@@ -1,0 +1,286 @@
+<div class="w-full min-h-[100vh] bg-zinc-100">
+  <h1 class="header-text-sm text-center">
+    Select Material By Following Choices
+  </h1>
+  <div class="flex w-full justify-center my-6">
+    <ul class="menu menu-horizontal bg-base-100 rounded-box">
+      <li><a id="properties" class="tab-option active" (click)="navigateTabs($event)">Properties</a></li>
+      <li><a id="process" class="tab-option" (click)="navigateTabs($event)">Process</a></li>
+      <li><a id="productry" class="tab-option" (click)="navigateTabs($event)">Productry Asistance</a></li>
+    </ul>
+  </div>
+  <div class="w-full flex justify-center">
+    <div class="metal-form flex flex-col mb-6" *ngIf="showProperties">
+      <div>
+        <select class="select w-full max-w-xl my-3">
+          <option disabled selected>Select Properties</option>
+          <option>Metals</option>
+          <option>Chemicals</option>
+          <option>Polymers</option>
+          <option>Composites</option>
+          <option>Glass</option>
+          <option>Ceramics</option>
+        </select>
+        <select class="select w-full max-w-xl my-3">
+          <option disabled selected>Select Property Type</option>
+          <option>Ferous</option>
+          <option>Non Ferous</option>
+        </select>
+        <select class="select w-full max-w-xl my-3">
+          <option disabled selected>Select Item</option>
+          <option>Cast Iron</option>
+          <option>Carbon Steel</option>
+          <option>Alloy Steel</option>
+        </select>
+      </div>
+      <p class="text-2xl font-semibold text-zinc-600 mt-6">
+        Physical Properties
+      </p>
+      <div class="overflow-x-auto">
+        <table class="table table-normal w-full p-4">
+          <thead class="text-zinc-700 " style="background-color: rgb(153, 199, 255) !important;">
+            <tr class="">
+              <th></th>
+              <th>Property Name</th>
+              <th>value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let items of PhysicalProperties">
+              <th>{{ items.id }}</th>
+              <td>{{ items.name }}</td>
+              <td>
+                <div class="flex gap-x-3 items-center">
+                  <input type="number" placeholder="0.01" class="input input-bordered input-md w-[6rem]" />
+                  <input type="number" placeholder="1.5" class="input input-bordered input-md w-[6rem]" />
+                  <div><span>{{items.unit}}</span></div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-2xl font-semibold text-zinc-600 mt-6">
+        Thermal Properties
+      </p>
+      <div class="overflow-x-auto">
+        <table class="table table-normal w-full p-4">
+          <thead class="text-zinc-400">
+            <tr>
+              <th></th>
+              <th>Property Name</th>
+
+              <th>value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let items of thermalProperties">
+              <th>{{ items.id }}</th>
+              <td>{{ items.name }}</td>
+              <td>
+                <div class="form-control">
+                  <label class="input-group">
+                    <input
+                      type="text"
+                      placeholder="0.01"
+                      class="input input-bordered"
+                    />
+                    <span>{{ items.unit }}</span>
+                  </label>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-2xl font-semibold text-zinc-600 mt-6">
+        Electrical Properties
+      </p>
+      <div class="overflow-x-auto">
+        <table class="table table-normal w-full p-4">
+          <thead class="text-zinc-400">
+            <tr>
+              <th></th>
+              <th>Property Name</th>
+
+              <th>value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let items of electricalProperties">
+              <th>{{ items.id }}</th>
+              <td>{{ items.name }}</td>
+              <td>
+                <div class="form-control">
+                  <label class="input-group">
+                    <input
+                      type="text"
+                      placeholder="0.01"
+                      class="input input-bordered"
+                    />
+                    <span>{{ items.unit }}</span>
+                  </label>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- The button to open modal -->
+      <label for="my-modal" class="btn btn-primary max-w-max my-6"
+        >find material</label
+      >
+
+      <!-- Put this part before </body> tag -->
+      <input type="checkbox" id="my-modal" class="modal-toggle" />
+      <div class="modal">
+        <div class="modal-box">
+          <h3 class="font-bold text-lg">
+            Based on properties mentioned suggested materials are
+          </h3>
+          <ul class="p-4 list-disc">
+            <li>Titanium</li>
+            <li>Titanium</li>
+            <li>Titanium</li>
+          </ul>
+          <div class="modal-action">
+            <label for="my-modal" class="btn btn-primary max-w-max"
+              >Close</label
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="metal-form flex flex-col mb-6" *ngIf="showProcess">
+      <div>
+        <select class="select w-full max-w-xl my-3">
+          <option disabled selected>Select Process</option>
+          <option>Casting</option>
+          <option>Sheet Metal Operation</option>
+          <option>Rapid Prototyping</option>
+          <option>Modling</option>
+          <option>Power Coating</option>
+        </select>
+        <select class="select w-full max-w-xl my-3">
+          <option disabled selected>Select Property Type</option>
+          <option>Compression</option>
+          <option>Rotation</option>
+          <option>Injection</option>
+          <option>RTM</option>
+          <option>Blow</option>
+        </select>
+        <select class="select w-full max-w-xl my-3">
+          <option disabled selected>Select Factor</option>
+          <option>Size range</option>
+          <option>Tolerance</option>
+          <option>Roughness</option>
+          <option>Batch</option>
+        </select>
+      </div>
+      <!-- The button to open modal -->
+      <label for="my-modal" class="btn btn-primary max-w-max my-6"
+        >find material</label
+      >
+
+      <!-- Put this part before </body> tag -->
+      <input type="checkbox" id="my-modal" class="modal-toggle" />
+      <div class="modal">
+        <div class="modal-box">
+          <h3 class="font-bold text-lg">
+            Based on properties mentioned suggested materials are
+          </h3>
+          <ul class="p-4 list-disc">
+            <li>Titanium</li>
+            <li>Titanium</li>
+            <li>Titanium</li>
+          </ul>
+          <div class="modal-action">
+            <label for="my-modal" class="btn btn-primary max-w-max"
+              >Close</label
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="metal-form flex flex-col mb-6" *ngIf="showAssistance">
+      <p class="header-text-sm text-center">
+        Let Us Know What You Want To Build
+      </p>
+      <div>
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Description For Products or Process</span>
+          </label>
+          <textarea
+            class="textarea textarea-bordered textarea-xs"
+            placeholder="Add your requirements here..."
+          ></textarea>
+        </div>
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Deep Dive into the Details</span>
+          </label>
+          <textarea
+            class="textarea textarea-bordered textarea-xs"
+            placeholder="Add your information here..."
+          ></textarea>
+        </div>
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Aesthetics Requirements</span>
+          </label>
+          <textarea
+            class="textarea textarea-bordered textarea-xs"
+            placeholder="Add your Aesthetics requirements here..."
+          ></textarea>
+        </div>
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Enviornmental Conditions</span>
+          </label>
+          <textarea
+            class="textarea textarea-bordered textarea-xs"
+            placeholder="Add your >Enviornmental Conditions here..."
+          ></textarea>
+        </div>
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Strengths</span>
+          </label>
+          <textarea
+            class="textarea textarea-bordered textarea-xs"
+            placeholder="Add your Strengths conditions here..."
+          ></textarea>
+        </div>
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Ergonomics</span>
+          </label>
+          <textarea
+            class="textarea textarea-bordered textarea-xs"
+            placeholder="Add your Ergonomics conditions here..."
+          ></textarea>
+        </div>
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Servisability</span>
+          </label>
+          <textarea
+            class="textarea textarea-bordered textarea-xs"
+            placeholder="Add your Servisability conditions here..."
+          ></textarea>
+        </div>
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Cost</span>
+          </label>
+          <textarea
+            class="textarea textarea-bordered textarea-xs"
+            placeholder="Add your cost conditions here..."
+          ></textarea>
+        </div>
+        <button class="btn btn-primary my-6">submit</button>
+      </div>
+    </div>
+  </div>
+</div>

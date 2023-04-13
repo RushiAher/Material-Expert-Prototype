@@ -1,0 +1,65 @@
+<app-navbar></app-navbar>
+<div class="sidebar-wrapper overflow-hidden group py-5" (mouseleave)="closeAllMenu()">
+  <div class="sidebar h-full w-full overflow-y-scroll scrollbar-hidden">
+    <div class="flex justify-center py-3 items-center flex-nowrap">
+        <img class="w-[2.5rem] object-contain" src="../../../assets/asserts/logo-icon-white.png" alt="" />
+    </div>
+    <div>
+      <ul class="flex items-start gap-y-5 flex-col text-cyan-50 p-3">
+        <li *ngFor="let items of menuData" class="w-full">
+          <ng-container *ngIf="items.hasSubmenu == 'false'; else hasSubmenu">
+            <a routerLink="{{ items.url }}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+              class="item-link btn p-0 w-full flex justify-start">
+              <div class="flex items-center">
+                <div
+                  class="menu-item-icon w-[3rem] h-[3rem] bg-white text-blue-700 flex justify-center items-center rounded-md">
+                  <i class="{{ items.icon }} text-lg"></i>
+                </div>
+                <div class="menu-item-name ms-2 whitespace-nowrap capitalize text-sm font-light">
+                  <!-- <a routerLink="{{ items.url }}"> -->
+                  {{ items.name }}
+                  <!-- </a> -->
+                </div>
+              </div>
+            </a>
+          </ng-container>
+          <ng-template #hasSubmenu>
+            <a id="dropdown-submenu-{{items.id}}" (click)="showsubmen(items.id)"
+              class="item-link btn p-0 w-full flex justify-start has-submenu">
+              <div class="flex items-center flex-nowrap">
+                <div
+                  class="menu-item-icon w-[3rem] h-[3rem] bg-white text-blue-700 flex justify-center items-center rounded-md">
+                  <i class="{{ items.icon }} text-xl"></i>
+                </div>
+                <div class="menu-item-name ms-2">
+                  <div class="flex justify-between w-full">
+                    <p class="whitespace-nowrap text-sm font-light capitalize">
+                      {{ items.name }}
+                    </p>
+                    <p class="ms-5"><i class="bi bi-chevron-down"></i></p>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <div id="submenu-{{ items.id }}" class="submenu">
+              <ul class="menu rounded-none w-full p-2 rounded-box text-xs font-light capitalize">
+                <li class=" mt-2 hover:bg-white/50 rounded-md" *ngFor="let data of items.submenuItems">
+                  <a class="submenu-link hover:bg-white/50 rounded-md" routerLink="{{ data.url }}"
+                    routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">{{ data.name }}</a>
+                </li>
+              </ul>
+            </div>
+          </ng-template>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="main-container-wrapper float-right flex justify-end overflow-hidden bg-zinc-100">
+  <div class="main-container overflow-y-scroll w-full h-full p-5">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+<i class="fa-solid fa-magnifying-glass"></i>

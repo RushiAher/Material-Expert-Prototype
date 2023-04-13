@@ -1,0 +1,60 @@
+<nav class="bg-white p-3 flex justify-end items-center h-[4rem]">
+  <!-- <i class="fa-solid fa-flask-vial"></i> -->
+  <div class="flex gap-x-5 items-center">
+    <div class="">
+      <button class="flex items-center bg-transparent px-4 py-1 border-0 bg-blue-100 rounded-full  hover:bg-blue-100 text-blue-500">
+        <div><i class="fa-solid fa-wallet text-xl"></i></div>
+        <div class="ms-3 font-semibold text-sm">₹ 3650</div>
+      </button>
+    </div>
+    <div>
+      <div class="avatar online placeholder ">
+        <div class="bg-neutral-focus text-neutral-content rounded-full w-9">
+          <span><i class="fa-solid fa-bell text-sm"></i></span>
+        </div>
+      </div>
+    </div>
+
+
+    <ng-container>
+    <div class="dropdown dropdown-end" *ngIf="userType === 'user',else showVendor">
+      <label tabindex="0" class="btn bg-transparent border-0 hover:bg-transparent">
+        <div class="flex gap-x-2 items-center">
+          <div class="avatar">
+            <div class="w-8 rounded-full">
+              <img src="https://i.pinimg.com/originals/99/12/15/99121582b0b475528445afd816f0621f.png" />
+            </div>
+          </div>
+          <div class="text-secondary normal-case">
+            <p>Hii 👋 Test</p>
+          </div>
+        </div>
+      </label>
+      <ul tabindex="0" class="dropdown-content menu p-2 shadow-md bg-base-100 rounded-box w-52">
+        <li><a routerLink="profile">Profile</a></li>
+        <!-- <li><a>Setting</a></li> -->
+        <li><a  (click)="logOut()">logOut</a></li>
+      </ul>
+    </div>
+  </ng-container>
+
+<ng-template #showVendor>
+  <div class="dropdown dropdown-end">
+    <label tabindex="0" class="btn bg-transparent border-0 hover:bg-transparent">
+      <div class="flex gap-x-2 items-center text-secondary">
+        <div>Productry</div>
+        <div><i class="bi bi-chevron-down"></i></div>
+      </div>
+    </label>
+    <ul tabindex="0" class="dropdown-content menu p-2 shadow-md bg-base-100 rounded-box w-52">
+      <li><a routerLink="profile">Profile</a></li>
+      <li><a>Terms & Conditions</a></li>
+      <li><a>Refer Us</a></li>
+      <li><a>Change Password</a></li>
+      <li><a  (click)="logOut()">logOut</a></li>
+    </ul>
+  </div>
+</ng-template>
+
+  </div>
+</nav>

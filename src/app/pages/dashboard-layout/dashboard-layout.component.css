@@ -1,0 +1,37 @@
+.sidebar-wrapper{position: fixed;z-index: 10;background-color: #192442;width:5rem ;height: 100vh;top: 0;left: 0;transition: width .3s ease-in-out;}
+.sidebar{position: relative;z-index: 11;}
+.submenu{display: none;}
+.logo-name{ opacity: 0;transition: opacity .3 ease-in-out;}
+.sidebar-wrapper:hover .logo-name{opacity: 1;display: block;}
+.menu-item-name{opacity: 0;transition: opacity .3 ease-in-out;}
+.menu-item-icon{background-color: transparent;color: #4a62a7;}
+
+.item-link{background-color: transparent;border: 0;}
+
+.sidebar-wrapper:hover {width: 17rem;}
+.sidebar-wrapper:hover .menu-item-name{opacity: 1;}
+
+.item-link:hover{background-color: #24335e;}
+.item-link:hover  .menu-item-icon{color: white;}
+.item-link:hover .menu-item-name{font-weight: 500;}
+
+.item-link.active .menu-item-icon{background-color: white;color: #192442;}
+
+.main-container-wrapper{width: calc(100vw - 5rem);height: calc(100vh - 4rem);}
+
+.sidebar-wrapper:hover .item-link.active{background-color: white;}
+.sidebar-wrapper:hover .item-link.active .menu-item-name{color: #192442;}
+
+
+.submenu
+
+.submenu-link.active{background-color: white;color: #24335e;}
+
+
+
+
+
+
+
+
+

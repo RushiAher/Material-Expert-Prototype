@@ -1,0 +1,95 @@
+<div class="grid grid-cols-3 gap-4">
+  <div class="bg-white h-[15rem] border rounded-xl p-5" *ngFor="let items of projectData">
+  <div id="{{items.id}}">
+    <p class="capitalize text-blue-500 text-2xl font-medium">{{items.name}}</p>
+    <p class="text-xs  my-5">{{items.summery}}</p>
+    <p class="capitalize font-medium text-zinc-400" >{{items.date}}</p>
+  </div>
+  </div>
+  <div class=" h-[15rem]  rounded-xl">
+    <label class="btn bg-white hover:bg-blue-50 border-0 w-full h-full" for="my-modal" >
+      <i class="text-secondary bi bi-plus-circle-dotted text-5xl"></i>
+    </label>
+  </div>
+</div>
+
+<input type="checkbox" id="my-modal" class="modal-toggle" />
+<div class="modal">
+  <div class="modal-box">
+    <div class="form-control mt-3">
+      <label class="label">
+        <span class="label-text">Project Name</span>
+      </label>
+      <input
+        type="text"
+        placeholder="Project Name"
+        class="input input-bordered w-full"
+      />
+    </div>
+
+    <div class="flex gap-x-3 mt-3">
+      <!--  -->
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text">Project Domain</span>
+        </label>
+        <input
+          type="text"
+          placeholder="Project Domain"
+          class="input input-bordered w-full"
+        />
+      </div>
+      <!--  -->
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text">Project Phase</span>
+        </label>
+        <input
+          type="text"
+          placeholder="Project Phase"
+          class="input input-bordered w-full"
+        />
+      </div>
+      <!--  -->
+    </div>
+
+    <div class="form-control mt-3">
+      <label class="label">
+        <span class="label-text"
+          >Project pincode (where project is building)</span
+        >
+      </label>
+      <input
+        type="text"
+        placeholder="Project pincode"
+        class="input input-bordered w-full"
+      />
+    </div>
+    <!--  -->
+    <div class="form-control mt-3">
+      <label class="label">
+        <span class="label-text">Project Description</span>
+      </label>
+      <input
+        type="text"
+        placeholder="Project Description"
+        class="input input-bordered w-full"
+      />
+    </div>
+    <!--  -->
+    <div class="form-control mt-3">
+      <label class="label">
+        <span class="label-text">Project Material Category</span>
+      </label>
+      <input
+        type="text"
+        placeholder="Project Matrial Category"
+        class="input input-bordered w-full"
+      />
+    </div>
+    <!--  -->
+    <div class="modal-action">
+      <label for="my-modal" class="btn">finish</label>
+    </div>
+  </div>
+</div>

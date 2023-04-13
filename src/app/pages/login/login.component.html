@@ -1,0 +1,94 @@
+<div class="w-[100vw] h-[100vh] bg-zinc-100 flex justify-center items-center">
+  <div class="w-[25rem] p-7 bg-white rounded-xl">
+    <div>
+      <img class="h-[3rem] w-full object-contain" src="https://www.productry.in/assets/asserts/logo.png" alt="logo">
+    </div>
+    <p class="mt-3 font-semibold text-xl text-center">{{headerText == true ? 'login' : 'Signup'}}</p>
+
+    <div *ngIf="showLogin">
+    <button class="btn flex items-center gap-x-3 w-full bg-white text-primary border-zinc-200 mt-10 hover:bg-zinc-50 hover:border-zinc-300">
+      <div><img class="w-5 h-5 object-contain" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/882px-Google_%22G%22_Logo.svg.png?20230305195327" alt=""></div>
+      <div>login with Google</div>
+    </button>
+    <div class="divider">OR</div>
+    <div>
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text">Email</span>
+        </label>
+        <input type="email" placeholder="Enter your email" class="input input-bordered w-full" id="email" (change)="checkEmail($event)"  (keyup)="checkEmail($event)"/>
+      </div>
+      <!--  -->
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text">Password</span>
+        </label>
+        <input type="password" placeholder="*********" class="input input-bordered w-full" />
+      </div>
+    </div>
+    <!--  -->
+    <div class="mt-5">
+      <p *ngIf="hasError" class="text-red-500 mb-2 text-xs text-center">{{errorMsg}}</p>
+      <button class="w-full  btn btn-primary" (click)="checkLogin()">Login</button>
+    </div>
+    <div class="mt-10">
+      <p class="text-center text-sm">Dont have an account?<a class="text-blue-500 ms-1 cursor-pointer" (click)="ToggleForm()">Sign Up</a></p>
+    </div>
+  </div>
+<!-- *************** -->
+<div *ngIf="!showLogin">
+
+<div class="my-5 flex gap-x-3">
+
+    <div class="w-full relative">
+      <input type="radio" name="userType" id="vendor" class="custom-radio-input" value="vendor" (click)="setUserType($event)">
+      <label for="vendor" class="custom-radio-btn p-3 flex justify-center rounded-md">Vendor</label>
+    </div>
+    <div class="w-full relative">
+      <input type="radio" name="userType" id="user" class="custom-radio-input" value="user" (click)="setUserType($event)">
+      <label for="user" class="custom-radio-btn p-3 flex justify-center rounded-md">User</label>
+    </div>
+</div>
+
+  <div class="form-control">
+    <label class="label">
+      <span class="label-text">Name</span>
+    </label>
+    <input type="text" placeholder="Full Name" class="input input-bordered w-full" />
+  </div>
+  <!--  -->
+  <div class="form-control">
+    <label class="label">
+      <span class="label-text">Username</span>
+    </label>
+    <input type="text" placeholder="Username" class="input input-bordered w-full" />
+  </div>
+  <!--  -->
+  <div class="form-control">
+    <label class="label">
+      <span class="label-text">Email</span>
+    </label>
+    <input type="email" placeholder="Email" class="input input-bordered w-full" />
+  </div>
+  <!--  -->
+  <div class="form-control">
+    <label class="label">
+      <span class="label-text">Password</span>
+    </label>
+    <input type="password" placeholder="*********" class="input input-bordered w-full" />
+  </div>
+
+  <div class="mt-5">
+    <p *ngIf="hasError" class="text-red-500 mb-2 text-xs text-center">{{errorMsg}}</p>
+    <button class="btn w-full btn-primary " (click)="signUp()">SignUp</button>
+  </div>
+
+
+<div class="mt-10">
+  <p class="text-center text-sm">I already have an account <a class="text-blue-500 ms-1 cursor-pointer" (click)="ToggleForm()">login</a></p>
+</div>
+</div>
+
+
+  </div>
+</div>

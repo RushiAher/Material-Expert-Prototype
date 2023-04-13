@@ -1,0 +1,100 @@
+<div class="w-full h-full flex justify-center items-start">
+  <div class="bg-white rounded-xl  w-1/2 p-5">
+
+    <div class="flex justify-between">
+      <p class="text-lg font-medium text-zinc-500">Personal Info</p>
+      <div>
+        <label for="my-modal" class="btn btn-sm bg-zinc-100 text-zinc-600 border-0 hover:bg-zinc-300">Edit</label>
+      </div>
+    </div>
+
+    <div class="overflow-x-auto mt-5 text-sm">
+      <table class="table w-full">
+        <tbody>
+          <!-- -->
+          <tr>
+            <td class="text-zinc-400">Name</td>
+            <td class="font-medium">Amit Jhadhav</td>
+          </tr>
+          <!--  -->
+          <tr>
+            <td class="text-zinc-400">Phone Number</td>
+            <td class="font-medium">7715934333</td>
+          </tr>
+          <!--  -->
+          <tr>
+            <td class="text-zinc-400">Email</td>
+            <td class="font-medium">Amitjhadav@productry.com</td>
+          </tr>
+          <!--  -->
+          <tr>
+            <td class="text-zinc-400">company Name</td>
+            <td class="font-medium">ProducTRY</td>
+          </tr>
+          <!--  -->
+          <tr>
+            <td class="text-zinc-400">Designation</td>
+            <td class="font-medium">Founder</td>
+          </tr>
+          <!--  -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Put this part before </body> tag -->
+<input type="checkbox" id="my-modal" class="modal-toggle" />
+<div class="modal">
+  <div class="modal-box">
+<!--  -->
+<div class="form-control  ">
+  <label class="label">
+    <span class="label-text">Name</span>
+  </label>
+  <input type="text" placeholder="Name" class="input input-bordered w-full" />
+</div>
+<div class="mt-3 flex gap-x-3">
+  <!--  -->
+  <div class="form-control  ">
+    <label class="label">
+      <span class="label-text">Phone Number</span>
+    </label>
+    <input type="text" placeholder="number" class="input input-bordered w-full" />
+  </div>
+<!--  -->
+
+  <!--  -->
+  <div class="form-control  ">
+    <label class="label">
+      <span class="label-text">Email</span>
+    </label>
+    <input type="text" placeholder="email" class="input input-bordered w-full" />
+  </div>
+  <!--  -->
+</div>
+<!--  -->
+<div class="flex gap-x-3 mt-3">
+  <div class="form-control ">
+    <label class="label">
+      <span class="label-text">Company Name</span>
+    </label>
+    <input type="text" placeholder="company name" class="input input-bordered w-full" />
+  </div>
+  <!--  -->
+  <div class="form-control ">
+    <label class="label">
+      <span class="label-text">Designation</span>
+    </label>
+    <input type="text" placeholder="Designation" class="input input-bordered w-full" />
+  </div>
+</div>
+
+<div class="mt-3 flex justify-end">
+  <label class="btn btn-primary" for="my-modal">finish</label>
+</div>
+<!--  -->
+  </div>
+</div>

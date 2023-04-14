@@ -78,12 +78,12 @@ export class DashboardLayoutComponent {
         id: '3',
         icon: 'bi bi-bag-fill',
         name: 'material procurement',
-        url: '#',
-        hasSubmenu: 'true',
+        url: 'materials-procurement',
+        hasSubmenu: 'false',
         submenuItems: [
           {
             name: 'metals',
-            url: '/app/metalprocurement',
+            url: '#',
           },
           {
             name: 'chemicals',

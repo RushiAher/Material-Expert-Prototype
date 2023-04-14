@@ -8,6 +8,7 @@ import { VendorDashboardComponent } from './components/vendor/vendor-dashboard/v
 import { UserProfileComponent } from './components/user/user-profile/user-profile.component';
 import { SettingsComponent } from './components/user/settings/settings.component';
 import { MatrialSelectionComponent } from './components/user/matrial-selection/matrial-selection.component';
+import { MatrialProcurementComponent } from './components/user/matrial-procurement/matrial-procurement.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -18,6 +19,7 @@ const routes: Routes = [
       {path:'profile', component:UserProfileComponent},
       {path:'settings', component:SettingsComponent},
       {path:'materials-selection', component:MatrialSelectionComponent},
+      {path:'materials-procurement', component:MatrialProcurementComponent},
 
       // ******* vendor ******
       // route url if there is a vendor use vendor at first like vendor/dashboard

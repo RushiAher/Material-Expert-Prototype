@@ -1,1 +1,490 @@
-<p>bussiness-info works!</p>
+<div class="flex flex-row w-full justify-between items-start gap-x-8">
+  <!-- <div class="w-full h-full flex justify-center items-start my-8"> -->
+  <div class="bg-white rounded-xl w-3/5 p-5">
+    <div class="flex justify-between">
+      <p class="text-lg font-medium text-zinc-500">Business Info</p>
+      <div>
+        <label
+          for="edit-info-modal"
+          class="btn btn-sm bg-zinc-100 text-zinc-600 border-0 hover:bg-zinc-300"
+          >Edit</label
+        >
+      </div>
+    </div>
+
+    <div class="overflow-x-auto text-sm">
+      <table class="table w-full">
+        <tbody>
+          <!-- -->
+          <tr>
+            <td class="text-zinc-400">Company Name</td>
+            <td class="font-medium">ProducTRY</td>
+          </tr>
+          <!--  -->
+          <tr>
+            <td class="text-zinc-400">Company Address</td>
+            <td class="font-medium">
+              Pune office - Radhakrishna Complex, Sinhgad<br />
+              Road, Vadgaon, Pune- 411041
+            </td>
+          </tr>
+          <!--  -->
+          <tr>
+            <td class="text-zinc-400">State</td>
+            <td class="font-medium">Maharastra</td>
+          </tr>
+          <!--  -->
+          <tr>
+            <td class="text-zinc-400">City</td>
+            <td class="font-medium">Pune</td>
+          </tr>
+          <!--  -->
+          <tr>
+            <td class="text-zinc-400">Pin Code</td>
+            <td class="font-medium">422208</td>
+          </tr>
+          <!--  -->
+          <tr>
+            <td class="text-zinc-400">GST No.</td>
+            <td class="font-medium">Pjdhj43434422208</td>
+          </tr>
+          <!--  -->
+          <tr>
+            <td class="text-zinc-400">Mobile Number</td>
+            <td class="font-medium">7789092345</td>
+          </tr>
+          <!--  -->
+          <tr>
+            <td class="text-zinc-400">Alternative Mobile Number</td>
+            <td class="font-medium">7789092345</td>
+          </tr>
+          <!--  -->
+          <tr>
+            <td class="text-zinc-400">Email</td>
+            <td class="font-medium">Amitjhadav@productry.com</td>
+          </tr>
+          <!--  -->
+          <tr>
+            <td class="text-zinc-400">Alternative Email</td>
+            <td class="font-medium">Amitjhadav@productry.com</td>
+          </tr>
+          <!--  -->
+          <tr>
+            <td class="text-zinc-400">Category</td>
+            <td class="font-medium">Metals</td>
+          </tr>
+          <!--  -->
+          <tr>
+            <td class="text-zinc-400">Website</td>
+            <td class="font-medium">https://productry.in</td>
+          </tr>
+          <!--  -->
+          <tr>
+            <td class="text-zinc-400">Brouchre</td>
+            <td class="font-medium">
+              <a class="text-primary cursor-pointer">company_broucher.pdf</a>
+            </td>
+          </tr>
+          <!--  -->
+        </tbody>
+      </table>
+    </div>
+    <!-- </div> -->
+  </div>
+  <div class="flex flex-col items-start w-2/5  gap-y-8">
+    <div class="bg-white rounded-xl w-full p-5">
+      <div class="flex justify-between">
+        <p class="text-lg font-medium text-zinc-500">Payment Info</p>
+        <div>
+          <label
+            for="payment-modal"
+            class="btn btn-sm bg-zinc-100 text-zinc-600 border-0 hover:bg-zinc-300"
+            >Add Card</label
+          >
+        </div>
+      </div>
+      <div class="container p-3 flex justify-start items-start">
+        <div
+          class="w-72 p-3 bg-gradient-to-r from-gray-600 to-black rounded-lg"
+        >
+          <div class="flex justify-between">
+            <span class="text-2xl font-semibold text-gray-100 pb-4"
+              >Master Card</span
+            >
+            <label for="edit-card-modal" class="text-primary cursor-pointer"
+              >edit</label
+            >
+          </div>
+
+          <span class="text-xs text-gray-200 shadow-2xl">Amit Jadhwar</span>
+
+          <div class="flex justify-between items-center pt-4">
+            <div class="flex flex-col">
+              <span class="text-xs text-gray-300 font-bold"
+                >1234 4567 8901 2345</span
+              >
+              <span class="text-xs text-gray-300 font-bold">09/25</span>
+            </div>
+
+            <img
+              src="https://img.icons8.com/offices/80/000000/sim-card-chip.png"
+              width="48"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-white rounded-xl w-full p-5">
+        <p class="text-lg font-medium text-zinc-500 mb-4">Add Brouchre</p>
+      <div class="flex items-center justify-center w-full">
+        <label
+          for="dropzone-file"
+          class="flex flex-col items-center justify-center w-full h-28 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50  hover:bg-gray-100 "
+        >
+          <div class="flex flex-col items-center justify-center pt-5 pb-6">
+            <svg
+              aria-hidden="true"
+              class="w-10 h-10 mb-3 text-gray-400"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
+              ></path>
+            </svg>
+            <p class="mb-2 text-sm text-gray-500 dark:text-gray-400">
+              <span class="font-semibold">Click to upload</span> or drag and
+              drop
+            </p>
+            <p class="text-xs text-gray-500 dark:text-gray-400">
+              PDF (MAX. 3MB)
+            </p>
+          </div>
+          <input id="dropzone-file" type="file" class="hidden" />
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="w-full hidden h-full flex justify-center items-start">
+    <div class="bg-white rounded-xl w-1/2 p-5">
+      <div class="flex justify-between">
+        <p class="text-lg font-medium text-zinc-500">payment Info</p>
+        <div>
+          <label
+            for="my-modal"
+            class="btn btn-sm bg-zinc-100 text-zinc-600 border-0 hover:bg-zinc-300"
+            >Edit</label
+          >
+        </div>
+      </div>
+
+      <div class="overflow-x-auto mt-5 text-sm">
+        <table class="table w-full">
+          <tbody>
+            <!-- -->
+            <tr>
+              <td class="text-zinc-400">Card Holder Name</td>
+              <td class="font-medium">Amit Jadhwar</td>
+            </tr>
+            <!-- -->
+            <tr>
+              <td class="text-zinc-400">Bank Name</td>
+              <td class="font-medium">Punjab National Bank</td>
+            </tr>
+            <!-- -->
+            <tr>
+              <td class="text-zinc-400">Card Number</td>
+              <td class="font-medium">120XXXXXXXXXXXXX</td>
+            </tr>
+            <!--  -->
+            <tr>
+              <td class="text-zinc-400">Expiry Date</td>
+              <td class="font-medium">5/26</td>
+            </tr>
+            <!--  -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Put this part before </body> tag -->
+<!-- add debit card modal -->
+<input type="checkbox" id="payment-modal" class="modal-toggle" />
+<div class="modal">
+  <div class="modal-box">
+    <!--  -->
+    <div class="form-control">
+      <label class="label">
+        <span class="label-text">Card Holder Name</span>
+      </label>
+      <input
+        type="text"
+        placeholder="Enter name"
+        class="input input-bordered w-full"
+      />
+    </div>
+
+    <!--  -->
+    <div class="form-control">
+      <label class="label">
+        <span class="label-text">Card Number</span>
+      </label>
+      <input
+        type="text"
+        placeholder="Enter card number"
+        class="input input-bordered w-full"
+      />
+    </div>
+    <!--  -->
+
+    <!--  -->
+    <div class="flex gap-x-3 mt-3">
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text">Expiry Date</span>
+        </label>
+        <input
+          type="text"
+          placeholder="2/24"
+          class="input input-bordered w-full"
+        />
+      </div>
+      <!--  -->
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text">CVV</span>
+        </label>
+        <input
+          type="text"
+          placeholder="546"
+          class="input input-bordered w-full"
+        />
+      </div>
+    </div>
+
+    <div class="mt-3 flex justify-end">
+      <label class="btn btn-primary" for="payment-modal">Add</label>
+    </div>
+    <!--  -->
+  </div>
+</div>
+<!-- edit debit card info card  -->
+<input type="checkbox" id="edit-card-modal" class="modal-toggle" />
+<div class="modal">
+  <div class="modal-box">
+    <!--  -->
+    <div class="form-control">
+      <label class="label">
+        <span class="label-text">Card Holder Name</span>
+      </label>
+      <input
+        type="text"
+        placeholder="Enter name"
+        class="input input-bordered w-full"
+        value="Amit Jadhwar"
+      />
+    </div>
+
+    <!--  -->
+    <div class="form-control">
+      <label class="label">
+        <span class="label-text">Card Number</span>
+      </label>
+      <input
+        type="text"
+        placeholder="Enter card number"
+        class="input input-bordered w-full"
+        value="1234 4567 8901 2345"
+      />
+    </div>
+    <!--  -->
+    <div class="flex gap-x-3 mt-3">
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text">Expiry Date</span>
+        </label>
+        <input
+          type="text"
+          placeholder="2/24"
+          class="input input-bordered w-full"
+          value="9/25"
+        />
+      </div>
+      <!--  -->
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text">CVV</span>
+        </label>
+        <input
+          type="text"
+          placeholder="546"
+          class="input input-bordered w-full"
+          value="435"
+        />
+      </div>
+    </div>
+
+    <div class="mt-3 flex justify-end">
+      <label class="btn btn-primary" for="edit-card-modal">Finish</label>
+    </div>
+    <!--  -->
+  </div>
+</div>
+
+<!-- edit business info card -->
+<input type="checkbox" id="edit-info-modal" class="modal-toggle" />
+<div class="modal">
+  <div class="modal-box ">
+    <!--  -->
+    <div class="form-control">
+      <label class="label">
+        <span class="label-text">Campany Name</span>
+      </label>
+      <input
+        type="text"
+        placeholder="Enter compay name"
+        class="input input-bordered w-full"
+      />
+    </div>
+
+    <!--  -->
+    <div class="form-control">
+      <label class="label">
+        <span class="label-text">company address</span>
+      </label>
+      <input
+        type="text"
+        placeholder="Enter company address"
+        class="input input-bordered w-full"
+      />
+    </div>
+    <!--  -->
+
+    <div class="flex gap-x-3 mt-3">
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text">State</span>
+        </label>
+        <input
+          type="text"
+          placeholder="Maharastra"
+          class="input input-bordered w-full"
+        />
+      </div>
+      <!--  -->
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text">City</span>
+        </label>
+        <input
+          type="text"
+          placeholder="pune"
+          class="input input-bordered w-full"
+        />
+      </div>
+    </div>
+    <div class="flex gap-x-3 mt-3">
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text">Pincode</span>
+        </label>
+        <input
+          type="text"
+          placeholder="eg. 42333"
+          class="input input-bordered w-full"
+        />
+      </div>
+      <!--  -->
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text">GST Number</span>
+        </label>
+        <input
+          type="text"
+          placeholder="eg. RIPENDW3434223H3"
+          class="input input-bordered w-full"
+        />
+      </div>
+    </div>
+    <div class="flex gap-x-3 mt-3">
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text">Phone Number</span>
+        </label>
+        <input
+          type="text"
+          placeholder="enter phone number"
+          class="input input-bordered w-full"
+        />
+      </div>
+      <!--  -->
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text">Alternative Phone Number</span>
+        </label>
+        <input
+          type="text"
+          placeholder="enter phone number"
+          class="input input-bordered w-full"
+        />
+      </div>
+    </div>
+    <div class="flex gap-x-3 mt-3">
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text">Email</span>
+        </label>
+        <input
+          type="email"
+          placeholder="enter your email"
+          class="input input-bordered w-full"
+        />
+      </div>
+      <!--  -->
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text">Alternative Email</span>
+        </label>
+        <input
+          type="email"
+          placeholder="enter your email"
+          class="input input-bordered w-full"
+        />
+      </div>
+    </div>
+    <div class="flex gap-x-3 mt-3">
+      <div class="form-control">
+        <label class="text">
+          <span class="label-text">Category</span>
+        </label>
+        <input
+          type="text"
+          placeholder="eg. Metals"
+          class="input input-bordered w-full"
+        />
+      </div>
+      <!--  -->
+      <div class="form-control">
+        <label class="text">
+          <span class="label-text">Website</span>
+        </label>
+        <input
+          type="text"
+          placeholder="eg. https://productry.in"
+          class="input input-bordered w-full"
+        />
+      </div>
+    </div>
+    <div class="mt-4 flex justify-end">
+      <label class="btn btn-primary" for="edit-info-modal">Finish</label>
+    </div>
+    <!--  -->
+  </div>
+</div>

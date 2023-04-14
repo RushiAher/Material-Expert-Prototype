@@ -253,16 +253,16 @@ export class DashboardLayoutComponent {
     {
       id: '1',
       icon: 'bi bi-house-door-fill',
-      name: 'home',
-      url: 'vendor/dashboard',
+      name: 'Business Profile',
+      url: 'vendor/business-profile',
       hasSubmenu: 'false',
     },
     {
       id: '2',
       icon: 'fa-solid fa-boxes-stacked',
-      name: 'Matrials',
+      name: 'Your Shop',
       url: '#',
-      hasSubmenu: 'true',
+      hasSubmenu: 'false',
       submenuItems: [
         {
           name: 'metals',
@@ -300,7 +300,7 @@ export class DashboardLayoutComponent {
     {
       id: '4',
       icon: 'fa-solid fa-building',
-      name: 'Company',
+      name: 'Dashboard',
       url: '#',
       hasSubmenu: 'false',
     },
@@ -311,15 +311,15 @@ export class DashboardLayoutComponent {
       url: '#',
       hasSubmenu: 'false',
     },
+    // {
+    //   id: '6',
+    //   icon: 'fa-solid fa-magnifying-glass-chart',
+    //   name: 'Analytics',
+    //   url: '#',
+    //   hasSubmenu: 'false',
+    // },
     {
       id: '6',
-      icon: 'fa-solid fa-magnifying-glass-chart',
-      name: 'Analytics',
-      url: '#',
-      hasSubmenu: 'false',
-    },
-    {
-      id: '7',
       icon: 'bi bi-question-circle-fill',
       name: 'Help & support',
       url: '#',

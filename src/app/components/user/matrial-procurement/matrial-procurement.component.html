@@ -1,1 +1,323 @@
-<p>matrial-procurement works!</p>
+<div class="w-full min-h-[100vh] bg-zinc-100">
+  <div class="flex flex-col px-8 gap-y-8">
+    <div class="flex gap-4 items-center">
+      <div class="h-[35px] w-[13.5px] inline-block rounded-xl bg-primary"></div>
+      <span class="text-xl capitalize font-semibold">Material Procurement</span>
+    </div>
+    <div
+      class="flex h-[46px] w-full bg-white items-center rounded-lg p-4 gap-x-4"
+    >
+      <div
+        class="inline-block flex flex-nowrap justify-between gap-x-2 items-center bg-blue-100 px-2 rounded-md"
+      >
+        methionylthre...
+        <i class="bi bi-x-circle-fill text-blue-300 cursor-pointer"></i>
+      </div>
+      <div
+        class="inline-block flex flex-nowrap justify-between gap-x-2 items-center bg-blue-100 px-2 rounded-md"
+      >
+        methionylthre...
+        <i class="bi bi-x-circle-fill text-blue-300 cursor-pointer"></i>
+      </div>
+      <div
+        class="inline-block flex flex-nowrap justify-between gap-x-2 items-center bg-blue-100 px-2 rounded-md"
+      >
+        methionylthre...
+        <i class="bi bi-x-circle-fill text-blue-300 cursor-pointer"></i>
+      </div>
+    </div>
+    <div class="flex flex-row gap-x-6">
+      <div
+        class="flex flex-col items-center gap-y-2"
+        *ngFor="let items of categories"
+      >
+        <span
+          id="item-{{ items.id }}"
+          class="h-[91px] w-[91px] border-4 border-blue-500 bg-slate-50 rounded-full p-4"
+        >
+          <a href="{{ items.url }}">
+            <img
+              class="cover-fill rounded-full"
+              src="{{ items.img }}"
+              alt="metals"
+          /></a>
+        </span>
+        <p class="text-sm text-normal text-center">{{ items.name }}</p>
+      </div>
+    </div>
+    <div class="min-h-max w-full p-6 bg-white rounded-lg">
+      <div class="flex flex-row items-start w-full gap-x-6">
+        <div class="flex flex-col justify-between w-1/4">
+          <div class="mb-6 w-full">
+            <label
+              for="material-name"
+              class="block mb-2 text-sm font-semibold text-black"
+              >Material Name</label
+            >
+            <input
+              type="text"
+              id="material-name"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2"
+              placeholder="eg. Aluminium"
+            />
+          </div>
+          <div
+            class="flex flex-wrap p-2 rounded-lg bg-gray-50 min-h-[12rem] border border-gray-300 w-full gap-2 items-start"
+          >
+            <p
+              class="text-sm font-medium max-h-max flex items-center bg-blue-100 px-2 py-1.5 rounded-md"
+            >
+              1001 Aluminium
+            </p>
+            <p
+              class="text-sm font-medium max-h-max flex items-center bg-blue-100 px-2 py-1.5 rounded-md"
+            >
+              3001 Aluminium
+            </p>
+            <p
+              class="text-sm font-medium max-h-max flex items-center bg-blue-100 px-2 py-1.5 rounded-md"
+            >
+              2001 Aluminium
+            </p>
+            <p
+              class="text-sm font-medium max-h-max flex items-center bg-blue-100 px-2 py-1.5 rounded-md"
+            >
+              4001 Aluminium
+            </p>
+            <p
+              class="text-sm font-medium max-h-max flex items-center bg-blue-100 px-2 py-1.5 rounded-md"
+            >
+              3003 Aluminium
+            </p>
+
+            <p
+              class="text-sm font-medium max-h-max flex items-center bg-blue-100 px-2 py-1.5 rounded-md"
+            >
+              1005 Aluminium
+            </p>
+            <p
+              class="text-sm font-medium max-h-max flex items-center bg-blue-100 px-2 py-1.5 rounded-md"
+            >
+              2003 Aluminium
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-col justify-between w-1/4">
+          <div class="mb-6 w-full">
+            <label
+              for="material-code"
+              class="block mb-2 text-sm font-semibold text-black"
+              >Material Code</label
+            >
+            <div class="flex w-full gap-x-2">
+              <select
+                id="categories"
+                class="max-w-max bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+              >
+                <option selected>Category</option>
+                <option value="US">Msi</option>
+                <option value="CA">Asi</option>
+                <option value="FR">Asi</option>
+                <option value="DE">Msi</option>
+              </select>
+
+              <input
+                type="text"
+                id="material-code"
+                class="w-2/3 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2"
+                placeholder="eg. 3000"
+              />
+            </div>
+          </div>
+          <div
+            class="flex flex-wrap py-2 px-4 rounded-lg bg-gray-50 min-h-[12rem] border border-gray-300 w-full gap-2 items-start"
+          >
+            <p
+              class="text-sm font-medium max-h-max flex items-center bg-blue-100 px-2 py-1.5 rounded-md"
+            >
+              3001 Aluminium
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-col items-start justify-between w-1/2 gap-x-6">
+          <p
+            for="material-spec"
+            class="block mb-2 text-sm font-semibold text-black"
+          >
+            Material Specification
+          </p>
+          <div class="flex items-start mb-6 w-full gap-x-6">
+            <textarea
+              name="material-spec"
+              rows="11"
+              class="block w-1/2 p-2.5 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+              placeholder="Write your material specification here..."
+            ></textarea>
+            <div
+              class="flex flex-wrap p-2 rounded-lg bg-gray-50 min-h-[12rem] border border-gray-300 gap-2 items-start w-1/2"
+            >
+              <p
+                class="text-sm font-medium max-h-max flex items-center bg-blue-100 px-2 py-1.5 rounded-md"
+              >
+                1005 Aluminium
+              </p>
+              <p
+                class="text-sm font-medium max-h-max flex items-center bg-blue-100 px-2 py-1.5 rounded-md"
+              >
+                2003 Aluminium
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="h-px my-8 bg-gray-200 border-0" />
+      <div class="flex flex-row items-start w-full gap-x-8">
+        <div class="flex flex-col w-3/5 gap-y-4">
+          <p class="mb-2 text-sm font-semibold text-black">
+            Material Requirement
+          </p>
+          <div class="flex w-full gap-x-6">
+            <div
+              class="flex justify-between items-center bg-gray-50 border border-gray-300 text-sm rounded-lg w-1/2 p-2"
+            >
+              <p class="text-sm font-medium text-gray-900">Quantity</p>
+              <div class="flex justify-between items-center max-w-max gap-x-2">
+                <i
+                  class="bi bi-dash-square-fill text-blue-300 cursor-pointer hover:scale-125"
+                ></i>
+
+                <div class="flex gap-x-1">
+                  <input
+                    type="number"
+                    placeholder="1"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-[3rem] h-[1.5rem] p-2"
+                  />
+                  <p class="text-sm hidden">mm</p>
+                </div>
+                <i
+                  class="bi bi-plus-square-fill text-blue-300 cursor-pointer hover:scale-125"
+                ></i>
+              </div>
+            </div>
+            <div
+              class="flex justify-between items-center bg-gray-50 border border-gray-300 text-sm rounded-lg w-1/2 p-2"
+            >
+              <p class="text-sm font-medium text-gray-900">Length</p>
+              <div class="flex justify-between items-center max-w-max gap-x-2">
+                <i
+                  class="bi bi-dash-square-fill text-blue-300 cursor-pointer hover:scale-125"
+                ></i>
+
+                <div class="flex gap-x-1">
+                  <input
+                    type="number"
+                    placeholder="1"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-[3rem] h-[1.5rem] p-2"
+                  />
+                  <p class="text-sm">mm</p>
+                </div>
+                <i
+                  class="bi bi-plus-square-fill text-blue-300 cursor-pointer hover:scale-125"
+                ></i>
+              </div>
+            </div>
+          </div>
+          <div class="flex w-full gap-x-6">
+            <div
+              class="flex justify-between items-center bg-gray-50 border border-gray-300 text-sm rounded-lg w-1/2 p-2"
+            >
+              <p class="text-sm font-medium text-gray-900">Thickness</p>
+              <div class="flex justify-between items-center max-w-max gap-x-2">
+                <i
+                  class="bi bi-dash-square-fill text-blue-300 cursor-pointer hover:scale-125"
+                ></i>
+
+                <div class="flex gap-x-1">
+                  <input
+                    type="number"
+                    placeholder="1"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-[3rem] h-[1.5rem] p-2"
+                  />
+                  <p class="text-sm hidden">mm</p>
+                </div>
+                <i
+                  class="bi bi-plus-square-fill text-blue-300 cursor-pointer hover:scale-125"
+                ></i>
+              </div>
+            </div>
+
+            <select
+              id="countries"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/2 p-2.5"
+            >
+              <option selected>form</option>
+              <option value="solid">Solid</option>
+              <option value="liquid">Liquid</option>
+            </select>
+          </div>
+          <div class="flex w-full gap-x-6">
+            <div
+              class="flex justify-between items-center bg-gray-50 border border-gray-300 text-sm rounded-lg w-1/2 p-2"
+            >
+              <p class="text-sm font-medium text-gray-900">Width</p>
+              <div class="flex justify-between items-center max-w-max gap-x-2">
+                <i
+                  class="bi bi-dash-square-fill text-blue-300 cursor-pointer hover:scale-125"
+                ></i>
+
+                <div class="flex gap-x-1">
+                  <input
+                    type="number"
+                    placeholder="1"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-[3rem] h-[1.5rem] p-2"
+                  />
+                  <p class="text-sm hidden">mm</p>
+                </div>
+                <i
+                  class="bi bi-plus-square-fill text-blue-300 cursor-pointer hover:scale-125"
+                ></i>
+              </div>
+            </div>
+            <div class="w-1/2"></div>
+          </div>
+        </div>
+        <div class="flex flex-col w-2/5 gap-y-4">
+          <p class="mb-2 text-sm font-semibold text-black">Material Summary</p>
+          <div
+            class="p-4 rounded-lg bg-gray-50 min-h-[12rem] border border-gray-300 w-full"
+          >
+            <p class="text-md font-semibold">1100 Aluminium</p>
+            <p class="text-sm text-gray-400">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Blanditiis aperiam porro dolor necessitatibus! Mollitia dolorem
+              ducimus atque nisi, eveniet soluta!
+            </p>
+            <p class="mt-5">
+              <span class="inline-block w-[8rem]">Quantity</span>: 3
+            </p>
+            <p class="mt-3">
+              <span class="inline-block w-[8rem]">Thickness</span>: 15mm
+            </p>
+            <p class="mt-3">
+              <span class="inline-block w-[8rem]">Width</span>: 30mm
+            </p>
+            <p class="mt-3">
+              <span class="inline-block w-[8rem]">Length</span>: 50m
+            </p>
+            <p class="mt-3">
+              <span class="inline-block w-[8rem]">Form</span>: Metal
+            </p>
+          </div>
+          <div class="w-full flex justify-end">
+            <button
+              type="button"
+              class="text-white max-w-max  bg-primary hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none"
+            >
+              <i class="bi bi-plus-square-fill text-blue-300 mr-2 hover:scale-125"></i>Add Material
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -13,7 +13,7 @@ export class DashboardLayoutComponent {
 
   menuData:any = []
 
-  userType:any
+  userType:any = 'user';
 
   constructor(private router:Router) {
 
@@ -249,19 +249,21 @@ export class DashboardLayoutComponent {
           }]
       }
   ]
+
+
   vendorMenuData=[
     {
       id: '1',
       icon: 'bi bi-house-door-fill',
-      name: 'Business Profile',
-      url: 'vendor/business-profile',
+      name: 'Dashboard',
+      url: 'vendor/dashboard',
       hasSubmenu: 'false',
     },
     {
       id: '2',
       icon: 'fa-solid fa-boxes-stacked',
       name: 'Your Shop',
-      url: '#',
+      url: 'vendor/your-shop',
       hasSubmenu: 'false',
       submenuItems: [
         {
@@ -294,14 +296,14 @@ export class DashboardLayoutComponent {
       id: '3',
       icon: 'fa-solid fa-cart-flatbed',
       name: 'Orders',
-      url: '#',
+      url: 'vendor/orders',
       hasSubmenu: 'false',
     },
     {
       id: '4',
       icon: 'fa-solid fa-building',
-      name: 'Dashboard',
-      url: '#',
+      name: 'Bussiness Profile',
+      url: 'vendor/business-profile',
       hasSubmenu: 'false',
     },
     {

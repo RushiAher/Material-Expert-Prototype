@@ -14,6 +14,9 @@ import { BussinessInfoComponent } from './components/vendor/bussiness-info/bussi
 import { VendorDashboardComponent } from './components/vendor/vendor-dashboard/vendor-dashboard.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { VendorProfileComponent } from './components/vendor/vendor-profile/vendor-profile.component';
+import { OrdersComponent } from './components/vendor/orders/orders.component';
+import { AddProductComponent } from './components/vendor/add-product/add-product.component';
+import { ProductListComponent } from './components/vendor/product-list/product-list.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import { VendorProfileComponent } from './components/vendor/vendor-profile/vendo
     BussinessInfoComponent,
     VendorDashboardComponent,
     NavbarComponent,
-    VendorProfileComponent
+    VendorProfileComponent,
+    OrdersComponent,
+    AddProductComponent,
+    ProductListComponent
   ],
   imports: [
     BrowserModule,

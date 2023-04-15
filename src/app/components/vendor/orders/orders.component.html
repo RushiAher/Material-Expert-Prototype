@@ -1,0 +1,43 @@
+<h1 class="title-text">view orders</h1>
+
+<div class="flex gap-x-3 mt-5">
+  <button class="btn bg-white btn-sm border-0  text-blue-500 hover:bg-blue-100">All</button>
+  <button class="btn bg-white btn-sm border-0  text-blue-500 hover:bg-blue-100">Deliverd</button>
+  <button class="btn bg-white btn-sm border-0  text-blue-500 hover:bg-blue-100">New</button>
+</div>
+
+<div class="overflow-x-auto mt-5 z-10 relative">
+  <table class="table table-auto table-compact w-full bg-white">
+    <thead>
+      <tr>
+        <th class="text-center resize-x w-3"></th>
+        <th class="text-center resize-x w-10">date</th>
+        <th class="text-center resize-x w-10">Order id</th>
+        <th class="text-center resize-x w-[20rem]">Matrial details</th>
+        <th class="text-center resize-x w-10">Payment</th>
+        <th class="text-center resize-x w-10">Customer ID</th>
+        <th class="text-center resize-x w-10">Status</th>
+        <th class="text-center resize-x w-10"></th>
+      </tr>
+    </thead>
+    <tbody class="capitalize">
+      <tr  *ngFor="let items of orderData;  let i = index">
+        <th class=" text-center resize-none">{{i+1}}</th>
+        <td class=" text-center resize-none">{{items.date}}</td>
+        <td class=" text-center resize-none">{{items.id}}PR</td>
+        <td class=" resize-none">{{items.product}}</td>
+        <td class=" text-center resize-none">₹ {{items.payment}}</td>
+        <td class=" text-center resize-none">{{items.customerId}}</td>
+        <td class="resize-none ">
+          <div class="flex justify-center">
+
+            <div class="badge  gap-2 text-xs text-white" [ngClass]="{'badge-success':items.status == 'delivered','badge-warning':items.status == 'canceled','badge-error':items.status == 'pending'}">
+              {{items.status}}
+            </div>
+          </div>
+        </td>
+        <td class="resize-none"><button class="btn btn-sm capitalize font-normal bg-transparent text-blue-500 border-0 hover:bg-transparent">view Details</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

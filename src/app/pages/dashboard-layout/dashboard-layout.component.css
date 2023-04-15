@@ -1,4 +1,4 @@
-.sidebar-wrapper{position: fixed;z-index: 10;background-color: #192442;width:5rem ;height: 100vh;top: 0;left: 0;transition: width .3s ease-in-out;}
+.sidebar-wrapper{position: fixed;z-index: 100;background-color: #192442;width:5rem ;height: 100vh;top: 0;left: 0;transition: width .3s ease-in-out;}
 .sidebar{position: relative;z-index: 11;}
 .submenu{display: none;}
 .logo-name{ opacity: 0;transition: opacity .3 ease-in-out;}

@@ -10,6 +10,8 @@ import { UserProfileComponent } from './components/user/user-profile/user-profil
 import { SettingsComponent } from './components/user/settings/settings.component';
 import { MatrialSelectionComponent } from './components/user/matrial-selection/matrial-selection.component';
 import { MatrialProcurementComponent } from './components/user/matrial-procurement/matrial-procurement.component';
+import { OrdersComponent } from './components/vendor/orders/orders.component';
+import { ProductListComponent } from './components/vendor/product-list/product-list.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -26,6 +28,8 @@ const routes: Routes = [
       // route url if there is a vendor use vendor at first like vendor/dashboard
       {path:'vendor/dashboard', component: VendorDashboardComponent},
       {path:'vendor/business-profile', component: BussinessInfoComponent},
+      {path:'vendor/orders', component: OrdersComponent},
+      {path:'vendor/your-shop', component: ProductListComponent},
     ]
   }
 

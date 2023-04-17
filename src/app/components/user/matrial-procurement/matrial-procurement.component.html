@@ -104,10 +104,17 @@
                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg px-2 focus:ring-blue-500 focus:border-blue-500 block p-2.5"
                   >
                     <option selected>code type</option>
-                    <option value="US">Msi</option>
-                    <option value="CA">Asi</option>
-                    <option value="FR">Asi</option>
-                    <option value="DE">Msi</option>
+                    <option value="US">DIN</option>
+                    <option value="CA">AISI</option>
+                    <option value="FR">BIS</option>
+                    <option value="DE">SAE</option>
+                    <option value="DE">ASTM</option>
+                    <option value="DE">UNI</option>
+                    <option value="DE">EN</option>
+                    <option value="DE">ASME</option>
+                    <option value="DE">BS</option>
+                    <option value="DE">JIS</option>
+                    <option value="DE">GOST</option>
                   </select>
 
                   <input
@@ -512,7 +519,7 @@
               <input
                 type="text"
                 class="bg-gray-50 w-full border rounded-md p-2 mt-3"
-                placeholder="Please mension polmer name"
+                placeholder="Please mension polymer name"
               />
             </div>
 
@@ -522,27 +529,23 @@
               <div class="flex gap-2 flex-wrap">
                 <span
                   class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm"
-                  >Hydrogen</span
+                  >Nylon
+                </span>
+                <span
+                  class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm"
+                  >polyethylene</span
                 >
                 <span
                   class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm"
-                  >acid</span
+                  >polyester</span
                 >
                 <span
                   class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm"
-                  >Beryllium</span
+                  >Teflon</span
                 >
                 <span
                   class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm"
-                  >chemicals 1</span
-                >
-                <span
-                  class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm"
-                  >chemicals 1</span
-                >
-                <span
-                  class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm"
-                  >chemicals 1</span
+                  >epoxy</span
                 >
               </div>
             </div>
@@ -550,18 +553,12 @@
           <!--  -->
           <div class="col-span-1">
             <div>
-              <label for="form" class="text-sm text-zinc-500"
-                >Polymer Grade</label
-              >
-              <select
-                id="form"
-                class="bg-zinc-50 border w-full p-2 rounded-md mt-2"
-              >
-                <option value="">Form</option>
-                <option value="">Liquid</option>
-                <option value="">Powder</option>
-                <option value="">Jelly</option>
-              </select>
+              <p class="font-semibold">Polymer Grade</p>
+              <input
+                type="text"
+                class="bg-gray-50 w-full border rounded-md p-2 mt-3"
+                placeholder="Please mension polmer grade"
+              />
             </div>
 
             <div class="mt-3">
@@ -582,19 +579,36 @@
             <div class="flex flex-col justify-between h-full">
               <div>
                 <div>
-                  <label for="form" class="text-sm text-zinc-500"
+                  <label for="form" class="font-semibold"
                     >Specify the Form of material</label
                   >
                   <select
                     id="form"
                     class="bg-zinc-50 border w-full p-2 rounded-md mt-2"
                   >
-                    <option value="">Form</option>
-                    <option value="">Liquid</option>
+                    <option value="">Sheet</option>
+                    <option value="">Bar</option>
+                    <option value="">Honeycomb</option>
+                    <option value="">Lump</option>
+                    <option value="">Mesh</option>
+                    <option value="">Fabric</option>
                     <option value="">Powder</option>
-                    <option value="">Jelly</option>
+                    <option value="">Film</option>
+                    <option value="">Rod</option>
+                    <option value="">Sphere</option>
+                    <option value="">Granule</option>
+                    <option value="">Tube</option>
+                    <option value="">Other</option>
                   </select>
                 </div>
+                 <p class="text-sm text-zinc-500 mt-4">If other please specify here</p>
+                <div class="flex gap-x-1 items-center mt-2">
+                  <input
+                    type="text"
+                    class="bg-zinc-50 border rounded-md w-full p-2"
+                  />
+                </div>
+                <p class="text-sm text-zinc-500 mt-4">Required Quantity</p>
                 <div class="flex gap-x-1 items-center mt-2">
                   <input
                     type="text"
@@ -608,19 +622,172 @@
                     </p>
                   </div>
                 </div>
+               
               </div>
               <!--  -->
-              <div class="flex justify-end">
-                <button
-                  type="button"
-                  class="text-white max-w-max bg-primary hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none"
-                >
-                  Buy Now
-                </button>
-              </div>
             </div>
           </div>
           <!--  -->
+        </div>
+        <hr class="h-px my-8 bg-gray-200 border-0" />
+        <div class="flex flex-row items-start w-full gap-x-8">
+          <div class="flex flex-col w-3/5 gap-y-4">
+            <p class="mb-2 text-sm font-semibold text-black">
+              Material Requirement
+            </p>
+            <div class="flex w-full gap-x-6">
+              <div
+                class="flex justify-between items-center bg-gray-50 border border-gray-300 text-sm rounded-lg w-1/2 p-2"
+              >
+                <p class="text-sm font-medium text-gray-900">Quantity</p>
+                <div
+                  class="flex justify-between items-center max-w-max gap-x-2"
+                >
+                  <i
+                    class="bi bi-dash-square-fill text-blue-300 cursor-pointer hover:scale-125"
+                  ></i>
+
+                  <div class="flex gap-x-1">
+                    <input
+                      type="number"
+                      placeholder="1"
+                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-[3rem] h-[1.5rem] p-2"
+                    />
+                    <p class="text-sm hidden">mm</p>
+                  </div>
+                  <i
+                    class="bi bi-plus-square-fill text-blue-300 cursor-pointer hover:scale-125"
+                  ></i>
+                </div>
+              </div>
+              <div
+                class="flex justify-between items-center bg-gray-50 border border-gray-300 text-sm rounded-lg w-1/2 p-2"
+              >
+                <p class="text-sm font-medium text-gray-900">Length</p>
+                <div
+                  class="flex justify-between items-center max-w-max gap-x-2"
+                >
+                  <i
+                    class="bi bi-dash-square-fill text-blue-300 cursor-pointer hover:scale-125"
+                  ></i>
+
+                  <div class="flex gap-x-1">
+                    <input
+                      type="number"
+                      placeholder="1"
+                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-[3rem] h-[1.5rem] p-2"
+                    />
+                    <p class="text-sm">mm</p>
+                  </div>
+                  <i
+                    class="bi bi-plus-square-fill text-blue-300 cursor-pointer hover:scale-125"
+                  ></i>
+                </div>
+              </div>
+            </div>
+            <div class="flex w-full gap-x-6">
+              <div
+                class="flex justify-between items-center bg-gray-50 border border-gray-300 text-sm rounded-lg w-1/2 p-2"
+              >
+                <p class="text-sm font-medium text-gray-900">Thickness</p>
+                <div
+                  class="flex justify-between items-center max-w-max gap-x-2"
+                >
+                  <i
+                    class="bi bi-dash-square-fill text-blue-300 cursor-pointer hover:scale-125"
+                  ></i>
+
+                  <div class="flex gap-x-1">
+                    <input
+                      type="number"
+                      placeholder="1"
+                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-[3rem] h-[1.5rem] p-2"
+                    />
+                    <p class="text-sm hidden">mm</p>
+                  </div>
+                  <i
+                    class="bi bi-plus-square-fill text-blue-300 cursor-pointer hover:scale-125"
+                  ></i>
+                </div>
+              </div>
+              <div class="w-1/2"></div>
+              <select
+                id="countries"
+                class="hidden bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/2 p-2.5"
+              >
+                <option selected disabled>select form</option>
+                <option>Angle</option>
+                <option>Square</option>
+                <option>Rectangle</option>
+                <option>bar</option>
+              </select>
+            </div>
+            <div class="flex w-full gap-x-6">
+              <div
+                class="flex justify-between items-center bg-gray-50 border border-gray-300 text-sm rounded-lg w-1/2 p-2"
+              >
+                <p class="text-sm font-medium text-gray-900">Width</p>
+                <div
+                  class="flex justify-between items-center max-w-max gap-x-2"
+                >
+                  <i
+                    class="bi bi-dash-square-fill text-blue-300 cursor-pointer hover:scale-125"
+                  ></i>
+
+                  <div class="flex gap-x-1">
+                    <input
+                      type="number"
+                      placeholder="1"
+                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-[3rem] h-[1.5rem] p-2"
+                    />
+                    <p class="text-sm hidden">mm</p>
+                  </div>
+                  <i
+                    class="bi bi-plus-square-fill text-blue-300 cursor-pointer hover:scale-125"
+                  ></i>
+                </div>
+              </div>
+              <div class="w-1/2"></div>
+            </div>
+          </div>
+          <div class="flex flex-col w-2/5 gap-y-4">
+            <p class="mb-2 text-sm font-semibold text-black">
+              Material Summary
+            </p>
+            <div
+              class="p-4 rounded-lg bg-gray-50 min-h-[12rem] border border-gray-300 w-full"
+            >
+              <p class="text-md font-semibold">Nylon</p>
+              <p class="text-sm text-gray-400">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Blanditiis aperiam porro dolor necessitatibus! Mollitia dolorem
+                ducimus atque nisi, eveniet soluta!
+              </p>
+              <p class="mt-5">
+                <span class="inline-block w-[8rem]">Quantity</span>: 3
+              </p>
+              <p class="mt-3">
+                <span class="inline-block w-[8rem]">Thickness</span>: 15mm
+              </p>
+              <p class="mt-3">
+                <span class="inline-block w-[8rem]">Width</span>: 30mm
+              </p>
+              <p class="mt-3">
+                <span class="inline-block w-[8rem]">Length</span>: 50m
+              </p>
+              <p class="mt-3">
+                <span class="inline-block w-[8rem]">Form</span>: Sphere
+              </p>
+            </div>
+            <div class="w-full flex justify-end">
+              <button
+                type="button"
+                class="text-white max-w-max bg-primary hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none"
+              >
+                Buy Now
+              </button>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -703,8 +870,16 @@
                 <option value="">Sphere</option>
                 <option value="">Granule</option>
                 <option value="">Tube</option>
+                <option value="">Other</option>
               </select>
             </div>
+             <p class="text-sm text-zinc-500 mt-4">If other please specify here</p>
+                <div class="flex gap-x-1 items-center mt-2">
+                  <input
+                    type="text"
+                    class="bg-zinc-50 border rounded-md w-full p-2"
+                  />
+                </div>
           </div>
           <!--  -->
 
@@ -954,8 +1129,16 @@
                 <option value="">Sphere</option>
                 <option value="">Granule</option>
                 <option value="">Tube</option>
+                <option value="">Other</option>
               </select>
             </div>
+             <p class="text-sm text-zinc-500 mt-4">If other please specify here</p>
+                <div class="flex gap-x-1 items-center mt-2">
+                  <input
+                    type="text"
+                    class="bg-zinc-50 border rounded-md w-full p-2"
+                  />
+                </div>
           </div>
           <!--  -->
 
@@ -1207,8 +1390,16 @@
                 <option value="">Sphere</option>
                 <option value="">Granule</option>
                 <option value="">Tube</option>
+                <option value="">Other</option>
               </select>
             </div>
+             <p class="text-sm text-zinc-500 mt-4">If other please specify here</p>
+                <div class="flex gap-x-1 items-center mt-2">
+                  <input
+                    type="text"
+                    class="bg-zinc-50 border rounded-md w-full p-2"
+                  />
+                </div>
           </div>
           <!--  -->
 

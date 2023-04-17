@@ -1,286 +1,403 @@
-<div class="w-full min-h-[100vh] bg-zinc-100">
-  <h1 class="header-text-sm text-center">
-    Select Material By Following Choices
-  </h1>
-  <div class="flex w-full justify-center my-6">
-    <ul class="menu menu-horizontal bg-base-100 rounded-box">
-      <li><a id="properties" class="tab-option active" (click)="navigateTabs($event)">Properties</a></li>
-      <li><a id="process" class="tab-option" (click)="navigateTabs($event)">Process</a></li>
-      <li><a id="productry" class="tab-option" (click)="navigateTabs($event)">Productry Asistance</a></li>
-    </ul>
-  </div>
-  <div class="w-full flex justify-center">
-    <div class="metal-form flex flex-col mb-6" *ngIf="showProperties">
-      <div>
-        <select class="select w-full max-w-xl my-3">
-          <option disabled selected>Select Properties</option>
-          <option>Metals</option>
-          <option>Chemicals</option>
-          <option>Polymers</option>
-          <option>Composites</option>
-          <option>Glass</option>
-          <option>Ceramics</option>
-        </select>
-        <select class="select w-full max-w-xl my-3">
-          <option disabled selected>Select Property Type</option>
-          <option>Ferous</option>
-          <option>Non Ferous</option>
-        </select>
-        <select class="select w-full max-w-xl my-3">
-          <option disabled selected>Select Item</option>
-          <option>Cast Iron</option>
-          <option>Carbon Steel</option>
-          <option>Alloy Steel</option>
-        </select>
-      </div>
-      <p class="text-2xl font-semibold text-zinc-600 mt-6">
-        Physical Properties
-      </p>
-      <div class="overflow-x-auto">
-        <table class="table table-normal w-full p-4">
-          <thead class="text-zinc-700 " style="background-color: rgb(153, 199, 255) !important;">
-            <tr class="">
-              <th></th>
-              <th>Property Name</th>
-              <th>value</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let items of PhysicalProperties">
-              <th>{{ items.id }}</th>
-              <td>{{ items.name }}</td>
-              <td>
-                <div class="flex gap-x-3 items-center">
-                  <input type="number" placeholder="0.01" class="input input-bordered input-md w-[6rem]" />
-                  <input type="number" placeholder="1.5" class="input input-bordered input-md w-[6rem]" />
-                  <div><span>{{items.unit}}</span></div>
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="text-2xl font-semibold text-zinc-600 mt-6">
-        Thermal Properties
-      </p>
-      <div class="overflow-x-auto">
-        <table class="table table-normal w-full p-4">
-          <thead class="text-zinc-400">
-            <tr>
-              <th></th>
-              <th>Property Name</th>
+<h1 class="title-text mb-5">matrial selection</h1>
 
-              <th>value</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let items of thermalProperties">
-              <th>{{ items.id }}</th>
-              <td>{{ items.name }}</td>
-              <td>
-                <div class="form-control">
-                  <label class="input-group">
-                    <input
-                      type="text"
-                      placeholder="0.01"
-                      class="input input-bordered"
-                    />
-                    <span>{{ items.unit }}</span>
-                  </label>
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="text-2xl font-semibold text-zinc-600 mt-6">
-        Electrical Properties
-      </p>
-      <div class="overflow-x-auto">
-        <table class="table table-normal w-full p-4">
-          <thead class="text-zinc-400">
-            <tr>
-              <th></th>
-              <th>Property Name</th>
 
-              <th>value</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let items of electricalProperties">
-              <th>{{ items.id }}</th>
-              <td>{{ items.name }}</td>
-              <td>
-                <div class="form-control">
-                  <label class="input-group">
-                    <input
-                      type="text"
-                      placeholder="0.01"
-                      class="input input-bordered"
-                    />
-                    <span>{{ items.unit }}</span>
-                  </label>
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <!-- The button to open modal -->
-      <label for="my-modal" class="btn btn-primary max-w-max my-6"
-        >find material</label
-      >
 
-      <!-- Put this part before </body> tag -->
-      <input type="checkbox" id="my-modal" class="modal-toggle" />
-      <div class="modal">
-        <div class="modal-box">
-          <h3 class="font-bold text-lg">
-            Based on properties mentioned suggested materials are
-          </h3>
-          <ul class="p-4 list-disc">
-            <li>Titanium</li>
-            <li>Titanium</li>
-            <li>Titanium</li>
-          </ul>
-          <div class="modal-action">
-            <label for="my-modal" class="btn btn-primary max-w-max"
-              >Close</label
-            >
-          </div>
-        </div>
-      </div>
+<!-- forms -->
+<div class="w-full bg-white p-5 rounded-xl ">
+  <p class="font-semibold">Project Specitication</p>
+  <div class="grid grid-cols-3 gap-x-4 mt-5">
+
+    <div class="">
+      <label for="" class=" text-sm text-zinc-400 ">Project Select</label><br>
+      <select class="select select-bordered w-full">
+        <option disabled selected>Select Your Project</option>
+        <option>Helmet</option>
+        <option>Condenser</option>
+      </select>
     </div>
-    <div class="metal-form flex flex-col mb-6" *ngIf="showProcess">
-      <div>
-        <select class="select w-full max-w-xl my-3">
-          <option disabled selected>Select Process</option>
-          <option>Casting</option>
-          <option>Sheet Metal Operation</option>
-          <option>Rapid Prototyping</option>
-          <option>Modling</option>
-          <option>Power Coating</option>
-        </select>
-        <select class="select w-full max-w-xl my-3">
-          <option disabled selected>Select Property Type</option>
-          <option>Compression</option>
-          <option>Rotation</option>
-          <option>Injection</option>
-          <option>RTM</option>
-          <option>Blow</option>
-        </select>
-        <select class="select w-full max-w-xl my-3">
-          <option disabled selected>Select Factor</option>
-          <option>Size range</option>
-          <option>Tolerance</option>
-          <option>Roughness</option>
-          <option>Batch</option>
-        </select>
-      </div>
-      <!-- The button to open modal -->
-      <label for="my-modal" class="btn btn-primary max-w-max my-6"
-        >find material</label
-      >
-
-      <!-- Put this part before </body> tag -->
-      <input type="checkbox" id="my-modal" class="modal-toggle" />
-      <div class="modal">
-        <div class="modal-box">
-          <h3 class="font-bold text-lg">
-            Based on properties mentioned suggested materials are
-          </h3>
-          <ul class="p-4 list-disc">
-            <li>Titanium</li>
-            <li>Titanium</li>
-            <li>Titanium</li>
-          </ul>
-          <div class="modal-action">
-            <label for="my-modal" class="btn btn-primary max-w-max"
-              >Close</label
-            >
-          </div>
-        </div>
-      </div>
+    <div class="">
+      <label for="" class=" text-sm text-zinc-400 ">Select Project Sub part</label><br>
+      <select class="select select-bordered w-full">
+        <option disabled selected>Select sub Parts</option>
+        <option *ngFor="let items of parts">{{items}}</option>
+      </select>
     </div>
-    <div class="metal-form flex flex-col mb-6" *ngIf="showAssistance">
-      <p class="header-text-sm text-center">
-        Let Us Know What You Want To Build
-      </p>
-      <div>
-        <div class="form-control">
-          <label class="label">
-            <span class="label-text">Description For Products or Process</span>
-          </label>
-          <textarea
-            class="textarea textarea-bordered textarea-xs"
-            placeholder="Add your requirements here..."
-          ></textarea>
-        </div>
-        <div class="form-control">
-          <label class="label">
-            <span class="label-text">Deep Dive into the Details</span>
-          </label>
-          <textarea
-            class="textarea textarea-bordered textarea-xs"
-            placeholder="Add your information here..."
-          ></textarea>
-        </div>
-        <div class="form-control">
-          <label class="label">
-            <span class="label-text">Aesthetics Requirements</span>
-          </label>
-          <textarea
-            class="textarea textarea-bordered textarea-xs"
-            placeholder="Add your Aesthetics requirements here..."
-          ></textarea>
-        </div>
-        <div class="form-control">
-          <label class="label">
-            <span class="label-text">Enviornmental Conditions</span>
-          </label>
-          <textarea
-            class="textarea textarea-bordered textarea-xs"
-            placeholder="Add your >Enviornmental Conditions here..."
-          ></textarea>
-        </div>
-        <div class="form-control">
-          <label class="label">
-            <span class="label-text">Strengths</span>
-          </label>
-          <textarea
-            class="textarea textarea-bordered textarea-xs"
-            placeholder="Add your Strengths conditions here..."
-          ></textarea>
-        </div>
-        <div class="form-control">
-          <label class="label">
-            <span class="label-text">Ergonomics</span>
-          </label>
-          <textarea
-            class="textarea textarea-bordered textarea-xs"
-            placeholder="Add your Ergonomics conditions here..."
-          ></textarea>
-        </div>
-        <div class="form-control">
-          <label class="label">
-            <span class="label-text">Servisability</span>
-          </label>
-          <textarea
-            class="textarea textarea-bordered textarea-xs"
-            placeholder="Add your Servisability conditions here..."
-          ></textarea>
-        </div>
-        <div class="form-control">
-          <label class="label">
-            <span class="label-text">Cost</span>
-          </label>
-          <textarea
-            class="textarea textarea-bordered textarea-xs"
-            placeholder="Add your cost conditions here..."
-          ></textarea>
-        </div>
-        <button class="btn btn-primary my-6">submit</button>
-      </div>
+    <div class="">
+      <label for="" class=" text-sm text-zinc-400 ">Select Category</label><br>
+      <select class="select select-bordered w-full">
+        <option disabled selected>Select matrial Category</option>
+        <option *ngFor="let items of MatrialCatagory">{{items}}</option>
+      </select>
     </div>
   </div>
+
+</div>
+
+
+<div class="mt-10 w-[80%] mx-auto">
+  <div class="flex ">
+    <div class="tabs switch-tabs">
+      <a id="properties" (click)="showForm($event)" class="tab  tab-lifted tab-active">Matrial by Properties</a>
+      <a id="process" (click)="showForm($event)" class="tab  tab-lifted ">By Process</a>
+      <a id="assistence" (click)="showForm($event)" class="tab  tab-lifted">Productry Assistence</a>
+    </div>
+  </div>
+  <!-- main -->
+  <div class="w-full bg-white p-5 rounded-xl rounded-tl-none">
+    <!-- matrial by properties -->
+    <div *ngIf="showMatrialByProperty">
+
+      <div >
+        <p class="mb-3 font-semibold">Physical Propertie</p>
+        <table  class="items-center w-full border-collapse text-blueGray-700  ">
+          <thead class="thead-light ">
+            <tr>
+              <th
+                class="px-6 bg-blueGray-50 w-[60%] text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+                Property Name
+              </th>
+              <th
+                class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+                Range
+              </th>
+              <th
+                class="px-6 bg-blueGray-50 text-blueGray-700 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left min-w-140-px">
+                Unit</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let items of parameterForMatrialByProperty.PhysicalProperties">
+              <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
+              {{items.name}}
+              </td>
+              <td>
+                <div class="flex items-center gap-x-2 my-2">
+                  <input type="text" class="bg-slate-100 w-[3rem] h-[3rem] rounded-md p-2">
+                  <i class="fa-solid fa-minus"></i>
+                  <input type="text" class="bg-slate-100 w-[3rem] h-[3rem] rounded-md p-2">
+                </div>
+              </td>
+              <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
+                {{items.units}}
+                </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!--  -->
+      <hr class="my-5">
+      <!--  -->
+      <div >
+        <p class="mb-3 font-semibold">Mechanical Properties</p>
+        <table class="items-center w-full border-collapse text-blueGray-700  ">
+          <thead class="thead-light ">
+            <tr>
+              <th
+                class="px-6 bg-blueGray-50 w-[60%] text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+                Property Name
+              </th>
+              <th
+                class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+                Range
+              </th>
+              <th
+                class="px-6 bg-blueGray-50 text-blueGray-700 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left min-w-140-px">
+                Unit</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let items of parameterForMatrialByProperty.MechanicalProperties">
+              <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
+              {{items.name}}
+              </td>
+              <td>
+                <div class="flex items-center gap-x-2 my-2">
+                  <input type="text" class="bg-slate-100 w-[3rem] h-[3rem] rounded-md p-2">
+                  <i class="fa-solid fa-minus"></i>
+                  <input type="text" class="bg-slate-100 w-[3rem] h-[3rem] rounded-md p-2">
+                </div>
+              </td>
+              <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
+                {{items.units}}
+                </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+ <!--  -->
+ <hr class="my-5">
+ <!--  -->
+ <div >
+   <p class="mb-3 font-semibold">Electrical Properties</p>
+   <table class="items-center w-full border-collapse text-blueGray-700  ">
+     <thead class="thead-light ">
+       <tr>
+         <th
+           class="px-6 bg-blueGray-50 w-[60%] text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+           Property Name
+         </th>
+         <th
+           class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+           Range
+         </th>
+         <th
+           class="px-6 bg-blueGray-50 text-blueGray-700 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left min-w-140-px">
+           Unit</th>
+       </tr>
+     </thead>
+     <tbody>
+       <tr *ngFor="let items of parameterForMatrialByProperty.ElectricalProperties">
+         <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
+         {{items.name}}
+         </td>
+         <td>
+           <div class="flex items-center gap-x-2 my-2">
+             <input type="text" class="bg-slate-100 w-[3rem] h-[3rem] rounded-md p-2">
+             <i class="fa-solid fa-minus"></i>
+             <input type="text" class="bg-slate-100 w-[3rem] h-[3rem] rounded-md p-2">
+           </div>
+         </td>
+         <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
+           {{items.unit}}
+           </td>
+       </tr>
+     </tbody>
+   </table>
+ </div>
+  <!--  -->
+  <hr class="my-5">
+  <!--  -->
+  <div >
+    <p class="mb-3 font-semibold">Thermal Properties</p>
+    <table class="items-center w-full border-collapse text-blueGray-700  ">
+      <thead class="thead-light ">
+        <tr>
+          <th
+            class="px-6 bg-blueGray-50 w-[60%] text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+            Property Name
+          </th>
+          <th
+            class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+            Range
+          </th>
+          <th
+            class="px-6 bg-blueGray-50 text-blueGray-700 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left min-w-140-px">
+            Unit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let items of parameterForMatrialByProperty.ThermalProperties">
+          <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
+          {{items.name}}
+          </td>
+          <td>
+            <div class="flex items-center gap-x-2 my-2">
+              <input type="text" class="bg-slate-100 w-[3rem] h-[3rem] rounded-md p-2">
+              <i class="fa-solid fa-minus"></i>
+              <input type="text" class="bg-slate-100 w-[3rem] h-[3rem] rounded-md p-2">
+            </div>
+          </td>
+          <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
+            {{items.unit}}
+            </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+    <!--  -->
+    <hr class="my-5">
+    <!--  -->
+    <div >
+      <p class="mb-3 font-semibold">Optical Properties</p>
+      <table class="items-center w-full border-collapse text-blueGray-700  ">
+        <thead class="thead-light ">
+          <tr>
+            <th
+              class="px-6 bg-blueGray-50 w-[60%] text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+              Property Name
+            </th>
+            <th
+              class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+              Range
+            </th>
+            <th
+              class="px-6 bg-blueGray-50 text-blueGray-700 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left min-w-140-px">
+              Unit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let items of parameterForMatrialByProperty.OpticalProperties">
+            <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
+            {{items.name}}
+            </td>
+            <td>
+              <div class="flex items-center gap-x-2 my-2">
+                <input type="text" class="bg-slate-100 w-[3rem] h-[3rem] rounded-md p-2">
+                <i class="fa-solid fa-minus"></i>
+                <input type="text" class="bg-slate-100 w-[3rem] h-[3rem] rounded-md p-2">
+              </div>
+            </td>
+            <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
+              {{items.unit}}
+              </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--  -->
+    <hr class="my-5">
+    <!--  -->
+    <div >
+      <p class="mb-3 font-semibold">Processing Properties</p>
+      <table class="items-center w-full border-collapse text-blueGray-700  ">
+        <thead class="thead-light ">
+          <tr>
+            <th
+              class="px-6 bg-blueGray-50 w-[60%] text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+              Property Name
+            </th>
+            <th
+              class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+              Range
+            </th>
+            <th
+              class="px-6 bg-blueGray-50 text-blueGray-700 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left min-w-140-px">
+              Unit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let items of parameterForMatrialByProperty.ProcessingProperties">
+            <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
+            {{items.name}}
+            </td>
+            <td>
+              <div class="flex items-center gap-x-2 my-2">
+                <input type="text" class="bg-slate-100 w-[3rem] h-[3rem] rounded-md p-2">
+                <i class="fa-solid fa-minus"></i>
+                <input type="text" class="bg-slate-100 w-[3rem] h-[3rem] rounded-md p-2">
+              </div>
+            </td>
+            <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
+              {{items.unit}}
+              </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+
+
+
+    </div>
+    <!-- matrial by properties -->
+    <!-- By Process -->
+    <div *ngIf="showByProcess">
+      <h3>By Process</h3>
+    </div>
+    <!-- By Process -->
+    <!-- Productry Assistence -->
+    <div *ngIf="showProductryAssistence">
+
+      <table  class="items-center w-full border-collapse text-blueGray-700  ">
+        <thead class="thead-light ">
+          <tr>
+            <th
+              class="px-6 bg-blueGray-50  text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+              Define Service Requirements
+            </th>
+            <th
+              class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+              Details
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let items of parameterForProductryAssistence.DefineServiceRequirements">
+            <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
+            {{items}}
+            </td>
+            <td>
+              <div class="my-2">
+                <input type="text" placeholder="please fill {{items}}" class="input input-bordered w-full " />
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+ <!--  -->
+ <hr class="my-5">
+ <!--  -->
+ <table  class="items-center w-full border-collapse text-blueGray-700  ">
+  <thead class="thead-light ">
+    <tr>
+      <th
+        class="px-6 bg-blueGray-50  text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+        Manufacturing Requirement
+      </th>
+      <th
+        class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+        Details
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let items of parameterForProductryAssistence.ManufacturingRequirement">
+      <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
+      {{items}}
+      </td>
+      <td>
+        <div class="my-2">
+          <input type="text" placeholder="please fill {{items}}" class="input input-bordered w-full " />
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<!--  -->
+<hr class="my-5">
+<!--  -->
+<table  class="items-center w-full border-collapse text-blueGray-700  ">
+  <thead class="thead-light ">
+    <tr>
+      <th
+        class="px-6 bg-blueGray-50  text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+        Material Property Requirement
+      </th>
+      <th
+        class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+        Details
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let items of parameterForProductryAssistence.MaterialPropertyRequirement">
+      <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
+      {{items}}
+      </td>
+      <td>
+        <div class="my-2">
+          <input type="text" placeholder="please fill {{items}}" class="input input-bordered w-full " />
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+    <!-- Productry Assistence -->
+
+
+
+
+
+
+<div class="flex justify-end">
+  <button class="mt-16 btn btn-primary px-5 ">submit</button>
+</div>
+  </div>
+
+
+
+
+  <!-- main -->
 </div>

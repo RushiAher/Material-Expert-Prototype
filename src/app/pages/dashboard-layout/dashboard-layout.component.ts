@@ -38,7 +38,7 @@ export class DashboardLayoutComponent {
         id: '1',
         icon: 'bi bi-house-door-fill',
         name: 'home',
-        url: '',
+        url: '/',
         hasSubmenu: 'false',
       },
       {
@@ -112,8 +112,9 @@ export class DashboardLayoutComponent {
         id: '4',
         icon: 'bi bi-chat-left-dots-fill',
         name: 'Community chat',
-        url: '#',
-        hasSubmenu: 'true',
+        url: '',
+        externalUrl:'http://surl.li/gkskn',
+        hasSubmenu: 'false',
         submenuItems: [
           {
             name: 'metals',

@@ -11,25 +11,31 @@ export class DashboardionComponent {
   projectData=[
     {
       id:'1',
-      name:'Helmet',
-      date:'25 jan 2023',
+      name:'UV Exposure Helmet',
+      date:'10 feb 2023',
+      projectSector:'Automotive',
+      ProjectOrganizationType:'Manufacturing Industry',
+      ProjectPhase:'Speciality Product',
+      projectAreaPincode:'412207',
       summary:`Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-  molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-  numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-  optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis`,
-  img:"../../../../assets/asserts/project assets/helmet.png"
+  molestiae quas vel sint commodi repudiandae consequuntur voluptatum `,
+       img:"../../../../assets/asserts/project assets/helmet.png",
+       Parts:['Shell','liners','padding','visor','buckle','fastener','adjuster'],
     },
     {
       id:'2',
-      name:'Condenser',
-      date:'15 feb 2023',
+      name:'Indirect HT Al Fin Condenser',
+      date:'10 feb 2023',
+      projectSector:'Automotive',
+      ProjectOrganizationType:'Product Development Lab',
+      ProjectPhase:'Minimum Viable Product',
+      projectAreaPincode:'412207',
       summary:`Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-  molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-  numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-  optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis`,
-       img:"../../../../assets/asserts/project assets/condenser.png"
+  molestiae quas vel sint commodi repudiandae consequuntur voluptatum `,
+       img:"../../../../assets/asserts/project assets/condenser.png",
+       Parts:['Condenser Tubes','Fins','Castings/Shells','Bracket/Frame','Gaskets/Seals','Working Fluid'],
     },
-    
+
   ]
 
 

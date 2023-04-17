@@ -32,23 +32,52 @@
         <p class="text-xs text-zinc-500">Project Name</p>
         <p class="text-md font-semibold">{{items.name}}</p>
       </div>
-      <a href="#"
-        class="inline-flex items-center px-2.5  text-sm font-medium text-center btn btn-primary btn-sm">
+      <a href="#" class="inline-flex items-center px-2.5  text-sm font-medium text-center btn btn-primary btn-sm">
         <p>view</p>
         <p><i class="ms-2 fa-solid fa-arrow-right"></i></p>
       </a>
     </div>
+    <div class="p-5 pt-0">
+      <table class="border-separate border-spacing-y-2">
+        <tbody class="text-xs ">
+          <tr>
+            <td>
+              <p class="text-zinc-500">Product Sectore : </p>
+            </td>
+            <td><span class="text-blue-500">{{items.projectSector}}</span></td>
+          </tr>
+          <tr>
+            <td>
+              <p class="text-zinc-500">Project Organization Type :</p>
+            </td>
+            <td><span class="text-blue-500">{{items.ProjectOrganizationType}}</span></td>
+          </tr>
+          <tr>
+            <td>
+              <p class="text-zinc-500">Project Area Pincode :</p>
+            </td>
+            <td><span class="text-blue-500">{{items.projectAreaPincode}}</span></td>
+          </tr>
+          <tr>
+            <td>
+              <p class="text-zinc-500">Project Phase :</p>
+            </td>
+            <td><span class="text-blue-500">{{items.ProjectPhase}}</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
     <div class="px-5">
-      <p class=" text-blue-500">Summary</p>
+      <p class="  text-sm">Summary</p>
       <p class="text-xs text-justify mt-2 text-zinc-500 whitespace-normal tracking-tight">
         {{items.summary}}
       </p>
     </div>
     <div class="p-5">
       <div class="flex flex-wrap min-h-max gap-2">
-        <span class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm">Metal</span>
-        <span class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm">Fabric</span>
-        <span class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm">Plastic</span>
+        <span class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm" *ngFor="let item of items.Parts">{{item}}</span>
       </div>
       <p class="text-sm mt-5">{{items.date}}</p>
     </div>

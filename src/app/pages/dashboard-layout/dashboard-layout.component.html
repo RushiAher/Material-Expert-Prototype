@@ -8,6 +8,8 @@
       <ul class="flex items-start gap-y-5 flex-col text-cyan-50 p-3">
         <li *ngFor="let items of menuData" class="w-full">
           <ng-container *ngIf="items.hasSubmenu == 'false'; else hasSubmenu">
+
+          <ng-container *ngIf="items.url != '';else externalURL">
             <a routerLink="{{ items.url }}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
               class="item-link btn p-0 w-full flex justify-start">
               <div class="flex items-center">
@@ -22,6 +24,25 @@
                 </div>
               </div>
             </a>
+          </ng-container>
+
+            <ng-template #externalURL>
+              <a href="{{ items.externalUrl }}" target="_blank"
+              class="item-link btn p-0 w-full flex justify-start">
+              <div class="flex items-center">
+                <div
+                  class="menu-item-icon w-[3rem] h-[3rem] bg-white text-blue-700 flex justify-center items-center rounded-md">
+                  <i class="{{ items.icon }} text-lg"></i>
+                </div>
+                <div class="menu-item-name ms-2 whitespace-nowrap capitalize text-sm font-light">
+                  <!-- <a routerLink="{{ items.url }}"> -->
+                  {{ items.name }}
+                  <!-- </a> -->
+                </div>
+              </div>
+            </a>
+            </ng-template>
+
           </ng-container>
           <ng-template #hasSubmenu>
             <a id="dropdown-submenu-{{items.id}}" (click)="showsubmen(items.id)"

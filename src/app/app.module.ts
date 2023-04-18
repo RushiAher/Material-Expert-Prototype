@@ -17,6 +17,7 @@ import { VendorProfileComponent } from './components/vendor/vendor-profile/vendo
 import { OrdersComponent } from './components/vendor/orders/orders.component';
 import { AddProductComponent } from './components/vendor/add-product/add-product.component';
 import { ProductListComponent } from './components/vendor/product-list/product-list.component';
+import { AnalyticsComponent } from './components/user/analytics/analytics.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { ProductListComponent } from './components/vendor/product-list/product-l
     VendorProfileComponent,
     OrdersComponent,
     AddProductComponent,
-    ProductListComponent
+    ProductListComponent,
+    AnalyticsComponent
   ],
   imports: [
     BrowserModule,

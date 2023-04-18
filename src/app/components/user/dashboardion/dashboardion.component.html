@@ -1,11 +1,11 @@
 <div class="mb-8 flex items-center gap-x-4">
   <button class="btn bg-white hover:bg-blue-50 border-0 flex p-2 px-5" routerLink="/materials-selection">
     <p><i class="fa-solid fa-circle-check text-blue-500"></i></p>
-    <p class="text-black font-medium capitalize ms-2">Matrial Selection</p>
+    <p class="text-black font-medium capitalize ms-2">Material Selection</p>
   </button>
   <button class="btn bg-white hover:bg-blue-50 border-0 flex p-2 px-5" routerLink="/materials-procurement">
     <p><i class="fa-solid fa-bag-shopping text-blue-500"></i></p>
-    <p class="text-black font-medium capitalize ms-2">Matrial Procurement</p>
+    <p class="text-black font-medium capitalize ms-2">Material Procurement</p>
   </button>
   <button class="btn bg-white hover:bg-blue-50 border-0 flex p-2 px-5">
     <p><i class="fa-solid fa-lightbulb text-blue-500"></i></p>
@@ -23,7 +23,7 @@
 
 
 <div class="flex gap-4">
-  <div class="w-[20rem] bg-white border border-gray-200 rounded-2xl " *ngFor="let items of projectData">
+  <div class="w-[27rem] bg-white border border-gray-200 rounded-2xl " *ngFor="let items of projectData">
     <div class="p-5 flex items-center justify-center">
       <img class="rounded-t-lg w-[8rem] h-[8rem] cover-fill" src="{{items.img}}" alt="" />
     </div>
@@ -82,27 +82,12 @@
       <p class="text-sm mt-5">{{items.date}}</p>
     </div>
   </div>
-  <div class=" w-[20rem]  rounded-xl">
+  <div class=" w-[27rem]  rounded-xl">
     <label class="btn bg-white hover:bg-blue-50 border-0 w-full h-full" for="my-modal">
       <i class="text-secondary bi bi-plus-circle-dotted text-5xl"></i>
     </label>
   </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <!-- modal -->

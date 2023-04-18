@@ -69,7 +69,7 @@ export class DashboardLayoutComponent {
             url: '#',
           },
           {
-            name: 'natural mmatrial',
+            name: 'natural material',
             url: '#',
           },
         ]
@@ -102,7 +102,7 @@ export class DashboardLayoutComponent {
             url: '#',
           },
           {
-            name: 'natural mmatrial',
+            name: 'natural material',
             url: '#',
           },
         ]
@@ -137,7 +137,7 @@ export class DashboardLayoutComponent {
             url: '#',
           },
           {
-            name: 'natural mmatrial',
+            name: 'natural material',
             url: '#',
           },
         ]
@@ -218,23 +218,23 @@ export class DashboardLayoutComponent {
       //   hasSubmenu: 'false',
       // },
    {
-      id:'8',
+      id:'5',
       icon:'fa-solid fa-chart-pie',
       name:'project analytics',
-      url:'#',
+      url:'project-analytics',
       hasSubmenu: 'false',
 
       },
 
     {
-      id:'9',
+      id:'6',
       icon:'bi bi-gear-fill',
       name:'Settings',
       url:'settings',
       hasSubmenu:'false',
       },
       {
-        id: '10',
+        id: '7',
         icon: 'bi bi-question-circle-fill',
         name: 'Help & support',
         url: '#',

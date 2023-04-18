@@ -39,18 +39,22 @@
         <th>capacity range</th>
         <th>technical data sheet</th>
         <th>material company</th>
-        <th>status</th>
+        <th class="text-center">status</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th>1</th>
-        <td>lithum</td>
-        <td>Quality Control Specialist</td>
-        <td>Littel, Schaden and Vandervort</td>
-        <td>Canada</td>
-        <td>12/16/2020</td>
-        <td>Blue</td>
+      <tr *ngFor="let items of productListData,let i = index">
+        <th>{{i+1}}</th>
+        <td>{{items.name}}</td>
+        <td>{{items.specifications}}</td>
+        <td>{{items.capacity}}</td>
+        <td>{{items.dataSheet}}</td>
+        <td>{{items.company}}</td>
+        <td class='flex justify-center'>
+          <div class="badge  "[ngClass]="{'badge-success  text-green-100':items.status == 'active','badge-error text-red-100':items.status == 'inactive'}">
+           <p class="text-xs capitalize">  {{items.status}}</p>
+          </div>
+        </td>
       </tr>
     </tbody>
   </table>

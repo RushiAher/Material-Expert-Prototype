@@ -293,7 +293,23 @@
     <!-- matrial by properties -->
     <!-- By Process -->
     <div *ngIf="showByProcess">
-      <h3>By Process</h3>
+    <div class="mt-5">
+      <div>
+        <label for="">Select Manufacturing Process</label><br />
+        <select class="select select-bordered w-full max-w-xs">
+          <option disabled selected>Select the Process</option>
+          <option *ngFor="let items of parameterForByProcess.ManufacturingProcess">{{items}}</option>
+
+        </select>
+      </div>
+      <div class="mt-3">
+        <label for="">Select Process type</label><br />
+        <select class="select select-bordered w-full max-w-xs">
+          <option disabled selected>Select the type</option>
+          <option *ngFor="let items of parameterForByProcess.ProcessType">{{items}}</option>
+        </select>
+      </div>
+    </div>
     </div>
     <!-- By Process -->
     <!-- Productry Assistence -->

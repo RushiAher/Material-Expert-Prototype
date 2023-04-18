@@ -1,4 +1,102 @@
-fkdjcjb
-<div id="chart">
+<div class="flex justify-between">
+  <div>
+    <h1 class='title-text'>Dashboard</h1>
+  </div>
+  <div class="flex gap-x-3">
+    <button class="btn btn-sm font-medium bg-white hover:bg-blue-50 text-blue-500 border-0">Yearly</button>
+    <button class="btn btn-sm font-medium bg-white hover:bg-blue-50 text-blue-500 border-0">Monthly</button>
+    <button class="btn btn-sm font-medium bg-white hover:bg-blue-50 text-blue-500 border-0">Weekly</button>
+    <button class="btn btn-sm font-medium bg-white hover:bg-blue-50 text-blue-500 border-0">Daily</button>
+    <button class="btn btn-sm font-medium bg-white hover:bg-blue-50 text-blue-500 border-0 flex items-center gap-x-2"><i class="fa-solid fa-calendar-days"></i> Custome Date</button>
+  </div>
+</div>
+
+<div class="dashboard mt-10">
+
+<div class="grid grid-cols-3 gap-5">
+
+<div class="col-span-1 bg-white p-5 rounded-xl">
+  <div class="flex items-center justify-between">
+    <h1 class="text-5xl">65.6K</h1>
+    <i class="fa-solid fa-ellipsis-vertical"></i>
+  </div>
+  <div id="revennuGraph"></div>
+</div>
+
+<div class="col-span-2  bg-white p-5 rounded-xl">
+  <div class="flex items-center justify-between">
+    <h1 class="text-xl font-semibold">Total Revenue</h1>
+    <i class="fa-solid fa-ellipsis-vertical"></i>
+  </div>
+  <div id="revenual-barchart"></div>
+</div>
+
+
+<div class="col-span-2  bg-white p-5 rounded-xl donut-chart">
+  <div class="flex items-center justify-between">
+    <h1 class="text-xl font-semibold">Sales</h1>
+    <i class="fa-solid fa-ellipsis-vertical"></i>
+  </div>
+  <div id="sales"></div>
+</div>
+
+<div class="col-span-1  bg-white p-5 rounded-xl donut-chart">
+  <div class="flex items-center justify-between">
+    <h1 class="text-xl font-semibold">Total Sales</h1>
+    <i class="fa-solid fa-ellipsis-vertical"></i>
+  </div>
+  <div id="Total-sales"></div>
+</div>
+
+<div class="col-span-1  bg-white p-5 rounded-xl donut-chart">
+  <div class="flex items-center justify-between">
+    <h1 class="text-xl font-semibold">Top selling Products</h1>
+    <i class="fa-solid fa-ellipsis-vertical"></i>
+  </div>
+  <div id="top-product"></div>
+</div>
+
+<div class="col-span-2 bg-white p-5 rounded-xl">
+  <div class="overflow-x-auto">
+    <table class="table table-compact w-full">
+      <thead class="text-center">
+        <tr>
+          <th></th>
+          <th>Material Name</th>
+          <th>min QTY</th>
+          <th>Price</th>
+          <th>Total qty sales</th>
+          <th>Total Revenu</th>
+          <th>Growth</th>
+        </tr>
+      </thead>
+      <tbody class="text-center">
+        <tr *ngFor="let items of tableData;let i=index">
+          <th>{{i}}</th>
+          <td class="capitalize text-start">{{items.name}}</td>
+          <td>{{items.minQTY}}</td>
+          <td>{{items.price}}</td>
+          <td>{{items.totalQtySale}}</td>
+          <td>{{items.totalRevenu}}</td>
+          <td>
+            <ng-container *ngIf="items.Growth > 20,else downGrowth">
+              <span class="text-green-500"><i class="fa-solid fa-arrow-up-long me-3"></i>{{items.Growth}}%</span>
+            </ng-container>
+            <ng-template #downGrowth>
+              <span class="text-red-500"><i class="fa-solid fa-arrow-down-long me-3"></i>{{items.Growth}}%</span>
+            </ng-template>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
 
 </div>
+
+
+
+</div>
+

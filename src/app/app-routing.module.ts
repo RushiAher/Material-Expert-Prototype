@@ -13,6 +13,10 @@ import { MatrialProcurementComponent } from './components/user/matrial-procureme
 import { AnalyticsComponent } from './components/user/analytics/analytics.component';
 import { OrdersComponent } from './components/vendor/orders/orders.component';
 import { ProductListComponent } from './components/vendor/product-list/product-list.component';
+import { VendorMatrialRequestComponent } from './components/user/vendor-matrial-request/vendor-matrial-request.component';
+import { PaymentComponent } from './components/user/payment/payment.component';
+import { CheckOutComponent } from './components/user/check-out/check-out.component';
+import { TrackOrderComponent } from './components/user/track-order/track-order.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -25,6 +29,11 @@ const routes: Routes = [
       {path:'materials-selection', component:MatrialSelectionComponent},
       {path:'materials-procurement', component:MatrialProcurementComponent},
       {path:'project-analytics', component:AnalyticsComponent},
+      {path:'quotation', component:VendorMatrialRequestComponent},
+      {path:'checkout', component:CheckOutComponent},
+      {path:'payment', component:PaymentComponent},
+      {path:'track-order', component:TrackOrderComponent},
+      
 
       // ******* vendor ******
       // route url if there is a vendor use vendor at first like vendor/dashboard

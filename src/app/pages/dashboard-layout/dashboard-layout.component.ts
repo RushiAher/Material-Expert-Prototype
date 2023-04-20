@@ -13,10 +13,10 @@ export class DashboardLayoutComponent {
 
   menuData:any = []
 
-  userType:any = 'user';
+  userType:any 
 
   constructor(private router:Router) {
-
+    this.userType 
   }
 
   ngOnInit():void {

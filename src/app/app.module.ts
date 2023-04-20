@@ -18,6 +18,10 @@ import { OrdersComponent } from './components/vendor/orders/orders.component';
 import { AddProductComponent } from './components/vendor/add-product/add-product.component';
 import { ProductListComponent } from './components/vendor/product-list/product-list.component';
 import { AnalyticsComponent } from './components/user/analytics/analytics.component';
+import { VendorMatrialRequestComponent } from './components/user/vendor-matrial-request/vendor-matrial-request.component';
+import { CheckOutComponent } from './components/user/check-out/check-out.component';
+import { PaymentComponent } from './components/user/payment/payment.component';
+import { TrackOrderComponent } from './components/user/track-order/track-order.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +40,11 @@ import { AnalyticsComponent } from './components/user/analytics/analytics.compon
     OrdersComponent,
     AddProductComponent,
     ProductListComponent,
-    AnalyticsComponent
+    AnalyticsComponent,
+    VendorMatrialRequestComponent,
+    CheckOutComponent,
+    PaymentComponent,
+    TrackOrderComponent
   ],
   imports: [
     BrowserModule,

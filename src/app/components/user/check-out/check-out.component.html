@@ -1,0 +1,63 @@
+
+    <div class="w-3/5 mx-auto bg-white p-5 rounded-xl">
+        <h1 class="title-text">Order Summary</h1>
+
+        <div class="overflow-x-auto mt-10">
+            <table class="table table-compact w-full">
+              <thead>
+                <tr>
+                  <th></th> 
+                  <th>Matrial Name</th> 
+                  <th>Code</th> 
+                  <th>Product QTY</th> 
+                  <th>Quantity</th> 
+                  <th>Matrial Requirement</th> 
+                  <th>Cost</th>
+                  <th></th>
+                </tr>
+              </thead> 
+              <tbody>
+                <tr *ngFor="let items of orderSummary">
+                    <th>{{items.id}}</th>
+                    <td>{{items.name}}</td>
+                    <td>{{items.code}}</td>
+                    <td>{{items.minQTY}}</td>
+                    <td>{{items.qty}}</td>
+                    <td><div class="flex flex-wrap text-xs text-zinc-500" *ngFor="let item of items.requirement">
+                        <span>{{item}}</span>
+                    </div></td>
+                    <td>₹ {{items.cost}}/-</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
+          <div class="mt-5">
+              <p class="font-semibold">Vendor Info</p>
+              <div class="flex border mt-3 p-3 rounded-xl gap-x-4" *ngFor="let items of vendorData">
+                <div>
+                <div class="w-[15rem] h-[10rem] relative">
+                    <span *ngIf="items.verifiedState" class="text-xs rounded-full bg-blue-100 text-blue-500 pe-1 ps-2 absolute top-2 left-2">Verified <i class="bi bi-patch-check-fill"></i></span>
+                    <img class="img-cover rounded-lg" src="{{items.vendorProfile ?? '../../../../assets/asserts/vendorProfile.png'}}" alt="">
+                </div></div>
+                <div class="w-full flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between w-full">
+                            <p class="text-zinc-500 text-sm">Vendor Name : <span class="font-semibold text-primary">{{items.vendorName}}</span></p>
+                            <p class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-xs"><i class="fa-solid fa-star"></i> {{items.rating}}/5</p>
+                        </div>
+                        <p class="text-zinc-500 text-sm">Delivery in : <span>{{items.deliveryDay}} Days</span></p>
+                        <p class="text-zinc-500 text-sm">Quality Certificate: <span class="uppercase">{{items.quality}}</span></p>
+                    </div>
+                    <div>
+                        <p class="font-semibold">Cost : <span>₹ {{items.cost}}/-</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex justify-end mt-5">
+            <button class="btn btn-primary" routerLink="/payment">Proceed to Pay</button>
+        </div>
+
+    </div>

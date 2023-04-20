@@ -1,0 +1,67 @@
+<!-- Snippet -->
+<section class="antialiased bg-gray-100 text-gray-600 w-2/5 p-4 mx-auto">
+    <div class="h-full">
+        <!-- Pay component -->
+        <div>
+            <!-- Card background -->
+            <div class="relative w-full h-[15rem]">
+                <img class="rounded-t img-cover" src="https://images.unsplash.com/photo-1527314392553-2c7bded21b23?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" alt="Pay background" />
+            </div>
+            <!-- Card body -->
+            <div class="relative w-full" x-data="{ card: true }">
+                <div class="bg-white px-8 pb-6 rounded-b">
+
+                    <!-- Card header -->
+                    <div class="text-center mb-6">
+                        <div class="mb-2">
+                            <img class="-mt-8 inline-flex rounded-full" src="../../../../assets/asserts/logoColor.png" width="64" height="64" alt="User" />
+                        </div>
+                        <h1 class="text-xl leading-snug text-gray-800 font-semibold mb-2">ProducTRY</h1>
+                        <div class="text-sm">
+                       Empowering the world hidden Innvators
+                        </div>
+                    </div>
+                    <!-- Card form -->
+                    <div class="w-full">
+                        <div class="space-y-4">
+                            <!-- Card Number -->
+                            <div>
+                                <label class="block text-sm font-medium mb-1" for="card-nr">Card Number <span class="text-red-500">*</span></label>
+                                <input id="card-nr" class="input w-full input-bordered" type="text" placeholder="1234 1234 1234 1234" />
+                            </div>
+                            <!-- Expiry and CVC -->
+                            <div class="flex space-x-4">
+                                <div class="flex-1">
+                                    <label class="block text-sm font-medium mb-1" for="card-expiry">Expiry Date <span class="text-red-500">*</span></label>
+                                    <input id="card-expiry" class="input w-full input-bordered" type="text" placeholder="MM/YY" />
+                                </div>
+                                <div class="flex-1">
+                                    <label class="block text-sm font-medium mb-1" for="card-cvc">CVC <span class="text-red-500">*</span></label>
+                                    <input id="card-cvc" class="input w-full input-bordered" type="text" placeholder="CVC" />
+                                </div>
+                            </div>
+                            <!-- Name on Card -->
+                            <div>
+                                <label class="block text-sm font-medium mb-1" for="card-name">Name on Card <span class="text-red-500">*</span></label>
+                                <input id="card-name" class="input w-full input-bordered" type="text" placeholder="John Doe" />
+                            </div>
+                            <!-- Email -->
+                            <div>
+                                <label class="block text-sm font-medium mb-1" for="card-email">Email <span class="text-red-500">*</span></label>
+                                <input id="card-email" class="input w-full input-bordered" type="email" placeholder="john@company.com" />
+                            </div>
+                        </div>
+                        <!-- Form footer -->
+                        <div class="mt-6">
+                            <div class="mb-4">
+                                <button class="btn btn-primary w-full" routerLink="/track-order">Pay ₹ 3560</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

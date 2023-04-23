@@ -9,6 +9,10 @@ export class AnalyticsComponent {
  chartOptions: any;
   chartData: any;
   
+  constructor(){
+    window.scroll(0,0)
+  }
+
   ngOnInit() {
     this.chartOptions = {
       series: [1200, 1500, 2400, 2100, 1000, 2000, 1300],

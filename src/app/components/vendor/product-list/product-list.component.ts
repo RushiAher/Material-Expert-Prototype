@@ -6,7 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent {
-
+  constructor(){
+    window.scroll(0,0)
+  }
 
 productListData=[
   {

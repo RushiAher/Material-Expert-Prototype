@@ -8,6 +8,10 @@ declare let ApexCharts: any
 export class VendorDashboardComponent {
   @ViewChild('myCanvas') myCanvas: any;
 
+  constructor(){
+    window.scroll(0,0)
+  }
+
   ngAfterViewInit(): void {
 
     var revenuGraph = {

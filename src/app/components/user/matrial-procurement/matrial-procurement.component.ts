@@ -7,6 +7,9 @@ declare let $:any
 })
 export class MatrialProcurementComponent {
 
+  constructor(){
+    window.scroll(0,0)
+  }
 
 chemicalPurity:any = '50';
 

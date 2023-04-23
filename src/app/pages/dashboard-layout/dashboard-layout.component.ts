@@ -16,7 +16,15 @@ export class DashboardLayoutComponent {
   userType:any 
 
   constructor(private router:Router) {
-    this.userType 
+    this.userType = localStorage.getItem('userType')
+    if (this.userType === 'user'){
+      this.menuData = this.userMenuData
+    }else if (this.userType === 'vendor'){
+      this.menuData = this.vendorMenuData
+    }else{
+      this.router.navigateByUrl('/login')
+    }
+    window.scroll(0,0)
   }
 
   ngOnInit():void {

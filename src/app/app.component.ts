@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'productryprototype-phase-1';
+  title = 'ProducTRY Prototype';
+
+constructor(){
+  window.scroll(0,0)
+}
+
+
 }

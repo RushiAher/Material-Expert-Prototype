@@ -8,6 +8,10 @@ import { Component } from '@angular/core';
 export class TrackOrderComponent {
 
 
+  constructor(){
+    window.scroll(0,0)
+  }
+
   orderSummary=[
     {
       id: "1",

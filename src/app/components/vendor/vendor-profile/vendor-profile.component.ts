@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class VendorProfileComponent {
 
+  constructor(){
+    window.scroll(0,0)
+  }
+
 }

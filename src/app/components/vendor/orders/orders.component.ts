@@ -7,6 +7,10 @@ import { Component } from '@angular/core';
 })
 export class OrdersComponent {
 
+  constructor(){
+    window.scroll(0,0)
+  }
+
   orderData =
     [{ id: "123456",date: "2023-04-15", product: "DUPLEX STEEL        ", payment: "3500", status: "delivered", customerId: "X5U6G2S8" },
     { id: "234567", date: "2023-04-16", product: "TITANIUM", payment: "1200", status: "delivered", customerId: "A3K9F2J7" },

@@ -7,6 +7,10 @@ import { Component } from '@angular/core';
 })
 export class VendorMatrialRequestComponent {
 
+  constructor(){
+    window.scroll(0,0)
+  }
+
 
 vendorData=[
   {

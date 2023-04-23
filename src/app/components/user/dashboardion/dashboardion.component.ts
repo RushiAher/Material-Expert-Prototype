@@ -8,6 +8,10 @@ import { Component } from '@angular/core';
 export class DashboardionComponent {
 
 
+  constructor(){
+    window.scroll(0,0)
+  }
+
   projectData=[
     {
       id:'1',

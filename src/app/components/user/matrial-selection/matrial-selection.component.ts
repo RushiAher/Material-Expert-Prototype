@@ -9,6 +9,11 @@ declare let $: any
 })
 export class MatrialSelectionComponent {
 
+
+  constructor(){
+    window.scroll(0,0)
+  }
+
   showMatrialByProperty: boolean = true;
   showByProcess: boolean = false;
   showProductryAssistence: boolean = false;

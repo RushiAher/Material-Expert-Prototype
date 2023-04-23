@@ -7,6 +7,9 @@ import { Component } from '@angular/core';
 })
 export class CheckOutComponent {
 
+  constructor(){
+    window.scroll(0,0)
+  }
 
 orderSummary=[
   {

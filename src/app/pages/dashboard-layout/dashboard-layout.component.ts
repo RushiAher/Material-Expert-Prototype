@@ -33,6 +33,10 @@ export class DashboardLayoutComponent {
 
   }
 
+  showLogoName(){
+    $('#logoName').addClass('opacity-1').removeClass(' opacity-0')
+  }
+
     userMenuData = [
       {
         id: '1',
@@ -346,6 +350,7 @@ export class DashboardLayoutComponent {
   }
 
   closeAllMenu(){
+    $('#logoName').removeClass('opacity-1').addClass(' opacity-0')
     $('.submenu').slideUp();
   }
 

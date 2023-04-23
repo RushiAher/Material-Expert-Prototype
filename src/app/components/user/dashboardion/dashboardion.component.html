@@ -1,4 +1,4 @@
-<div class="mb-8 flex items-center gap-x-4">
+<div class="mb-8 flex flex-wrap items-center gap-4">
   <button class="btn bg-white hover:bg-blue-50 border-0 flex p-2 px-5" routerLink="/materials-selection">
     <p><i class="fa-solid fa-circle-check text-blue-500"></i></p>
     <p class="text-black font-medium capitalize ms-2">Material Selection</p>
@@ -21,9 +21,10 @@
 
 <h1 class="title-text mb-8">Your Projects</h1>
 
-
-<div class="flex gap-4">
-  <div class="w-[27rem] bg-white border border-gray-200 rounded-2xl " *ngFor="let items of projectData">
+<div class="overflow-hidden">
+<div class="flex gap-4 overflow-x-auto flex-nowrap w-full">
+  <div *ngFor="let items of projectData">
+  <div class="w-[22rem] lg:w-[27rem] h-full bg-white border border-gray-200 rounded-2xl " >
     <div class="p-5 flex items-center justify-center">
       <img class="rounded-t-lg w-[8rem] h-[8rem] cover-fill" src="{{items.img}}" alt="" />
     </div>
@@ -82,13 +83,16 @@
       <!-- <p class="text-sm mt-5 hidden">{{items.date}}</p> -->
     </div>
   </div>
-  <div class=" w-[27rem]  rounded-xl">
+</div>
+<div>
+  <div class=" w-[22rem] lg:w-[27rem] h-full rounded-xl">
     <label class="btn bg-white hover:bg-blue-50 border-0 w-full h-full" for="my-modal">
       <i class="text-secondary bi bi-plus-circle-dotted text-5xl"></i>
     </label>
   </div>
 </div>
-
+</div>
+</div>
 
 <!-- modal -->
 <input type="checkbox" id="my-modal" class="modal-toggle" />

@@ -1,8 +1,9 @@
 <app-navbar></app-navbar>
-<div class="sidebar-wrapper overflow-hidden group py-5" (mouseleave)="closeAllMenu()">
+<div class="sidebar-wrapper overflow-hidden group py-5" (mouseenter)="showLogoName()" (mouseleave)="closeAllMenu()">
   <div class="sidebar h-full w-full overflow-y-scroll scrollbar-hidden">
-    <div class="flex justify-center py-3 items-center flex-nowrap">
-        <img class="w-[2.5rem] object-contain" src="../../../assets/asserts/logo-icon-white.png" alt="" />
+    <div class="flex  py-3 items-center ">
+        <img class="h-[2.5rem] object-contain ms-4" id="logoIcon" src="../../../assets/asserts/logo-icon-white.png" alt="" />
+        <img  class="w-[9rem] img-contain ms-2 opacity-0" id="logoName" src="../../../assets/asserts/ProducTRY.png" alt="">
     </div>
     <div>
       <ul class="flex items-start gap-y-5 flex-col text-cyan-50 p-3">

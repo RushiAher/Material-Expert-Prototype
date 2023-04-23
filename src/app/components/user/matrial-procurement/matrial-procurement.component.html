@@ -1,16 +1,11 @@
 <div class="w-full min-h-[100vh] bg-zinc-100">
-  <div class="flex flex-col px-8 gap-y-8">
+  <div class="flex flex-col  gap-y-8">
     <h1 class="title-text">Material Procurement</h1>
     <!-- serach -->
-    <div
-      class="flex items-center gap-x-4 bg-white py-1 px-5 rounded-lg serchBox-div"
-    >
+    <div class="flex items-center gap-x-4 bg-white py-1 px-5 rounded-lg serchBox-div">
       <div class="w-full">
-        <input
-          type="text"
-          class="py-2 w-full"
-          placeholder="Search by Material name , Material code or Material specification"
-        />
+        <input type="text" class="py-2 w-full"
+          placeholder="Search by Material name , Material code or Material specification" />
       </div>
       <div>
         <i class="fa-solid fa-magnifying-glass text-xl text-zinc-500"></i>
@@ -18,21 +13,12 @@
     </div>
     <!-- serach -->
     <div class="flex flex-row gap-x-6 materials-catagory">
-      <div
-        class="flex flex-col items-center gap-y-2"
-        *ngFor="let items of categories"
-      >
-        <a
-          id="Procurement-matrial-{{ items.id }}"
+      <div class="flex flex-col items-center gap-y-2" *ngFor="let items of categories">
+        <a id="Procurement-matrial-{{ items.id }}"
           class="cursor-pointer flex flex-col items-center gap-y-2 Procurement-matrial"
-          (click)="ShowMatrialForm(items.id)"
-        >
+          (click)="ShowMatrialForm(items.id)">
           <div class="w-[4rem] h-[4rem] matrial-icon rounded-full bg-white p-2">
-            <img
-              class="cover-fill rounded-full"
-              src="{{ items.img }}"
-              alt="metals"
-            />
+            <img class="cover-fill rounded-full" src="{{ items.img }}" alt="metals" />
           </div>
           <p class="text-sm text-normal text-center">{{ items.name }}</p>
         </a>
@@ -42,67 +28,34 @@
     <div id="matrial-form">
       <!-- metals form -->
       <div id="matrial-1" class="form min-h-max w-full p-6 bg-white rounded-lg">
-        <div class="grid grid-cols-3 gap-4">
+        <div class="grid md:grid-cols-4 lg:grid-cols-3 gap-4">
           <!--  -->
-          <div class="grid-cols-1">
+          <div class="md:col-span-2 lg:col-span-1">
             <div class="mb-6 w-full">
-              <label
-                for="material-name"
-                class="block mb-2 text-sm font-semibold text-black"
-                >Material Name</label
-              >
-              <input
-                type="text"
-                id="material-name"
+              <label for="material-name" class="block mb-2 text-sm font-semibold text-black">Material Name</label>
+              <input type="text" id="material-name"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2"
-                placeholder="eg. Aluminium"
-              />
+                placeholder="eg. Aluminium" />
             </div>
-            <div
-              class="mt-3 w-full bg-zinc-50 p-3 border rounded-md h-[12.8rem]"
-            >
-              <div class="flex gap-2 flex-wrap">
-                <span
-                  class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm"
-                  >1001 Aluminium</span
-                >
-                <span
-                  class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm"
-                  >2001 Aluminium</span
-                >
-                <span
-                  class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm"
-                  >3001 Aluminium</span
-                >
-                <span
-                  class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm"
-                  >3001 Aluminium</span
-                >
-                <span
-                  class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm"
-                  >1001 Aluminium</span
-                >
-                <span
-                  class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm"
-                  >5002 Aluminium</span
-                >
+            <div class="mt-3 w-full bg-zinc-50 p-3 border rounded-md h-[12.8rem] overflow-hidden">
+              <div class="flex gap-2 flex-wrap overflow-y-auto text-xs lg:text-sm">
+                <span class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize">1001 Aluminium</span>
+                <span class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize">2001 Aluminium</span>
+                <span class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize">3001 Aluminium</span>
+                <span class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize">3001 Aluminium</span>
+                <span class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize">1001 Aluminium</span>
+                <span class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize">5002 Aluminium</span>
               </div>
             </div>
           </div>
           <!--  -->
-          <div class="grid-cols-1">
+          <div class="md:col-span-2 lg:col-span-1">
             <div class="">
               <div class="mb-6 w-full">
-                <label
-                  for="material-code"
-                  class="block mb-2 text-sm font-semibold text-black"
-                  >Material Code</label
-                >
+                <label for="material-code" class="block mb-2 text-sm font-semibold text-black">Material Code</label>
                 <div class="flex w-full gap-x-2">
-                  <select
-                    id="categories"
-                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg px-2 focus:ring-blue-500 focus:border-blue-500 block p-2.5"
-                  >
+                  <select id="categories"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg px-2 focus:ring-blue-500 focus:border-blue-500 block p-2.5">
                     <option selected>code type</option>
                     <option value="US">DIN</option>
                     <option value="CA">AISI</option>
@@ -117,84 +70,55 @@
                     <option value="DE">GOST</option>
                   </select>
 
-                  <input
-                    type="text"
-                    id="material-code"
+                  <input type="text" id="material-code"
                     class="w-full bg-gray-50 border px-3 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 blockp-2"
-                    placeholder="eg. 3000"
-                  />
+                    placeholder="eg. 3000" />
                 </div>
               </div>
-              <div
-                class="mt-3 w-full bg-zinc-50 p-3 border rounded-md h-[12.8rem]"
-              >
-                <div class="flex gap-2 flex-wrap">
-                  <span
-                    class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm"
-                    >1001 Aluminium</span
-                  >
-                  <span
-                    class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm"
-                    >2001 Aluminium</span
-                  >
+              <div class="mt-3 w-full bg-zinc-50 p-3 border rounded-md h-[12.8rem]">
+                <div class="flex gap-2 flex-wrap text-xs lg:text-sm">
+                  <span class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize">1001 Aluminium</span>
+                  <span class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize">2001 Aluminium</span>
                 </div>
               </div>
             </div>
           </div>
           <!--  -->
-          <div class="grid-cols-1 h-full">
-            <p
-              for="material-spec"
-              class="block mb-2 text-sm font-semibold text-black"
-            >
+          <div class="md:col-span-4 lg:col-span-1 h-full">
+            <p for="material-spec" class="block mb-2 text-sm font-semibold text-black">
               Material Specification
             </p>
-            <textarea
-              name="material-spec"
-              rows="11"
+            <textarea name="material-spec" rows="11"
               class="block w-full p-2.5 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
-              placeholder="Write your material specification here..."
-            ></textarea>
+              placeholder="Write your material specification here..."></textarea>
           </div>
           <!--  -->
         </div>
         <!-- ************ -->
         <hr class="h-px my-8 bg-gray-200 border-0" />
-        <div class="flex flex-row items-start w-full gap-x-8">
-          <div class="flex flex-col w-3/5 gap-y-4">
+        <div class="lg:flex flex-nowrap items-start w-full gap-8">
+          <div class="flex flex-col w-full lg:w-3/5 gap-y-4">
             <p class="mb-2 text-sm font-semibold text-black">
               Material Requirement
             </p>
             <div class="flex w-full gap-x-6">
               <div
-                class="flex justify-between items-center bg-gray-50 border border-gray-300 text-sm rounded-lg w-1/2 p-2"
-              >
+                class="flex justify-between items-center bg-gray-50 border border-gray-300 text-sm rounded-lg w-1/2 p-2">
                 <p class="text-sm font-medium text-gray-900">Quantity</p>
-                <div
-                  class="flex justify-between items-center max-w-max gap-x-2"
-                >
-                  <i
-                    class="bi bi-dash-square-fill text-blue-300 cursor-pointer hover:scale-125"
-                  ></i>
+                <div class="flex justify-between items-center max-w-max gap-x-2">
+                  <i class="bi bi-dash-square-fill text-blue-300 cursor-pointer hover:scale-125"></i>
 
                   <div class="flex gap-x-1">
-                    <input
-                      type="number"
-                      placeholder="1"
-                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-[3rem] h-[1.5rem] p-2"
-                    />
-                    
+                    <input type="number" placeholder="1"
+                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-[3rem] h-[1.5rem] p-2" />
+
                   </div>
-                  <i
-                    class="bi bi-plus-square-fill text-blue-300 cursor-pointer hover:scale-125"
-                  ></i>
-                 
+                  <i class="bi bi-plus-square-fill text-blue-300 cursor-pointer hover:scale-125"></i>
+
                 </div>
               </div>
-               <select
-                id="countries"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/2 p-2.5"
-              >
+              <select id="countries"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/2 p-2.5">
                 <option selected disabled>select form</option>
                 <option>Angle</option>
                 <option>Square</option>
@@ -223,127 +147,84 @@
                 <option>I Beam</option>
                 <option>Coil</option>
                 <option>Seemless</option>
-               
               </select>
-             
+
             </div>
             <div class="flex w-full gap-x-6">
               <div
-                class="flex justify-between items-center bg-gray-50 border border-gray-300 text-sm rounded-lg w-1/2 p-2"
-              >
+                class="flex justify-between items-center bg-gray-50 border border-gray-300 text-sm rounded-lg w-1/2 p-2">
                 <p class="text-sm font-medium text-gray-900">Thickness</p>
-                <div
-                  class="flex justify-between items-center max-w-max gap-x-2"
-                >
-                  <i
-                    class="bi bi-dash-square-fill text-blue-300 cursor-pointer hover:scale-125"
-                  ></i>
+                <div class="flex justify-between items-center max-w-max gap-x-2">
+                  <i class="bi bi-dash-square-fill text-blue-300 cursor-pointer hover:scale-125"></i>
 
                   <div class="flex gap-x-1">
-                    <input
-                      type="number"
-                      placeholder="1"
-                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-[3rem] h-[1.5rem] p-2"
-                    />
-                  
+                    <input type="number" placeholder="1"
+                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-[3rem] h-[1.5rem] p-2" />
+
                   </div>
-                  <i
-                    class="bi bi-plus-square-fill text-blue-300 cursor-pointer hover:scale-125"
-                  ></i>
-                    <p class="text-sm ">mm</p>
+                  <i class="bi bi-plus-square-fill text-blue-300 cursor-pointer hover:scale-125"></i>
+                  <p class="text-sm ">mm</p>
                 </div>
               </div>
 
               <div
-                class="flex  justify-between items-center bg-gray-50 border border-gray-300 text-sm rounded-lg w-1/2 p-2"
-              >
+                class="flex  justify-between items-center bg-gray-50 border border-gray-300 text-sm rounded-lg w-1/2 p-2">
                 <p class="text-sm font-medium text-gray-900">Length</p>
-                <div
-                  class="flex justify-between items-center max-w-max gap-x-2"
-                >
-                  <i
-                    class="bi bi-dash-square-fill text-blue-300 cursor-pointer hover:scale-125"
-                  ></i>
+                <div class="flex justify-between items-center max-w-max gap-x-2">
+                  <i class="bi bi-dash-square-fill text-blue-300 cursor-pointer hover:scale-125"></i>
 
                   <div class="flex gap-x-1">
-                    <input
-                      type="number"
-                      placeholder="1"
-                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-[3rem] h-[1.5rem] p-2"
-                    />
-                   
+                    <input type="number" placeholder="1"
+                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-[3rem] h-[1.5rem] p-2" />
+
                   </div>
-                  <i
-                    class="bi bi-plus-square-fill text-blue-300 cursor-pointer hover:scale-125"
-                  ></i>
-                   <p class="text-sm">mm</p>
+                  <i class="bi bi-plus-square-fill text-blue-300 cursor-pointer hover:scale-125"></i>
+                  <p class="text-sm">mm</p>
                 </div>
               </div>
             </div>
             <div class="flex w-full gap-x-6">
               <div
-                class="flex justify-between items-center bg-gray-50 border border-gray-300 text-sm rounded-lg w-1/2 p-2"
-              >
+                class="flex justify-between items-center bg-gray-50 border border-gray-300 text-sm rounded-lg w-1/2 p-2">
                 <p class="text-sm font-medium text-gray-900">Width</p>
-                <div
-                  class="flex justify-between items-center max-w-max gap-x-2"
-                >
-                  <i
-                    class="bi bi-dash-square-fill text-blue-300 cursor-pointer hover:scale-125"
-                  ></i>
+                <div class="flex justify-between items-center max-w-max gap-x-2">
+                  <i class="bi bi-dash-square-fill text-blue-300 cursor-pointer hover:scale-125"></i>
 
                   <div class="flex gap-x-1">
-                    <input
-                      type="number"
-                      placeholder="1"
-                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-[3rem] h-[1.5rem] p-2"
-                    />
-                    
+                    <input type="number" placeholder="1"
+                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-[3rem] h-[1.5rem] p-2" />
+
                   </div>
-                  <i
-                    class="bi bi-plus-square-fill text-blue-300 cursor-pointer hover:scale-125"
-                  ></i>
+                  <i class="bi bi-plus-square-fill text-blue-300 cursor-pointer hover:scale-125"></i>
                   <p class="text-sm ">mm</p>
                 </div>
               </div>
               <div
-                class="flex justify-between items-center bg-gray-50 border border-gray-300 text-sm rounded-lg w-1/2 p-2"
-              >
+                class="flex justify-between items-center bg-gray-50 border border-gray-300 text-sm rounded-lg w-1/2 p-2">
                 <p class="text-sm font-medium text-gray-900">Diameter</p>
-                <div
-                  class="flex justify-between items-center max-w-max gap-x-2"
-                >
-                  <i
-                    class="bi bi-dash-square-fill text-blue-300 cursor-pointer hover:scale-125"
-                  ></i>
+                <div class="flex justify-between items-center max-w-max gap-x-2">
+                  <i class="bi bi-dash-square-fill text-blue-300 cursor-pointer hover:scale-125"></i>
 
                   <div class="flex gap-x-1">
-                    <input
-                      type="number"
-                      placeholder="1"
-                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-[3rem] h-[1.5rem] p-2"
-                    />
-                    
+                    <input type="number" placeholder="1"
+                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-[3rem] h-[1.5rem] p-2" />
+
                   </div>
-                  <i
-                    class="bi bi-plus-square-fill text-blue-300 cursor-pointer hover:scale-125"
-                  ></i>
+                  <i class="bi bi-plus-square-fill text-blue-300 cursor-pointer hover:scale-125"></i>
                   <p class="text-sm ">mm</p>
                 </div>
               </div>
-             
             </div>
           </div>
-          <div class="flex flex-col w-2/5 gap-y-4">
+          <div class="flex flex-col w-full lg:w-2/5 gap-y-4 mt-5 lg:mt-5">
             <p class="mb-2 text-sm font-semibold text-black">
               Material Summary
             </p>
-            <div
-              class="p-4 rounded-lg bg-gray-50 min-h-[12rem] border border-gray-300 w-full"
-            >
+            <div class="p-4 rounded-lg bg-gray-50 min-h-[12rem] border border-gray-300 w-full">
               <p class="text-md font-semibold">1100 Aluminium</p>
               <p class="text-sm text-gray-400">
-                 It has low density, is non-toxic, has high thermal conductivity, has excellent resistance to corrosion, and can be cast, machined and moulded quickly.
+                It has low density, is non-toxic, has high thermal conductivity, has excellent resistance to corrosion,
+                and can be cast, machined and moulded quickly.
               </p>
               <p class="mt-5">
                 <span class="inline-block w-[8rem]">Quantity</span>: 3
@@ -362,11 +243,8 @@
               </p>
             </div>
             <div class="w-full flex justify-end">
-              <button
-              routerLink="/quotation"
-                type="button"
-                class="text-white max-w-max bg-primary hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none"
-              >
+              <button routerLink="/vendors" type="button"
+                class="text-white max-w-max bg-primary hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none">
                 Buy Now
               </button>
             </div>
@@ -375,157 +253,82 @@
       </div>
       <!-- chemical form -->
       <div id="matrial-2" class="form min-h-max w-full p-6 bg-white rounded-lg">
-        <div class="grid grid-cols-3 gap-6">
+        <div class="grid md:grid-cols-4 lg:grid-cols-3 gap-6">
           <!--  -->
-          <div class="col-span-1">
+          <div class="md:col-span-2 lg:col-span-1">
             <div>
               <p class="font-semibold">Chemical Name</p>
-              <input
-                type="text"
-                class="bg-gray-50 w-full border rounded-md p-2 mt-3"
-                placeholder="Please mension chemical name"
-              />
+              <input type="text" class="bg-gray-50 w-full border rounded-md p-2 mt-3"
+                placeholder="Please mension chemical name" />
             </div>
 
-            <div
-              class="hidden mt-3 w-full bg-zinc-50 p-3 border rounded-md h-[10rem]"
-            >
+            <div class="hidden mt-3 w-full bg-zinc-50 p-3 border rounded-md h-[10rem]">
               <div class="flex gap-2 flex-wrap">
-                <span
-                  class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm"
-                  >Hydrogen</span
-                >
-                <span
-                  class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm"
-                  >acid</span
-                >
-                <span
-                  class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm"
-                  >Beryllium</span
-                >
-                <span
-                  class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm"
-                  >chemicals 1</span
-                >
-                <span
-                  class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm"
-                  >chemicals 1</span
-                >
-                <span
-                  class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm"
-                  >chemicals 1</span
-                >
+                <span class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm">Hydrogen</span>
+                <span class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm">acid</span>
+                <span class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm">Beryllium</span>
+                <span class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm">chemicals 1</span>
+                <span class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm">chemicals 1</span>
+                <span class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm">chemicals 1</span>
               </div>
             </div>
             <div class="mt-3">
-              <label for="structure " class="text-sm text-zinc-500"
-                >Structural Formula</label
-              >
-              <textarea
-                name=""
-                id="structure"
-                class="bg-gray-50 w-full border rounded-md p-2"
-                rows="7"
-                placeholder="Structural Formula"
-              ></textarea>
+              <label for="structure " class="text-sm text-zinc-500">Structural Formula</label>
+              <textarea name="" id="structure" class="bg-gray-50 w-full border rounded-md p-2" rows="7"
+                placeholder="Structural Formula"></textarea>
             </div>
           </div>
           <!--  -->
-          <div class="col-span-1">
+          <div class="md:col-span-2 lg:col-span-1">
             <!--  -->
             <div class="flex gap-x-4">
               <div>
-                <label for="iupac" class="text-sm to-zinc-500"
-                  >IUPAC Name</label
-                >
-                <input
-                  type="text"
-                  id="iupac"
-                  class="w-full bg-gray-50 rounded-md border p-2"
-                />
+                <label for="iupac" class="text-sm to-zinc-500">IUPAC Name</label>
+                <input type="text" id="iupac" class="w-full bg-gray-50 rounded-md border p-2" />
               </div>
               <div>
                 <label for="CAS" class="text-sm to-zinc-500">CAS Number</label>
-                <input
-                  type="text"
-                  id="CAS"
-                  class="w-full bg-gray-50 rounded-md border p-2"
-                />
+                <input type="text" id="CAS" class="w-full bg-gray-50 rounded-md border p-2" />
               </div>
             </div>
             <!--  -->
             <div class="mt-3 w-full bg-zinc-50 p-3 border rounded-md h-[14rem]">
               <div class="flex gap-2 flex-wrap">
-                <span
-                  class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm"
-                  >Hydrogen</span
-                >
-                <span
-                  class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm"
-                  >acid</span
-                >
-                <span
-                  class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm"
-                  >Beryllium</span
-                >
-                <span
-                  class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm"
-                  >chemicals 1</span
-                >
-                <span
-                  class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm"
-                  >chemicals 1</span
-                >
-                <span
-                  class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm"
-                  >chemicals 1</span
-                >
+                <span class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm">Hydrogen</span>
+                <span class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm">acid</span>
+                <span class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm">Beryllium</span>
+                <span class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm">chemicals 1</span>
+                <span class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm">chemicals 1</span>
+                <span class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm">chemicals 1</span>
               </div>
             </div>
             <!--  -->
           </div>
           <!--  -->
-          <div class="col-span-1">
+          <div class="md:col-span-4 lg:col-span-1">
             <p class="">Chemical Application/Purity</p>
             <div class="mt-3 flex items-center gap-x-3">
-              <input
-                type="range"
-                min="0"
-                max="100"
-                value="50"
-                step="1"
-                class="range range-primary range-xs"
-                (change)="setPurity($event)"
-              />
+              <input type="range" min="0" max="100" value="50" step="1" class="range range-primary range-xs"
+                (change)="setPurity($event)" />
               <p class="font-semibold text-primary text-lg">
                 {{ chemicalPurity }}%
               </p>
             </div>
             <div class="mt-3">
               <label for="sector"></label>
-              <textarea
-                name=""
-                id="sector"
-                placeholder="please mention sector"
-                rows="10"
-                class="w-full h-[14rem] bg-zinc-50 border p-3 rounded-md"
-              ></textarea>
+              <textarea name="" id="sector" placeholder="please mention sector" rows="10"
+                class="w-full h-[14rem] bg-zinc-50 border p-3 rounded-md"></textarea>
             </div>
           </div>
           <!--  -->
         </div>
         <!-- **************** -->
         <hr class="my-8 text-zinc-500" />
-        <div class="flex justify-between">
-          <div class="flex gap-x-4">
+        <div class="flex justify-between items-end">
+          <div class="lg:flex gap-x-4">
             <div>
-              <label for="form" class="text-sm text-zinc-500"
-                >Specify the Form of material</label
-              >
-              <select
-                id="form"
-                class="bg-zinc-50 border w-full p-2 rounded-md mt-2"
-              >
+              <label for="form" class="text-sm text-zinc-500">Specify the Form of material</label>
+              <select id="form" class="bg-zinc-50 border w-full p-2 rounded-md mt-2">
                 <option value="">Form</option>
                 <option value="">Liquid</option>
                 <option value="">Powder</option>
@@ -533,120 +336,75 @@
               </select>
             </div>
             <div>
-              <label for="Requirement" class="text-sm text-zinc-500"
-                >Specify the Material Requirement</label
-              >
+              <label for="Requirement" class="text-sm text-zinc-500">Specify the Material Requirement</label>
               <div class="flex gap-x-1 items-center mt-2">
-                <input
-                  type="text"
-                  class="bg-zinc-50 border rounded-md w-full p-2"
-                />
+                <input type="text" class="bg-zinc-50 border rounded-md w-full p-2" />
                 <div>
-                 
-                   <select
-                    id="categories"
-                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg px-2  block p-2.5"
-                  >
+
+                  <select id="categories"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg px-2  block p-2.5">
                     <option selected>Litre</option>
                     <option value="US">Kg</option>
                     <option value="CA">Grams</option>
                     <option value="FR">Units</option>
-                    
+
                   </select>
-                  
+
                 </div>
               </div>
             </div>
           </div>
           <div>
-            <button
-            routerLink="/quotation"
-              type="button"
-              class="text-white max-w-max bg-primary hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none"
-            >
+            <button routerLink="/vendors" type="button"
+              class="text-white max-w-max bg-primary hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none">
               Buy Now
             </button>
           </div>
         </div>
       </div>
-
       <!-- polymers form -->
       <div id="matrial-3" class="form min-h-max w-full p-6 bg-white rounded-lg">
-        <div class="grid grid-cols-3 gap-x-6">
+        <div class="grid  grid-cols-4 lg:grid-cols-3 gap-6">
           <!-- -->
-          <div class="col-span-1">
+          <div class="md:col-span-2 lg:col-span-1">
             <div>
               <p class="font-semibold">Polymer Name</p>
-              <input
-                type="text"
-                class="bg-gray-50 w-full border rounded-md p-2 mt-3"
-                placeholder="Please mention polymer name"
-              />
+              <input type="text" class="bg-gray-50 w-full border rounded-md p-2 mt-3"
+                placeholder="Please mention polymer name" />
             </div>
 
-            <div
-              class="mt-3 w-full bg-zinc-50 p-3 border rounded-md h-[12.8rem]"
-            >
+            <div class="mt-3 w-full bg-zinc-50 p-3 border rounded-md h-[12.8rem]">
               <div class="flex gap-2 flex-wrap">
-                <span
-                  class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm"
-                  >Nylon
+                <span class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm">Nylon
                 </span>
-                <span
-                  class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm"
-                  >polyethylene</span
-                >
-                <span
-                  class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm"
-                  >polyester</span
-                >
-                <span
-                  class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm"
-                  >Teflon</span
-                >
-                <span
-                  class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm"
-                  >epoxy</span
-                >
+                <span class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm">polyethylene</span>
+                <span class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm">polyester</span>
+                <span class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm">Teflon</span>
+                <span class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm">epoxy</span>
               </div>
             </div>
           </div>
           <!--  -->
-          <div class="col-span-1">
+          <div class="md:col-span-2 lg:col-span-1">
             <div>
               <p class="font-semibold">Polymer Grade</p>
-              <input
-                type="text"
-                class="bg-gray-50 w-full border rounded-md p-2 mt-3"
-                placeholder="Please mention polymer grade"
-              />
+              <input type="text" class="bg-gray-50 w-full border rounded-md p-2 mt-3"
+                placeholder="Please mention polymer grade" />
             </div>
 
             <div class="mt-3">
-              <label for="structure " class="text-sm text-zinc-500"
-                >Material Specification</label
-              >
-              <textarea
-                name=""
-                id="structure"
-                class="bg-gray-50 w-full border rounded-md p-2"
-                rows="7"
-                placeholder="Structural Formula"
-              ></textarea>
+              <label for="structure " class="text-sm text-zinc-500">Material Specification</label>
+              <textarea name="" id="structure" class="bg-gray-50 w-full border rounded-md p-2" rows="7"
+                placeholder="Structural Formula"></textarea>
             </div>
           </div>
           <!--  -->
-          <div class="col-span-1">
+          <div class="md:col-span-4 lg:col-span-1">
             <div class="flex flex-col justify-between h-full">
               <div>
                 <div>
-                  <label for="form" class="font-semibold"
-                    >Specify the Form of material</label
-                  >
-                  <select
-                    id="form"
-                    class="bg-zinc-50 border w-full p-2 rounded-md mt-2"
-                  >
+                  <label for="form" class="font-semibold">Specify the Form of material</label>
+                  <select id="form" class="bg-zinc-50 border w-full p-2 rounded-md mt-2">
                     <option value="">Sheet</option>
                     <option value="">Bar</option>
                     <option value="">Honeycomb</option>
@@ -662,28 +420,20 @@
                     <option value="">Other</option>
                   </select>
                 </div>
-                 <p class="text-sm text-zinc-500 mt-4">If other please specify here</p>
+                <p class="text-sm text-zinc-500 mt-4">If other please specify here</p>
                 <div class="flex gap-x-1 items-center mt-2">
-                  <input
-                    type="text"
-                    class="bg-zinc-50 border rounded-md w-full p-2"
-                  />
+                  <input type="text" class="bg-zinc-50 border rounded-md w-full p-2" />
                 </div>
                 <p class="text-sm text-zinc-500 mt-4">Required Quantity</p>
                 <div class="flex gap-x-1 items-center mt-2">
-                  <input
-                    type="text"
-                    class="bg-zinc-50 border rounded-md w-full p-2"
-                  />
+                  <input type="text" class="bg-zinc-50 border rounded-md w-full p-2" />
                   <div>
-                    <p
-                      class="p-2 mb-0 bg-blue-100 rounded-md text-blue-500 flex justify-center items-center w-[3rem]"
-                    >
+                    <p class="p-2 mb-0 bg-blue-100 rounded-md text-blue-500 flex justify-center items-center w-[3rem]">
                       <span>g</span>
                     </p>
                   </div>
                 </div>
-               
+
               </div>
               <!--  -->
             </div>
@@ -691,91 +441,59 @@
           <!--  -->
         </div>
         <hr class="h-px my-8 bg-gray-200 border-0" />
-        <div class="flex flex-row items-start w-full gap-x-8">
-          <div class="flex flex-col w-3/5 gap-y-4">
+        <div class="lg:flex flex-row items-start w-full gap-x-8">
+          <div class="flex flex-col w-full lg:w-3/5 gap-y-4">
             <p class="mb-2 text-sm font-semibold text-black">
               Material Requirement
             </p>
             <div class="flex w-full gap-x-6">
               <div
-                class="flex justify-between items-center bg-gray-50 border border-gray-300 text-sm rounded-lg w-1/2 p-2"
-              >
+                class="flex justify-between items-center bg-gray-50 border border-gray-300 text-sm rounded-lg w-1/2 p-2">
                 <p class="text-sm font-medium text-gray-900">Quantity</p>
-                <div
-                  class="flex justify-between items-center max-w-max gap-x-2"
-                >
-                  <i
-                    class="bi bi-dash-square-fill text-blue-300 cursor-pointer hover:scale-125"
-                  ></i>
+                <div class="flex justify-between items-center max-w-max gap-x-2">
+                  <i class="bi bi-dash-square-fill text-blue-300 cursor-pointer hover:scale-125"></i>
 
                   <div class="flex gap-x-1">
-                    <input
-                      type="number"
-                      placeholder="1"
-                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-[3rem] h-[1.5rem] p-2"
-                    />
+                    <input type="number" placeholder="1"
+                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-[3rem] h-[1.5rem] p-2" />
                     <p class="text-sm hidden">mm</p>
                   </div>
-                  <i
-                    class="bi bi-plus-square-fill text-blue-300 cursor-pointer hover:scale-125"
-                  ></i>
+                  <i class="bi bi-plus-square-fill text-blue-300 cursor-pointer hover:scale-125"></i>
                 </div>
               </div>
               <div
-                class="flex justify-between items-center bg-gray-50 border border-gray-300 text-sm rounded-lg w-1/2 p-2"
-              >
+                class="flex justify-between items-center bg-gray-50 border border-gray-300 text-sm rounded-lg w-1/2 p-2">
                 <p class="text-sm font-medium text-gray-900">Length</p>
-                <div
-                  class="flex justify-between items-center max-w-max gap-x-2"
-                >
-                  <i
-                    class="bi bi-dash-square-fill text-blue-300 cursor-pointer hover:scale-125"
-                  ></i>
+                <div class="flex justify-between items-center max-w-max gap-x-2">
+                  <i class="bi bi-dash-square-fill text-blue-300 cursor-pointer hover:scale-125"></i>
 
                   <div class="flex gap-x-1">
-                    <input
-                      type="number"
-                      placeholder="1"
-                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-[3rem] h-[1.5rem] p-2"
-                    />
+                    <input type="number" placeholder="1"
+                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-[3rem] h-[1.5rem] p-2" />
                   </div>
-                  <i
-                  class="bi bi-plus-square-fill text-blue-300 cursor-pointer hover:scale-125"
-                  ></i>
+                  <i class="bi bi-plus-square-fill text-blue-300 cursor-pointer hover:scale-125"></i>
                   <p class="text-sm">mm</p>
                 </div>
               </div>
             </div>
             <div class="flex w-full gap-x-6">
               <div
-                class="flex justify-between items-center bg-gray-50 border border-gray-300 text-sm rounded-lg w-1/2 p-2"
-              >
+                class="flex justify-between items-center bg-gray-50 border border-gray-300 text-sm rounded-lg w-1/2 p-2">
                 <p class="text-sm font-medium text-gray-900">Thickness</p>
-                <div
-                  class="flex justify-between items-center max-w-max gap-x-2"
-                >
-                  <i
-                    class="bi bi-dash-square-fill text-blue-300 cursor-pointer hover:scale-125"
-                  ></i>
+                <div class="flex justify-between items-center max-w-max gap-x-2">
+                  <i class="bi bi-dash-square-fill text-blue-300 cursor-pointer hover:scale-125"></i>
 
                   <div class="flex gap-x-1">
-                    <input
-                      type="number"
-                      placeholder="1"
-                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-[3rem] h-[1.5rem] p-2"
-                    />
+                    <input type="number" placeholder="1"
+                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-[3rem] h-[1.5rem] p-2" />
                   </div>
-                  <i
-                  class="bi bi-plus-square-fill text-blue-300 cursor-pointer hover:scale-125"
-                  ></i>
+                  <i class="bi bi-plus-square-fill text-blue-300 cursor-pointer hover:scale-125"></i>
                   <p class="text-sm ">mm</p>
                 </div>
               </div>
-              
-              <select
-                id="countries"
-                class=" bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/2 p-2.5"
-              >
+
+              <select id="countries"
+                class=" bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/2 p-2.5">
                 <option selected disabled>select form</option>
                 <option>Sheet</option>
                 <option>Bar</option>
@@ -789,47 +507,36 @@
                 <option>Sphere</option>
                 <option>Granule</option>
                 <option>Tube</option>
-               
+
               </select>
             </div>
             <div class="flex w-full gap-x-6">
               <div
-                class="flex justify-between items-center bg-gray-50 border border-gray-300 text-sm rounded-lg w-1/2 p-2"
-              >
+                class="flex justify-between items-center bg-gray-50 border border-gray-300 text-sm rounded-lg w-1/2 p-2">
                 <p class="text-sm font-medium text-gray-900">Width</p>
-                <div
-                  class="flex justify-between items-center max-w-max gap-x-2"
-                >
-                  <i
-                    class="bi bi-dash-square-fill text-blue-300 cursor-pointer hover:scale-125"
-                  ></i>
+                <div class="flex justify-between items-center max-w-max gap-x-2">
+                  <i class="bi bi-dash-square-fill text-blue-300 cursor-pointer hover:scale-125"></i>
 
                   <div class="flex gap-x-1">
-                    <input
-                      type="number"
-                      placeholder="1"
-                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-[3rem] h-[1.5rem] p-2"
-                    />
+                    <input type="number" placeholder="1"
+                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-[3rem] h-[1.5rem] p-2" />
                   </div>
-                  <i
-                  class="bi bi-plus-square-fill text-blue-300 cursor-pointer hover:scale-125"
-                  ></i>
+                  <i class="bi bi-plus-square-fill text-blue-300 cursor-pointer hover:scale-125"></i>
                   <p class="text-sm hidden">mm</p>
                 </div>
               </div>
               <div class="w-1/2"></div>
             </div>
           </div>
-          <div class="flex flex-col w-2/5 gap-y-4">
+          <div class="flex flex-col w-full lg:w-2/5 gap-y-4 mt-5 lg:mt-5">
             <p class="mb-2 text-sm font-semibold text-black">
               Material Summary
             </p>
-            <div
-              class="p-4 rounded-lg bg-gray-50 min-h-[12rem] border border-gray-300 w-full"
-            >
+            <div class="p-4 rounded-lg bg-gray-50 min-h-[12rem] border border-gray-300 w-full">
               <p class="text-md font-semibold">Nylon</p>
               <p class="text-sm text-gray-400">
-               Nylon is approximately 1/8 the weight of bronze, 1/7 the weight of cast iron, and 1/2 the weight of aluminum.
+                Nylon is approximately 1/8 the weight of bronze, 1/7 the weight of cast iron, and 1/2 the weight of
+                aluminum.
               </p>
               <p class="mt-5">
                 <span class="inline-block w-[8rem]">Quantity</span>: 3
@@ -848,87 +555,51 @@
               </p>
             </div>
             <div class="w-full flex justify-end">
-              <button
-              routerLink="/quotation"
-                type="button"
-                class="text-white max-w-max bg-primary hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none"
-              >
+              <button routerLink="/vendors" type="button"
+                class="text-white max-w-max bg-primary hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none">
                 Buy Now
               </button>
             </div>
           </div>
         </div>
       </div>
-
       <!-- composite form -->
       <div id="matrial-4" class="form min-h-max w-full p-6 bg-white rounded-lg">
-        <div class="grid grid-cols-3 gap-4">
+        <div class="grid md:grid-cols-4 lg:grid-cols-3 gap-4">
           <!--  -->
-          <div class="grid-cols-1">
+          <div class="col-span-2 lg:col-span-1">
             <div class="mb-6 w-full">
-              <label
-                for="material-name"
-                class="block mb-2 text-sm font-semibold text-black"
-                >Composite Name</label
-              >
-              <input
-                type="text"
-                id="material-name"
+              <label for="material-name" class="block mb-2 text-sm font-semibold text-black">Composite Name</label>
+              <input type="text" id="material-name"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2"
-                placeholder="eg. plywood"
-              />
+                placeholder="eg. plywood" />
             </div>
-            <div
-              class="mt-3 w-full bg-zinc-50 p-3 border rounded-md h-[12.8rem]"
-            >
+            <div class="mt-3 w-full bg-zinc-50 p-3 border rounded-md h-[12.8rem]">
               <div class="flex gap-2 flex-wrap">
-                <span
-                  class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm"
-                  >plywood</span
-                >
-                <span
-                  class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm"
-                  >engineered wood</span
-                >
-                <span
-                  class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm"
-                  >Oriented strand board (OSB)</span
-                >
-                <span
-                  class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm"
-                  >Concrete</span
-                >
+                <span class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm">plywood</span>
+                <span class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm">engineered wood</span>
+                <span class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm">Oriented strand board
+                  (OSB)</span>
+                <span class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm">Concrete</span>
               </div>
             </div>
           </div>
           <!--  -->
-          <div class="grid-cols-1 h-full">
-            <p
-              for="material-spec"
-              class="block mb-2 text-sm font-semibold text-black"
-            >
+          <div class="col-span-2 lg:col-span-1 h-full">
+            <p for="material-spec" class="block mb-2 text-sm font-semibold text-black">
               Material Specification
             </p>
-            <textarea
-              name="material-spec"
-              rows="11"
+            <textarea name="material-spec" rows="11"
               class="block w-full p-2.5 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
-              placeholder="Write your material specification here..."
-            ></textarea>
+              placeholder="Write your material specification here..."></textarea>
           </div>
           <!--  -->
-          <div class="col-span-1">
+          <div class="col-span-4 lg:col-span-1">
             <div>
-              <p
-                for="material-spec"
-                class="block mb-2 text-sm font-semibold text-black"
-              >
+              <p for="material-spec" class="block mb-2 text-sm font-semibold text-black">
                 Material Form
               </p>
-              <select
-                id="form"
-                class="bg-zinc-50 border w-full p-2 rounded-md mt-2"
-              >
+              <select id="form" class="bg-zinc-50 border w-full p-2 rounded-md mt-2">
                 <option value="">Rod</option>
                 <option value="">Pipe</option>
                 <option value="">Hollow</option>
@@ -942,104 +613,69 @@
                 <option value="">Other</option>
               </select>
             </div>
-             <p class="text-sm text-zinc-500 mt-4">If other please specify here</p>
-                <div class="flex gap-x-1 items-center mt-2">
-                  <input
-                    type="text"
-                    class="bg-zinc-50 border rounded-md w-full p-2"
-                  />
-                </div>
+            <p class="text-sm text-zinc-500 mt-4">If other please specify here</p>
+            <div class="flex gap-x-1 items-center mt-2">
+              <input type="text" class="bg-zinc-50 border rounded-md w-full p-2" />
+            </div>
           </div>
           <!--  -->
 
           <!--  -->
         </div>
         <hr class="h-px my-8 bg-gray-200 border-0" />
-        <div class="flex flex-row items-start w-full gap-x-8">
-          <div class="flex flex-col w-3/5 gap-y-4">
+        <div class="lg:flex flex-row items-start w-full gap-8">
+          <div class="flex flex-col w-full lg:w-3/5 gap-y-4">
             <p class="mb-2 text-sm font-semibold text-black">
               Material Requirement
             </p>
             <div class="flex w-full gap-x-6">
               <div
-                class="flex justify-between items-center bg-gray-50 border border-gray-300 text-sm rounded-lg w-1/2 p-2"
-              >
+                class="flex justify-between items-center bg-gray-50 border border-gray-300 text-sm rounded-lg w-1/2 p-2">
                 <p class="text-sm font-medium text-gray-900">Quantity</p>
-                <div
-                  class="flex justify-between items-center max-w-max gap-x-2"
-                >
-                  <i
-                    class="bi bi-dash-square-fill text-blue-300 cursor-pointer hover:scale-125"
-                  ></i>
+                <div class="flex justify-between items-center max-w-max gap-x-2">
+                  <i class="bi bi-dash-square-fill text-blue-300 cursor-pointer hover:scale-125"></i>
 
                   <div class="flex gap-x-1">
-                    <input
-                      type="number"
-                      placeholder="1"
-                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-[3rem] h-[1.5rem] p-2"
-                    />
+                    <input type="number" placeholder="1"
+                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-[3rem] h-[1.5rem] p-2" />
                     <p class="text-sm hidden">mm</p>
                   </div>
-                  <i
-                    class="bi bi-plus-square-fill text-blue-300 cursor-pointer hover:scale-125"
-                  ></i>
+                  <i class="bi bi-plus-square-fill text-blue-300 cursor-pointer hover:scale-125"></i>
                 </div>
               </div>
               <div
-                class="flex justify-between items-center bg-gray-50 border border-gray-300 text-sm rounded-lg w-1/2 p-2"
-              >
+                class="flex justify-between items-center bg-gray-50 border border-gray-300 text-sm rounded-lg w-1/2 p-2">
                 <p class="text-sm font-medium text-gray-900">Length</p>
-                <div
-                  class="flex justify-between items-center max-w-max gap-x-2"
-                >
-                  <i
-                    class="bi bi-dash-square-fill text-blue-300 cursor-pointer hover:scale-125"
-                  ></i>
+                <div class="flex justify-between items-center max-w-max gap-x-2">
+                  <i class="bi bi-dash-square-fill text-blue-300 cursor-pointer hover:scale-125"></i>
 
                   <div class="flex gap-x-1">
-                    <input
-                      type="number"
-                      placeholder="1"
-                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-[3rem] h-[1.5rem] p-2"
-                    />
+                    <input type="number" placeholder="1"
+                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-[3rem] h-[1.5rem] p-2" />
                     <p class="text-sm">mm</p>
                   </div>
-                  <i
-                    class="bi bi-plus-square-fill text-blue-300 cursor-pointer hover:scale-125"
-                  ></i>
+                  <i class="bi bi-plus-square-fill text-blue-300 cursor-pointer hover:scale-125"></i>
                 </div>
               </div>
             </div>
             <div class="flex w-full gap-x-6">
               <div
-                class="flex justify-between items-center bg-gray-50 border border-gray-300 text-sm rounded-lg w-1/2 p-2"
-              >
+                class="flex justify-between items-center bg-gray-50 border border-gray-300 text-sm rounded-lg w-1/2 p-2">
                 <p class="text-sm font-medium text-gray-900">Thickness</p>
-                <div
-                  class="flex justify-between items-center max-w-max gap-x-2"
-                >
-                  <i
-                    class="bi bi-dash-square-fill text-blue-300 cursor-pointer hover:scale-125"
-                  ></i>
+                <div class="flex justify-between items-center max-w-max gap-x-2">
+                  <i class="bi bi-dash-square-fill text-blue-300 cursor-pointer hover:scale-125"></i>
 
                   <div class="flex gap-x-1">
-                    <input
-                      type="number"
-                      placeholder="1"
-                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-[3rem] h-[1.5rem] p-2"
-                    />
+                    <input type="number" placeholder="1"
+                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-[3rem] h-[1.5rem] p-2" />
                     <p class="text-sm hidden">mm</p>
                   </div>
-                  <i
-                    class="bi bi-plus-square-fill text-blue-300 cursor-pointer hover:scale-125"
-                  ></i>
+                  <i class="bi bi-plus-square-fill text-blue-300 cursor-pointer hover:scale-125"></i>
                 </div>
               </div>
-          
-              <select
-                id="countries"
-                class=" bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/2 p-2.5"
-              >
+
+              <select id="countries"
+                class=" bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/2 p-2.5">
                 <option selected disabled>select form</option>
                 <option value="">Rod</option>
                 <option value="">Pipe</option>
@@ -1056,42 +692,31 @@
             </div>
             <div class="flex w-full gap-x-6">
               <div
-                class="flex justify-between items-center bg-gray-50 border border-gray-300 text-sm rounded-lg w-1/2 p-2"
-              >
+                class="flex justify-between items-center bg-gray-50 border border-gray-300 text-sm rounded-lg w-1/2 p-2">
                 <p class="text-sm font-medium text-gray-900">Width</p>
-                <div
-                  class="flex justify-between items-center max-w-max gap-x-2"
-                >
-                  <i
-                    class="bi bi-dash-square-fill text-blue-300 cursor-pointer hover:scale-125"
-                  ></i>
+                <div class="flex justify-between items-center max-w-max gap-x-2">
+                  <i class="bi bi-dash-square-fill text-blue-300 cursor-pointer hover:scale-125"></i>
 
                   <div class="flex gap-x-1">
-                    <input
-                      type="number"
-                      placeholder="1"
-                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-[3rem] h-[1.5rem] p-2"
-                    />
+                    <input type="number" placeholder="1"
+                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-[3rem] h-[1.5rem] p-2" />
                     <p class="text-sm hidden">mm</p>
                   </div>
-                  <i
-                    class="bi bi-plus-square-fill text-blue-300 cursor-pointer hover:scale-125"
-                  ></i>
+                  <i class="bi bi-plus-square-fill text-blue-300 cursor-pointer hover:scale-125"></i>
                 </div>
               </div>
               <div class="w-1/2"></div>
             </div>
           </div>
-          <div class="flex flex-col w-2/5 gap-y-4">
+          <div class="flex flex-col w-full lg:w-2/5 gap-y-4 mt-5 lg:mt-5">
             <p class="mb-2 text-sm font-semibold text-black">
               Material Summary
             </p>
-            <div
-              class="p-4 rounded-lg bg-gray-50 min-h-[12rem] border border-gray-300 w-full"
-            >
+            <div class="p-4 rounded-lg bg-gray-50 min-h-[12rem] border border-gray-300 w-full">
               <p class="text-md font-semibold">Plywood</p>
               <p class="text-sm text-gray-400">
-               Also known as commercial plywood, MR plywood means Moisture Resistant plywood. It is given the IS 303 grade.
+                Also known as commercial plywood, MR plywood means Moisture Resistant plywood. It is given the IS 303
+                grade.
               </p>
               <p class="mt-5">
                 <span class="inline-block w-[8rem]">Quantity</span>: 3
@@ -1110,11 +735,8 @@
               </p>
             </div>
             <div class="w-full flex justify-end">
-              <button
-              routerLink="/quotation"
-                type="button"
-                class="text-white max-w-max bg-primary hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none"
-              >
+              <button routerLink="/vendors" type="button"
+                class="text-white max-w-max bg-primary hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none">
                 Buy Now
               </button>
             </div>
@@ -1123,77 +745,41 @@
       </div>
       <!-- ceramic form -->
       <div id="matrial-5" class="form min-h-max w-full p-6 bg-white rounded-lg">
-        <div class="grid grid-cols-3 gap-4">
+        <div class="grid grid-cols-4 lg:grid-cols-3 gap-4">
           <!--  -->
-          <div class="grid-cols-1">
+          <div class="col-span-2 lg:col-span-1">
             <div class="mb-6 w-full">
-              <label
-                for="material-name"
-                class="block mb-2 text-sm font-semibold text-black"
-                >Ceramic Name</label
-              >
-              <input
-                type="text"
-                id="material-name"
+              <label for="material-name" class="block mb-2 text-sm font-semibold text-black">Ceramic Name</label>
+              <input type="text" id="material-name"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2"
-                placeholder="eg. Clay"
-              />
+                placeholder="eg. Clay" />
             </div>
-            <div
-              class="mt-3 w-full bg-zinc-50 p-3 border rounded-md h-[12.8rem]"
-            >
+            <div class="mt-3 w-full bg-zinc-50 p-3 border rounded-md h-[12.8rem]">
               <div class="flex gap-2 flex-wrap">
-                <span
-                  class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm"
-                  >Clay</span
-                >
-                <span
-                  class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm"
-                  >Brick</span
-                >
-                <span
-                  class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm"
-                  >Tiles</span
-                >
-                <span
-                  class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm"
-                  >Glass</span
-                >
-                <span
-                  class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm"
-                  >Cement</span
-                >
+                <span class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm">Clay</span>
+                <span class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm">Brick</span>
+                <span class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm">Tiles</span>
+                <span class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm">Glass</span>
+                <span class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm">Cement</span>
               </div>
             </div>
           </div>
           <!--  -->
-          <div class="grid-cols-1 h-full">
-            <p
-              for="material-spec"
-              class="block mb-2 text-sm font-semibold text-black"
-            >
+          <div class="col-span-2 lg:col-span-1 h-full">
+            <p for="material-spec" class="block mb-2 text-sm font-semibold text-black">
               Material Specification
             </p>
-            <textarea
-              name="material-spec"
-              rows="11"
+            <textarea name="material-spec" rows="11"
               class="block w-full p-2.5 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
-              placeholder="Write your material specification here..."
-            ></textarea>
+              placeholder="Write your material specification here..."></textarea>
           </div>
           <!--  -->
-          <div class="col-span-1">
+          <div class="col-span-4 lg:col-span-1">
             <div>
-              <p
-                for="material-spec"
-                class="block mb-2 text-sm font-semibold text-black"
-              >
+              <p for="material-spec" class="block mb-2 text-sm font-semibold text-black">
                 Material Form
               </p>
-              <select
-                id="form"
-                class="bg-zinc-50 border w-full p-2 rounded-md mt-2"
-              >
+              <select id="form" class="bg-zinc-50 border w-full p-2 rounded-md mt-2">
                 <option value="">Rod</option>
                 <option value="">Pipe</option>
                 <option value="">Hollow</option>
@@ -1207,106 +793,71 @@
                 <option value="">Other</option>
               </select>
             </div>
-             <p class="text-sm text-zinc-500 mt-4">If other please specify here</p>
-                <div class="flex gap-x-1 items-center mt-2">
-                  <input
-                    type="text"
-                    class="bg-zinc-50 border rounded-md w-full p-2"
-                  />
-                </div>
+            <p class="text-sm text-zinc-500 mt-4">If other please specify here</p>
+            <div class="flex gap-x-1 items-center mt-2">
+              <input type="text" class="bg-zinc-50 border rounded-md w-full p-2" />
+            </div>
           </div>
           <!--  -->
 
           <!--  -->
         </div>
         <hr class="h-px my-8 bg-gray-200 border-0" />
-        <div class="flex flex-row items-start w-full gap-x-8">
-          <div class="flex flex-col w-3/5 gap-y-4">
+        <div class="lg:flex flex-row items-start w-full gap-x-8">
+          <div class="flex flex-col w-full lg:w-3/5 gap-y-4">
             <p class="mb-2 text-sm font-semibold text-black">
               Material Requirement
             </p>
             <div class="flex w-full gap-x-6">
               <div
-                class="flex justify-between items-center bg-gray-50 border border-gray-300 text-sm rounded-lg w-1/2 p-2"
-              >
+                class="flex justify-between items-center bg-gray-50 border border-gray-300 text-sm rounded-lg w-1/2 p-2">
                 <p class="text-sm font-medium text-gray-900">Quantity</p>
-                <div
-                  class="flex justify-between items-center max-w-max gap-x-2"
-                >
-                  <i
-                    class="bi bi-dash-square-fill text-blue-300 cursor-pointer hover:scale-125"
-                  ></i>
+                <div class="flex justify-between items-center max-w-max gap-x-2">
+                  <i class="bi bi-dash-square-fill text-blue-300 cursor-pointer hover:scale-125"></i>
 
                   <div class="flex gap-x-1">
-                    <input
-                      type="number"
-                      placeholder="1"
-                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-[3rem] h-[1.5rem] p-2"
-                    />
+                    <input type="number" placeholder="1"
+                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-[3rem] h-[1.5rem] p-2" />
                     <p class="text-sm hidden">mm</p>
                   </div>
-                  <i
-                    class="bi bi-plus-square-fill text-blue-300 cursor-pointer hover:scale-125"
-                  ></i>
+                  <i class="bi bi-plus-square-fill text-blue-300 cursor-pointer hover:scale-125"></i>
                 </div>
               </div>
               <div
-                class="flex justify-between items-center bg-gray-50 border border-gray-300 text-sm rounded-lg w-1/2 p-2"
-              >
+                class="flex justify-between items-center bg-gray-50 border border-gray-300 text-sm rounded-lg w-1/2 p-2">
                 <p class="text-sm font-medium text-gray-900">Length</p>
-                <div
-                  class="flex justify-between items-center max-w-max gap-x-2"
-                >
-                  <i
-                    class="bi bi-dash-square-fill text-blue-300 cursor-pointer hover:scale-125"
-                  ></i>
+                <div class="flex justify-between items-center max-w-max gap-x-2">
+                  <i class="bi bi-dash-square-fill text-blue-300 cursor-pointer hover:scale-125"></i>
 
                   <div class="flex gap-x-1">
-                    <input
-                      type="number"
-                      placeholder="1"
-                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-[3rem] h-[1.5rem] p-2"
-                    />
+                    <input type="number" placeholder="1"
+                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-[3rem] h-[1.5rem] p-2" />
                     <p class="text-sm">mm</p>
                   </div>
-                  <i
-                    class="bi bi-plus-square-fill text-blue-300 cursor-pointer hover:scale-125"
-                  ></i>
+                  <i class="bi bi-plus-square-fill text-blue-300 cursor-pointer hover:scale-125"></i>
                 </div>
               </div>
             </div>
             <div class="flex w-full gap-x-6">
               <div
-                class="flex justify-between items-center bg-gray-50 border border-gray-300 text-sm rounded-lg w-1/2 p-2"
-              >
+                class="flex justify-between items-center bg-gray-50 border border-gray-300 text-sm rounded-lg w-1/2 p-2">
                 <p class="text-sm font-medium text-gray-900">Thickness</p>
-                <div
-                  class="flex justify-between items-center max-w-max gap-x-2"
-                >
-                  <i
-                    class="bi bi-dash-square-fill text-blue-300 cursor-pointer hover:scale-125"
-                  ></i>
+                <div class="flex justify-between items-center max-w-max gap-x-2">
+                  <i class="bi bi-dash-square-fill text-blue-300 cursor-pointer hover:scale-125"></i>
 
                   <div class="flex gap-x-1">
-                    <input
-                      type="number"
-                      placeholder="1"
-                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-[3rem] h-[1.5rem] p-2"
-                    />
+                    <input type="number" placeholder="1"
+                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-[3rem] h-[1.5rem] p-2" />
                     <p class="text-sm hidden">mm</p>
                   </div>
-                  <i
-                    class="bi bi-plus-square-fill text-blue-300 cursor-pointer hover:scale-125"
-                  ></i>
+                  <i class="bi bi-plus-square-fill text-blue-300 cursor-pointer hover:scale-125"></i>
                 </div>
               </div>
-             
-              <select
-                id="countries"
-                class=" bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/2 p-2.5"
-              >
+
+              <select id="countries"
+                class=" bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/2 p-2.5">
                 <option selected disabled>select form</option>
-                 <option value="">Rod</option>
+                <option value="">Rod</option>
                 <option value="">Pipe</option>
                 <option value="">Hollow</option>
                 <option value="">L Shape</option>
@@ -1321,42 +872,31 @@
             </div>
             <div class="flex w-full gap-x-6">
               <div
-                class="flex justify-between items-center bg-gray-50 border border-gray-300 text-sm rounded-lg w-1/2 p-2"
-              >
+                class="flex justify-between items-center bg-gray-50 border border-gray-300 text-sm rounded-lg w-1/2 p-2">
                 <p class="text-sm font-medium text-gray-900">Width</p>
-                <div
-                  class="flex justify-between items-center max-w-max gap-x-2"
-                >
-                  <i
-                    class="bi bi-dash-square-fill text-blue-300 cursor-pointer hover:scale-125"
-                  ></i>
+                <div class="flex justify-between items-center max-w-max gap-x-2">
+                  <i class="bi bi-dash-square-fill text-blue-300 cursor-pointer hover:scale-125"></i>
 
                   <div class="flex gap-x-1">
-                    <input
-                      type="number"
-                      placeholder="1"
-                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-[3rem] h-[1.5rem] p-2"
-                    />
+                    <input type="number" placeholder="1"
+                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-[3rem] h-[1.5rem] p-2" />
                     <p class="text-sm hidden">mm</p>
                   </div>
-                  <i
-                    class="bi bi-plus-square-fill text-blue-300 cursor-pointer hover:scale-125"
-                  ></i>
+                  <i class="bi bi-plus-square-fill text-blue-300 cursor-pointer hover:scale-125"></i>
                 </div>
               </div>
               <div class="w-1/2"></div>
             </div>
           </div>
-          <div class="flex flex-col w-2/5 gap-y-4">
+          <div class="flex flex-col w-full lg:w-2/5 gap-y-4 mt-5 lg:mt-0">
             <p class="mb-2 text-sm font-semibold text-black">
               Material Summary
             </p>
-            <div
-              class="p-4 rounded-lg bg-gray-50 min-h-[12rem] border border-gray-300 w-full"
-            >
+            <div class="p-4 rounded-lg bg-gray-50 min-h-[12rem] border border-gray-300 w-full">
               <p class="text-md font-semibold">Clay</p>
               <p class="text-sm text-gray-400">
-                CLAY SPECIFICATIONS. CLAY. CONE FIRED COLOR. FIRED SHRINKAGE +/- 2%. WATER ABSORBTION +/- 1%. 06-04 CASTING SLIP. 04. WHITE. 5%. 19%. DURANGO RED.
+                CLAY SPECIFICATIONS. CLAY. CONE FIRED COLOR. FIRED SHRINKAGE +/- 2%. WATER ABSORBTION +/- 1%. 06-04
+                CASTING SLIP. 04. WHITE. 5%. 19%. DURANGO RED.
               </p>
               <p class="mt-5">
                 <span class="inline-block w-[8rem]">Quantity</span>: 3
@@ -1375,11 +915,8 @@
               </p>
             </div>
             <div class="w-full flex justify-end">
-              <button
-              routerLink="/quotation"
-                type="button"
-                class="text-white max-w-max bg-primary hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none"
-              >
+              <button routerLink="/vendors" type="button"
+                class="text-white max-w-max bg-primary hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none">
                 Buy Now
               </button>
             </div>
@@ -1388,82 +925,44 @@
       </div>
       <!-- naturial matrial form -->
       <div id="matrial-6" class="form min-h-max w-full p-6 bg-white rounded-lg">
-        <div class="grid grid-cols-3 gap-4">
+        <div class="grid grid-cols-4 lg:grid-cols-3 gap-4">
           <!--  -->
-          <div class="grid-cols-1">
+          <div class="col-span-2 lg:col-span-1">
             <div class="mb-6 w-full">
-              <label
-                for="material-name"
-                class="block mb-2 text-sm font-semibold text-black"
-                >Natural Material Name</label
-              >
-              <input
-                type="text"
-                id="material-name"
+              <label for="material-name" class="block mb-2 text-sm font-semibold text-black">Natural Material
+                Name</label>
+              <input type="text" id="material-name"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2"
-                placeholder="eg. Wood"
-              />
+                placeholder="eg. Wood" />
             </div>
 
-            <div
-              class="mt-3 w-full bg-zinc-50 p-3 border rounded-md h-[12.8rem]"
-            >
+            <div class="mt-3 w-full bg-zinc-50 p-3 border rounded-md h-[12.8rem]">
               <div class="flex gap-2 flex-wrap">
-                <span
-                  class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm"
-                  >Wood</span
-                >
-                <span
-                  class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm"
-                  >Bamboo</span
-                >
-                <span
-                  class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm"
-                  >Paper</span
-                >
-                <span
-                  class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm"
-                  >Natural Fiber</span
-                >
-                <span
-                  class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm"
-                  >Cork</span
-                >
-                <span
-                  class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm"
-                  >Clay</span
-                >
+                <span class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm">Wood</span>
+                <span class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm">Bamboo</span>
+                <span class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm">Paper</span>
+                <span class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm">Natural Fiber</span>
+                <span class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm">Cork</span>
+                <span class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm">Clay</span>
               </div>
             </div>
           </div>
           <!--  -->
-          <div class="grid-cols-1 h-full">
-            <p
-              for="material-spec"
-              class="block mb-2 text-sm font-semibold text-black"
-            >
+          <div class="col-span-2 lg:col-span-1 h-full">
+            <p for="material-spec" class="block mb-2 text-sm font-semibold text-black">
               Material Specification
             </p>
-            <textarea
-              name="material-spec"
-              rows="11"
+            <textarea name="material-spec" rows="11"
               class="block w-full p-2.5 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
-              placeholder="Write your material specification here..."
-            ></textarea>
+              placeholder="Write your material specification here..."></textarea>
           </div>
           <!--  -->
-          <div class="col-span-1">
+          <div class="col-span-4 lg:col-span-1">
             <div>
-              <p
-                for="material-spec"
-                class="block mb-2 text-sm font-semibold text-black"
-              >
+              <p for="material-spec" class="block mb-2 text-sm font-semibold text-black">
                 Material Form
               </p>
-              <select
-                id="form"
-                class="bg-zinc-50 border w-full p-2 rounded-md mt-2"
-              >
+              <select id="form" class="bg-zinc-50 border w-full p-2 rounded-md mt-2">
                 <option value="">Rope</option>
                 <option value="">Disc</option>
                 <option value="">Foil</option>
@@ -1474,104 +973,70 @@
                 <option value="">Other</option>
               </select>
             </div>
-             <p class="text-sm text-zinc-500 mt-4">If other please specify here</p>
-                <div class="flex gap-x-1 items-center mt-2">
-                  <input
-                    type="text"
-                    class="bg-zinc-50 border rounded-md w-full p-2"
-                  />
-                </div>
+            <p class="text-sm text-zinc-500 mt-4">If other please specify here</p>
+            <div class="flex gap-x-1 items-center mt-2">
+              <input type="text" class="bg-zinc-50 border rounded-md w-full p-2" />
+            </div>
           </div>
           <!--  -->
 
           <!--  -->
         </div>
+        <!--  -->
         <hr class="h-px my-8 bg-gray-200 border-0" />
-        <div class="flex flex-row items-start w-full gap-x-8">
-          <div class="flex flex-col w-3/5 gap-y-4">
+        <div class="lg:flex flex-row items-start w-full gap-x-8">
+          <div class="flex flex-col w-full lg:w-3/5 gap-y-4">
             <p class="mb-2 text-sm font-semibold text-black">
               Material Requirement
             </p>
             <div class="flex w-full gap-x-6">
               <div
-                class="flex justify-between items-center bg-gray-50 border border-gray-300 text-sm rounded-lg w-1/2 p-2"
-              >
+                class="flex justify-between items-center bg-gray-50 border border-gray-300 text-sm rounded-lg w-1/2 p-2">
                 <p class="text-sm font-medium text-gray-900">Quantity</p>
-                <div
-                  class="flex justify-between items-center max-w-max gap-x-2"
-                >
-                  <i
-                    class="bi bi-dash-square-fill text-blue-300 cursor-pointer hover:scale-125"
-                  ></i>
+                <div class="flex justify-between items-center max-w-max gap-x-2">
+                  <i class="bi bi-dash-square-fill text-blue-300 cursor-pointer hover:scale-125"></i>
 
                   <div class="flex gap-x-1">
-                    <input
-                      type="number"
-                      placeholder="1"
-                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-[3rem] h-[1.5rem] p-2"
-                    />
+                    <input type="number" placeholder="1"
+                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-[3rem] h-[1.5rem] p-2" />
                     <p class="text-sm hidden">mm</p>
                   </div>
-                  <i
-                    class="bi bi-plus-square-fill text-blue-300 cursor-pointer hover:scale-125"
-                  ></i>
+                  <i class="bi bi-plus-square-fill text-blue-300 cursor-pointer hover:scale-125"></i>
                 </div>
               </div>
               <div
-                class="flex justify-between items-center bg-gray-50 border border-gray-300 text-sm rounded-lg w-1/2 p-2"
-              >
+                class="flex justify-between items-center bg-gray-50 border border-gray-300 text-sm rounded-lg w-1/2 p-2">
                 <p class="text-sm font-medium text-gray-900">Length</p>
-                <div
-                  class="flex justify-between items-center max-w-max gap-x-2"
-                >
-                  <i
-                    class="bi bi-dash-square-fill text-blue-300 cursor-pointer hover:scale-125"
-                  ></i>
+                <div class="flex justify-between items-center max-w-max gap-x-2">
+                  <i class="bi bi-dash-square-fill text-blue-300 cursor-pointer hover:scale-125"></i>
 
                   <div class="flex gap-x-1">
-                    <input
-                      type="number"
-                      placeholder="1"
-                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-[3rem] h-[1.5rem] p-2"
-                    />
+                    <input type="number" placeholder="1"
+                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-[3rem] h-[1.5rem] p-2" />
                     <p class="text-sm">mm</p>
                   </div>
-                  <i
-                    class="bi bi-plus-square-fill text-blue-300 cursor-pointer hover:scale-125"
-                  ></i>
+                  <i class="bi bi-plus-square-fill text-blue-300 cursor-pointer hover:scale-125"></i>
                 </div>
               </div>
             </div>
             <div class="flex w-full gap-x-6">
               <div
-                class="flex justify-between items-center bg-gray-50 border border-gray-300 text-sm rounded-lg w-1/2 p-2"
-              >
+                class="flex justify-between items-center bg-gray-50 border border-gray-300 text-sm rounded-lg w-1/2 p-2">
                 <p class="text-sm font-medium text-gray-900">Thickness</p>
-                <div
-                  class="flex justify-between items-center max-w-max gap-x-2"
-                >
-                  <i
-                    class="bi bi-dash-square-fill text-blue-300 cursor-pointer hover:scale-125"
-                  ></i>
+                <div class="flex justify-between items-center max-w-max gap-x-2">
+                  <i class="bi bi-dash-square-fill text-blue-300 cursor-pointer hover:scale-125"></i>
 
                   <div class="flex gap-x-1">
-                    <input
-                      type="number"
-                      placeholder="1"
-                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-[3rem] h-[1.5rem] p-2"
-                    />
+                    <input type="number" placeholder="1"
+                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-[3rem] h-[1.5rem] p-2" />
                     <p class="text-sm hidden">mm</p>
                   </div>
-                  <i
-                    class="bi bi-plus-square-fill text-blue-300 cursor-pointer hover:scale-125"
-                  ></i>
+                  <i class="bi bi-plus-square-fill text-blue-300 cursor-pointer hover:scale-125"></i>
                 </div>
               </div>
-             
-              <select
-                id="countries"
-                class=" bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/2 p-2.5"
-              >
+
+              <select id="countries"
+                class=" bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/2 p-2.5">
                 <option selected disabled>select form</option>
                 <option>Angle</option>
                 <option>Square</option>
@@ -1581,42 +1046,31 @@
             </div>
             <div class="flex w-full gap-x-6">
               <div
-                class="flex justify-between items-center bg-gray-50 border border-gray-300 text-sm rounded-lg w-1/2 p-2"
-              >
+                class="flex justify-between items-center bg-gray-50 border border-gray-300 text-sm rounded-lg w-1/2 p-2">
                 <p class="text-sm font-medium text-gray-900">Width</p>
-                <div
-                  class="flex justify-between items-center max-w-max gap-x-2"
-                >
-                  <i
-                    class="bi bi-dash-square-fill text-blue-300 cursor-pointer hover:scale-125"
-                  ></i>
+                <div class="flex justify-between items-center max-w-max gap-x-2">
+                  <i class="bi bi-dash-square-fill text-blue-300 cursor-pointer hover:scale-125"></i>
 
                   <div class="flex gap-x-1">
-                    <input
-                      type="number"
-                      placeholder="1"
-                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-[3rem] h-[1.5rem] p-2"
-                    />
+                    <input type="number" placeholder="1"
+                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-[3rem] h-[1.5rem] p-2" />
                     <p class="text-sm hidden">mm</p>
                   </div>
-                  <i
-                    class="bi bi-plus-square-fill text-blue-300 cursor-pointer hover:scale-125"
-                  ></i>
+                  <i class="bi bi-plus-square-fill text-blue-300 cursor-pointer hover:scale-125"></i>
                 </div>
               </div>
               <div class="w-1/2"></div>
             </div>
           </div>
-          <div class="flex flex-col w-2/5 gap-y-4">
+          <div class="flex flex-col w-full lg:w-2/5 gap-y-4 mt-5 lg:mt-5">
             <p class="mb-2 text-sm font-semibold text-black">
               Material Summary
             </p>
-            <div
-              class="p-4 rounded-lg bg-gray-50 min-h-[12rem] border border-gray-300 w-full"
-            >
+            <div class="p-4 rounded-lg bg-gray-50 min-h-[12rem] border border-gray-300 w-full">
               <p class="text-md font-semibold">Wood</p>
               <p class="text-sm text-gray-400">
-                Timber is generally specified by cross-section, length, stress grade, as seasoned or unseasoned, by species or timber group, and treatment.
+                Timber is generally specified by cross-section, length, stress grade, as seasoned or unseasoned, by
+                species or timber group, and treatment.
               </p>
               <p class="mt-5">
                 <span class="inline-block w-[8rem]">Quantity</span>: 3
@@ -1635,11 +1089,8 @@
               </p>
             </div>
             <div class="w-full flex justify-end">
-              <button
-              routerLink="/quotation"
-                type="button"
-                class="text-white max-w-max bg-primary hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none"
-              >
+              <button routerLink="/vendors" type="button"
+                class="text-white max-w-max bg-primary hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none">
                 Buy Now
               </button>
             </div>

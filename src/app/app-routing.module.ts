@@ -30,7 +30,7 @@ const routes: Routes = [
       {path:'materials-selection', component:MatrialSelectionComponent},
       {path:'materials-procurement', component:MatrialProcurementComponent},
       {path:'project-analytics', component:AnalyticsComponent},
-      {path:'quotation', component:VendorMatrialRequestComponent},
+      {path:'vendors', component:VendorMatrialRequestComponent},
       {path:'checkout', component:CheckOutComponent},
       {path:'payment', component:PaymentComponent},
       { path: 'track-order', component: TrackOrderComponent },

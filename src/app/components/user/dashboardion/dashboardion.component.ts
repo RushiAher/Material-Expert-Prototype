@@ -12,11 +12,10 @@ export class DashboardionComponent {
     {
       id:'1',
       name:'UV Exposure Helmet',
-      date:'10 feb 2023',
+      projectStartDate:'10 feb 2023',
       projectSector:'Automotive',
       ProjectOrganizationType:'Manufacturing Industry',
       ProjectPhase:'Speciality Product',
-      projectAreaPincode:'412207',
       summary:`A helmet is a form of protective gear worn to protect the head. More specifically, complements to protect your eyes from harmful UV rays.	 `,
        img:"../../../../assets/asserts/project assets/helmet.png",
        Parts:['Shell','liners','padding','visor','buckle','fastener','adjuster'],
@@ -24,11 +23,10 @@ export class DashboardionComponent {
     {
       id:'2',
       name:'Indirect HT Al Fin Condenser',
-      date:'10 feb 2023',
+      projectStartDate:'10 feb 2023',
       projectSector:'Automotive',
       ProjectOrganizationType:'Product Development Lab',
       ProjectPhase:'Minimum Viable Product',
-      projectAreaPincode:'412207',
       summary:`An indirect heat transfer aluminum fin condenser is a type of heat exchanger that uses aluminum fins to transfer heat from a 
 hot fluid to a cooler fluid without direct contact between the two fluids. `,
        img:"../../../../assets/asserts/project assets/condenser.png",

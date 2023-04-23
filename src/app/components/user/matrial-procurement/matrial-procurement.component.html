@@ -1,6 +1,6 @@
 <div class="w-full min-h-[100vh] bg-zinc-100">
   <div class="flex flex-col px-8 gap-y-8">
-    <h1 class="title-text">Matrial Procurement</h1>
+    <h1 class="title-text">Material Procurement</h1>
     <!-- serach -->
     <div
       class="flex items-center gap-x-4 bg-white py-1 px-5 rounded-lg serchBox-div"
@@ -9,7 +9,7 @@
         <input
           type="text"
           class="py-2 w-full"
-          placeholder="Search by Matrial name , Matrial code or Matrial specification"
+          placeholder="Search by Material name , Material code or Material specification"
         />
       </div>
       <div>
@@ -183,37 +183,49 @@
                       placeholder="1"
                       class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-[3rem] h-[1.5rem] p-2"
                     />
-                    <p class="text-sm hidden">mm</p>
+                    
                   </div>
                   <i
                     class="bi bi-plus-square-fill text-blue-300 cursor-pointer hover:scale-125"
                   ></i>
+                 
                 </div>
               </div>
-              <div
-                class="flex justify-between items-center bg-gray-50 border border-gray-300 text-sm rounded-lg w-1/2 p-2"
+               <select
+                id="countries"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/2 p-2.5"
               >
-                <p class="text-sm font-medium text-gray-900">Length</p>
-                <div
-                  class="flex justify-between items-center max-w-max gap-x-2"
-                >
-                  <i
-                    class="bi bi-dash-square-fill text-blue-300 cursor-pointer hover:scale-125"
-                  ></i>
-
-                  <div class="flex gap-x-1">
-                    <input
-                      type="number"
-                      placeholder="1"
-                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-[3rem] h-[1.5rem] p-2"
-                    />
-                    <p class="text-sm">mm</p>
-                  </div>
-                  <i
-                    class="bi bi-plus-square-fill text-blue-300 cursor-pointer hover:scale-125"
-                  ></i>
-                </div>
-              </div>
+                <option selected disabled>select form</option>
+                <option>Angle</option>
+                <option>Square</option>
+                <option>Rectangle</option>
+                <option>bar</option>
+                <option>Honeycomb</option>
+                <option>Wire</option>
+                <option>Chopped Fiber</option>
+                <option>Sputtering Target</option>
+                <option>Crucible</option>
+                <option>Mesh</option>
+                <option>Fiber</option>
+                <option>Fabric</option>
+                <option>Powder</option>
+                <option>Foam</option>
+                <option>Film</option>
+                <option>Rod</option>
+                <option>Insulated Wire</option>
+                <option>Sheet</option>
+                <option>Micro Foil</option>
+                <option>Foil</option>
+                <option>Sphere</option>
+                <option>Micro Leaf</option>
+                <option>Granule</option>
+                <option>Tube</option>
+                <option>I Beam</option>
+                <option>Coil</option>
+                <option>Seemless</option>
+               
+              </select>
+             
             </div>
             <div class="flex w-full gap-x-6">
               <div
@@ -233,24 +245,40 @@
                       placeholder="1"
                       class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-[3rem] h-[1.5rem] p-2"
                     />
-                    <p class="text-sm hidden">mm</p>
+                  
                   </div>
                   <i
                     class="bi bi-plus-square-fill text-blue-300 cursor-pointer hover:scale-125"
                   ></i>
+                    <p class="text-sm ">mm</p>
                 </div>
               </div>
 
-              <select
-                id="countries"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/2 p-2.5"
+              <div
+                class="flex  justify-between items-center bg-gray-50 border border-gray-300 text-sm rounded-lg w-1/2 p-2"
               >
-                <option selected disabled>select form</option>
-                <option>Angle</option>
-                <option>Square</option>
-                <option>Rectangle</option>
-                <option>bar</option>
-              </select>
+                <p class="text-sm font-medium text-gray-900">Length</p>
+                <div
+                  class="flex justify-between items-center max-w-max gap-x-2"
+                >
+                  <i
+                    class="bi bi-dash-square-fill text-blue-300 cursor-pointer hover:scale-125"
+                  ></i>
+
+                  <div class="flex gap-x-1">
+                    <input
+                      type="number"
+                      placeholder="1"
+                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-[3rem] h-[1.5rem] p-2"
+                    />
+                   
+                  </div>
+                  <i
+                    class="bi bi-plus-square-fill text-blue-300 cursor-pointer hover:scale-125"
+                  ></i>
+                   <p class="text-sm">mm</p>
+                </div>
+              </div>
             </div>
             <div class="flex w-full gap-x-6">
               <div
@@ -270,14 +298,40 @@
                       placeholder="1"
                       class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-[3rem] h-[1.5rem] p-2"
                     />
-                    <p class="text-sm hidden">mm</p>
+                    
                   </div>
                   <i
                     class="bi bi-plus-square-fill text-blue-300 cursor-pointer hover:scale-125"
                   ></i>
+                  <p class="text-sm ">mm</p>
                 </div>
               </div>
-              <div class="w-1/2"></div>
+              <div
+                class="flex justify-between items-center bg-gray-50 border border-gray-300 text-sm rounded-lg w-1/2 p-2"
+              >
+                <p class="text-sm font-medium text-gray-900">Diameter</p>
+                <div
+                  class="flex justify-between items-center max-w-max gap-x-2"
+                >
+                  <i
+                    class="bi bi-dash-square-fill text-blue-300 cursor-pointer hover:scale-125"
+                  ></i>
+
+                  <div class="flex gap-x-1">
+                    <input
+                      type="number"
+                      placeholder="1"
+                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-[3rem] h-[1.5rem] p-2"
+                    />
+                    
+                  </div>
+                  <i
+                    class="bi bi-plus-square-fill text-blue-300 cursor-pointer hover:scale-125"
+                  ></i>
+                  <p class="text-sm ">mm</p>
+                </div>
+              </div>
+             
             </div>
           </div>
           <div class="flex flex-col w-2/5 gap-y-4">
@@ -289,9 +343,7 @@
             >
               <p class="text-md font-semibold">1100 Aluminium</p>
               <p class="text-sm text-gray-400">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Blanditiis aperiam porro dolor necessitatibus! Mollitia dolorem
-                ducimus atque nisi, eveniet soluta!
+                 It has low density, is non-toxic, has high thermal conductivity, has excellent resistance to corrosion, and can be cast, machined and moulded quickly.
               </p>
               <p class="mt-5">
                 <span class="inline-block w-[8rem]">Quantity</span>: 3
@@ -306,7 +358,7 @@
                 <span class="inline-block w-[8rem]">Length</span>: 50m
               </p>
               <p class="mt-3">
-                <span class="inline-block w-[8rem]">Form</span>: Metal
+                <span class="inline-block w-[8rem]">Form</span>: Square
               </p>
             </div>
             <div class="w-full flex justify-end">
@@ -490,11 +542,18 @@
                   class="bg-zinc-50 border rounded-md w-full p-2"
                 />
                 <div>
-                  <p
-                    class="p-2 mb-0 bg-blue-100 rounded-md text-blue-500 flex justify-center items-center"
+                 
+                   <select
+                    id="categories"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg px-2  block p-2.5"
                   >
-                    <span>ml</span>
-                  </p>
+                    <option selected>Litre</option>
+                    <option value="US">Kg</option>
+                    <option value="CA">Grams</option>
+                    <option value="FR">Units</option>
+                    
+                  </select>
+                  
                 </div>
               </div>
             </div>
@@ -521,7 +580,7 @@
               <input
                 type="text"
                 class="bg-gray-50 w-full border rounded-md p-2 mt-3"
-                placeholder="Please mension polymer name"
+                placeholder="Please mention polymer name"
               />
             </div>
 
@@ -559,13 +618,13 @@
               <input
                 type="text"
                 class="bg-gray-50 w-full border rounded-md p-2 mt-3"
-                placeholder="Please mension polmer grade"
+                placeholder="Please mention polymer grade"
               />
             </div>
 
             <div class="mt-3">
               <label for="structure " class="text-sm text-zinc-500"
-                >Matrial Specification</label
+                >Material Specification</label
               >
               <textarea
                 name=""
@@ -679,11 +738,11 @@
                       placeholder="1"
                       class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-[3rem] h-[1.5rem] p-2"
                     />
-                    <p class="text-sm">mm</p>
                   </div>
                   <i
-                    class="bi bi-plus-square-fill text-blue-300 cursor-pointer hover:scale-125"
+                  class="bi bi-plus-square-fill text-blue-300 cursor-pointer hover:scale-125"
                   ></i>
+                  <p class="text-sm">mm</p>
                 </div>
               </div>
             </div>
@@ -705,23 +764,32 @@
                       placeholder="1"
                       class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-[3rem] h-[1.5rem] p-2"
                     />
-                    <p class="text-sm hidden">mm</p>
                   </div>
                   <i
-                    class="bi bi-plus-square-fill text-blue-300 cursor-pointer hover:scale-125"
+                  class="bi bi-plus-square-fill text-blue-300 cursor-pointer hover:scale-125"
                   ></i>
+                  <p class="text-sm ">mm</p>
                 </div>
               </div>
-              <div class="w-1/2"></div>
+              
               <select
                 id="countries"
                 class=" bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/2 p-2.5"
               >
                 <option selected disabled>select form</option>
-                <option>Angle</option>
-                <option>Square</option>
-                <option>Rectangle</option>
-                <option>bar</option>
+                <option>Sheet</option>
+                <option>Bar</option>
+                <option>Honeycomb</option>
+                <option>Lump</option>
+                <option>Mesh</option>
+                <option>Fabric</option>
+                <option>Powder</option>
+                <option>Film</option>
+                <option>Rod</option>
+                <option>Sphere</option>
+                <option>Granule</option>
+                <option>Tube</option>
+               
               </select>
             </div>
             <div class="flex w-full gap-x-6">
@@ -742,11 +810,11 @@
                       placeholder="1"
                       class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-[3rem] h-[1.5rem] p-2"
                     />
-                    <p class="text-sm hidden">mm</p>
                   </div>
                   <i
-                    class="bi bi-plus-square-fill text-blue-300 cursor-pointer hover:scale-125"
+                  class="bi bi-plus-square-fill text-blue-300 cursor-pointer hover:scale-125"
                   ></i>
+                  <p class="text-sm hidden">mm</p>
                 </div>
               </div>
               <div class="w-1/2"></div>
@@ -761,9 +829,7 @@
             >
               <p class="text-md font-semibold">Nylon</p>
               <p class="text-sm text-gray-400">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Blanditiis aperiam porro dolor necessitatibus! Mollitia dolorem
-                ducimus atque nisi, eveniet soluta!
+               Nylon is approximately 1/8 the weight of bronze, 1/7 the weight of cast iron, and 1/2 the weight of aluminum.
               </p>
               <p class="mt-5">
                 <span class="inline-block w-[8rem]">Quantity</span>: 3
@@ -969,16 +1035,23 @@
                   ></i>
                 </div>
               </div>
-              <div class="w-1/2"></div>
+          
               <select
                 id="countries"
                 class=" bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/2 p-2.5"
               >
                 <option selected disabled>select form</option>
-                <option>Angle</option>
-                <option>Square</option>
-                <option>Rectangle</option>
-                <option>bar</option>
+                <option value="">Rod</option>
+                <option value="">Pipe</option>
+                <option value="">Hollow</option>
+                <option value="">L Shape</option>
+                <option value="">U Shape</option>
+                <option value="">Foil</option>
+                <option value="">Powder</option>
+                <option value="">Sphere</option>
+                <option value="">Granule</option>
+                <option value="">Tube</option>
+                <option value="">Other</option>
               </select>
             </div>
             <div class="flex w-full gap-x-6">
@@ -1018,9 +1091,7 @@
             >
               <p class="text-md font-semibold">Plywood</p>
               <p class="text-sm text-gray-400">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Blanditiis aperiam porro dolor necessitatibus! Mollitia dolorem
-                ducimus atque nisi, eveniet soluta!
+               Also known as commercial plywood, MR plywood means Moisture Resistant plywood. It is given the IS 303 grade.
               </p>
               <p class="mt-5">
                 <span class="inline-block w-[8rem]">Quantity</span>: 3
@@ -1229,16 +1300,23 @@
                   ></i>
                 </div>
               </div>
-              <div class="w-1/2"></div>
+             
               <select
                 id="countries"
                 class=" bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/2 p-2.5"
               >
                 <option selected disabled>select form</option>
-                <option>Angle</option>
-                <option>Square</option>
-                <option>Rectangle</option>
-                <option>bar</option>
+                 <option value="">Rod</option>
+                <option value="">Pipe</option>
+                <option value="">Hollow</option>
+                <option value="">L Shape</option>
+                <option value="">U Shape</option>
+                <option value="">Foil</option>
+                <option value="">Powder</option>
+                <option value="">Sphere</option>
+                <option value="">Granule</option>
+                <option value="">Tube</option>
+                <option value="">Other</option>
               </select>
             </div>
             <div class="flex w-full gap-x-6">
@@ -1278,9 +1356,7 @@
             >
               <p class="text-md font-semibold">Clay</p>
               <p class="text-sm text-gray-400">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Blanditiis aperiam porro dolor necessitatibus! Mollitia dolorem
-                ducimus atque nisi, eveniet soluta!
+                CLAY SPECIFICATIONS. CLAY. CONE FIRED COLOR. FIRED SHRINKAGE +/- 2%. WATER ABSORBTION +/- 1%. 06-04 CASTING SLIP. 04. WHITE. 5%. 19%. DURANGO RED.
               </p>
               <p class="mt-5">
                 <span class="inline-block w-[8rem]">Quantity</span>: 3
@@ -1491,7 +1567,7 @@
                   ></i>
                 </div>
               </div>
-              <div class="w-1/2"></div>
+             
               <select
                 id="countries"
                 class=" bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/2 p-2.5"
@@ -1540,9 +1616,7 @@
             >
               <p class="text-md font-semibold">Wood</p>
               <p class="text-sm text-gray-400">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Blanditiis aperiam porro dolor necessitatibus! Mollitia dolorem
-                ducimus atque nisi, eveniet soluta!
+                Timber is generally specified by cross-section, length, stress grade, as seasoned or unseasoned, by species or timber group, and treatment.
               </p>
               <p class="mt-5">
                 <span class="inline-block w-[8rem]">Quantity</span>: 3

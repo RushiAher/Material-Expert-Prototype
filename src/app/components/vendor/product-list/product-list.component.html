@@ -1,23 +1,35 @@
-<h1 class="title-text">Matrials list</h1>
+<h1 class="title-text">Materials list</h1>
 
 <div class="flex gap-x-3 my-8">
-  <button class="btn btn-sm bg-white border-0 text-blue-500 capitalize font-normal hover:bg-blue-100">
+  <button
+    class="btn btn-sm bg-white border-0 text-blue-500 capitalize font-normal hover:bg-blue-100"
+  >
     Metals
   </button>
-  <button class="btn btn-sm bg-white border-0 text-blue-500 capitalize font-normal hover:bg-blue-100">
+  <button
+    class="btn btn-sm bg-white border-0 text-blue-500 capitalize font-normal hover:bg-blue-100"
+  >
     Chemicals
   </button>
-  <button class="btn btn-sm bg-white border-0 text-blue-500 capitalize font-normal hover:bg-blue-100">
+  <button
+    class="btn btn-sm bg-white border-0 text-blue-500 capitalize font-normal hover:bg-blue-100"
+  >
     polymers
   </button>
-  <button class="btn btn-sm bg-white border-0 text-blue-500 capitalize font-normal hover:bg-blue-100">
+  <button
+    class="btn btn-sm bg-white border-0 text-blue-500 capitalize font-normal hover:bg-blue-100"
+  >
     composites
   </button>
-  <button class="btn btn-sm bg-white border-0 text-blue-500 capitalize font-normal hover:bg-blue-100">
+  <button
+    class="btn btn-sm bg-white border-0 text-blue-500 capitalize font-normal hover:bg-blue-100"
+  >
     ceramics
   </button>
-  <button class="btn btn-sm bg-white border-0 text-blue-500 capitalize font-normal hover:bg-blue-100">
-    naturial matrials
+  <button
+    class="btn btn-sm bg-white border-0 text-blue-500 capitalize font-normal hover:bg-blue-100"
+  >
+    natural materials
   </button>
 </div>
 
@@ -26,7 +38,9 @@
     <p class="capitalize font-semibold">product list</p>
   </div>
   <div>
-    <label for="my-modal" class="btn btn-sm btn-primary"><i class="fa-solid fa-plus me-3"></i> add Material</label>
+    <label for="my-modal" class="btn btn-sm btn-primary"
+      ><i class="fa-solid fa-plus me-3"></i> add Material</label
+    >
   </div>
 </div>
 <div class="overflow-x-auto mt-5">
@@ -34,25 +48,33 @@
     <thead>
       <tr>
         <th></th>
-        <th>matrial name</th>
+        <th>material name</th>
         <th>material specification</th>
         <th>capacity range</th>
         <th>technical data sheet</th>
-        <th>material company</th>
+        <th>Available Forms</th>
+        <th>Manufacturing Company</th>
         <th class="text-center">status</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let items of productListData,let i = index">
-        <th>{{i+1}}</th>
-        <td>{{items.name}}</td>
-        <td>{{items.specifications}}</td>
-        <td>{{items.capacity}}</td>
-        <td>{{items.dataSheet}}</td>
-        <td>{{items.company}}</td>
-        <td class='flex justify-center'>
-          <div class="badge  "[ngClass]="{'badge-success  text-green-100':items.status == 'active','badge-error text-red-100':items.status == 'inactive'}">
-           <p class="text-xs capitalize">  {{items.status}}</p>
+      <tr *ngFor="let items of productListData; let i = index">
+        <th>{{ i + 1 }}</th>
+        <td>{{ items.name }}</td>
+        <td>{{ items.specifications }}</td>
+        <td>{{ items.capacity }}</td>
+        <td>{{ items.dataSheet }}</td>
+        <td>{{ items.forms }}</td>
+        <td>{{ items.company }}</td>
+        <td class="flex justify-center">
+          <div
+            class="badge"
+            [ngClass]="{
+              'badge-success  text-green-100': items.status == 'active',
+              'badge-error text-red-100': items.status == 'inactive'
+            }"
+          >
+            <p class="text-xs capitalize">{{ items.status }}</p>
           </div>
         </td>
       </tr>
@@ -71,40 +93,63 @@
       <option>polymers</option>
       <option>ceramics</option>
       <option>composites</option>
-      <option>naturial matrial</option>
+      <option>natural material</option>
     </select>
 
     <div class="form-control w-full">
-      <label class="label text-xs  to-zinc-500">Matrial Name</label>
-      <input type="text" placeholder="Matrial Name" class=" input input-bordered w-full" />
+      <label class="label text-xs to-zinc-500">Material Name</label>
+      <input
+        type="text"
+        placeholder="Material Name"
+        class="input input-bordered w-full"
+      />
     </div>
 
     <div class="form-control">
-      <label class="label text-xs to-zinc-500">Matrial specification </label>
-      <textarea class="textarea textarea-bordered h-24" placeholder="Matrial specification"></textarea>
+      <label class="label text-xs to-zinc-500">Material specification </label>
+      <textarea
+        class="textarea textarea-bordered h-24"
+        placeholder="Material specification"
+      ></textarea>
     </div>
-<div class="mt-3">
-  <label class="label text-xs to-zinc-500">Technical data sheet</label>
-  <input type="file" class="file-input file-input-bordered file-input-primary w-full " />
-</div>
+    <div class="form-control w-full">
+      <label class="label text-xs  to-zinc-500">Available Forms</label>
+      <input type="text" placeholder="Add available forms" class=" input input-bordered w-full" />
+    </div>
+    <div class="mt-3">
+      <label class="label text-xs to-zinc-500">Technical data sheet</label>
+      <input
+        type="file"
+        class="file-input file-input-bordered file-input-primary w-full"
+      />
+    </div>
 
-<div class="flex justify-between items-center mt-3 w-full">
-  <div><p>Capacity Range</p></div>
-  <div class="flex items-center gap-x-3">
-    <input type="text" class="bg-zinc-100 input input-bordered border w-[3rem] h-[3rem] rounded-md p-2">
-    <span>to</span>
-    <input type="text" class="bg-zinc-100 input input-bordered border w-[3rem] h-[3rem] rounded-md p-2">
-  </div>
-</div>
+    <div class="flex justify-between items-center mt-3 w-full">
+      <div><p>Capacity Range</p></div>
+      <div class="flex items-center gap-x-3">
+        <input
+          type="text"
+          class="bg-zinc-100 input input-bordered border w-[3rem] h-[3rem] rounded-md p-2"
+        />
+        <span>to</span>
+        <input
+          type="text"
+          class="bg-zinc-100 input input-bordered border w-[3rem] h-[3rem] rounded-md p-2"
+        />
+      </div>
+    </div>
 
-<div class="form-control w-full">
-  <label class="label text-xs  to-zinc-500">Matrial company</label>
-  <input type="text" placeholder="Matrial company" class=" input input-bordered w-full" />
-</div>
-
+    <div class="form-control w-full">
+      <label class="label text-xs to-zinc-500">Manufacturing company</label>
+      <input
+        type="text"
+        placeholder="Manufacturing company"
+        class="input input-bordered w-full"
+      />
+    </div>
 
     <div class="modal-action">
-      <label for="my-modal" class="btn">Add matrial</label>
+      <label for="my-modal" class="btn">Add Material</label>
     </div>
   </div>
 </div>

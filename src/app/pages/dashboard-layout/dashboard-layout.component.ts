@@ -246,7 +246,7 @@ export class DashboardLayoutComponent {
           },
           {
             name: 'FAQs',
-            url: '#',
+            url: 'faqs',
           }]
       }
   ]
@@ -311,7 +311,7 @@ export class DashboardLayoutComponent {
       id: '5',
       icon: 'fa-solid fa-gears',
       name: 'Settings',
-      url: '#',
+      url: 'vendor/settings',
       hasSubmenu: 'false',
     },
     // {
@@ -334,7 +334,7 @@ export class DashboardLayoutComponent {
         },
         {
           name: 'FAQs',
-          url: '#',
+          url: 'vendor/faqs',
         }]
     }
   ]

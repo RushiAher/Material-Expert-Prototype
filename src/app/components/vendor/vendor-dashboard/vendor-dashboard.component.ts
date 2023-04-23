@@ -11,10 +11,12 @@ export class VendorDashboardComponent {
   ngAfterViewInit(): void {
 
     var revenuGraph = {
-      series: [{
-        name: 'Sales',
-        data: [31, 40, 28, 51, 42, 109, 100, 110, 95, 90, 70, 85]
-      }, {
+      series: [
+      //   {
+      //   name: 'Sales',
+      //   data: [31, 40, 28, 51, 42, 109, 100, 110, 95, 90, 70, 85]
+      // },
+        {
         name: 'Revenue',
         data: [11, 32, 45, 32, 34, 52, 41, 52, 66, 40, 42, 53]
       }],
@@ -42,6 +44,10 @@ export class VendorDashboardComponent {
           show: false
         },
         categories: ["Jan", "Feb", "Mar", 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', "Dec"]
+        ,
+         title: {
+          text: "Revenue"
+        },
       },
       grid: {
         xaxis: {
@@ -139,12 +145,12 @@ export class VendorDashboardComponent {
     chart.render();
     // chart 2
     var sales = {
-      series: [85, 55, 95, 30, 15],
+      series: [85, 55, 95, 30, 15, 20],
       chart: {
         type: 'donut',
       },
 
-      labels: ['lethium', 'Copper', 'Aluminium', 'Carbon', 'Iron'],
+      labels: ['DUPLEX STEEL', 'COBALT ALLOYS', 'INCONEL', 'INCOLOY', 'TITANIUM','MONEL'],
       responsive: [{
         breakpoint: 480,
         options: {
@@ -320,7 +326,7 @@ export class VendorDashboardComponent {
 
     var popularproducts = {
       series: [{
-        data: [400, 430, 448, 470, 540, 580, 690, 1100, 1200, 1380]
+        data: [400, 430, 448, 470, 540, 580]
       }],
       chart: {
         type: 'bar',
@@ -337,10 +343,16 @@ export class VendorDashboardComponent {
         enabled: false
       },
       xaxis: {
-        categories: ['Lithium', 'Boron', 'Carbon', 'Hydrogen', 'Iron', 'Aluminium', 'Sodium',
-          'Berelium', 'boron', 'Nitrogen'
-        ],
-      }
+        categories: ['DUPLEX STEEL', 'COBALT ALLOYS', 'INCONEL', 'INCOLOY', 'TITANIUM', 'MONEL'],
+         title: {
+          text: "Revenue"
+        },
+      },
+      yaxis: {
+         title: {
+          text: "Materials"
+        },
+       }
     };
 
     var chart = new ApexCharts(document.querySelector("#top-product"), popularproducts);
@@ -351,7 +363,7 @@ export class VendorDashboardComponent {
 
   tableData = [
     {
-      name: 'lithium',
+      name: 'DUPLEX STEEL',
       minQTY: '50g',
       price: '350',
       totalQtySale: '5.6 kg',
@@ -359,7 +371,7 @@ export class VendorDashboardComponent {
       Growth: 32
     },
         {
-      name: 'carbon',
+      name: 'COBALT ALLOYS',
       minQTY: '50g',
       price: '650',
       totalQtySale: '2.25 kg',
@@ -367,7 +379,7 @@ export class VendorDashboardComponent {
       Growth: 12
     },
         {
-      name: 'aluminium',
+      name: 'INCONEL',
       minQTY: '1 kg',
       price: '505',
       totalQtySale: '860 kg',
@@ -375,7 +387,7 @@ export class VendorDashboardComponent {
       Growth: 120
     },
         {
-      name: 'cappor',
+      name: 'INCOLOY',
       minQTY: '250g',
       price: '650',
       totalQtySale: '120 kg',
@@ -383,7 +395,7 @@ export class VendorDashboardComponent {
       Growth: 25
     },
         {
-      name: 'boron',
+      name: 'TITANIUM',
       minQTY: '1g',
       price: '2650',
       totalQtySale: '150 g',
@@ -391,7 +403,7 @@ export class VendorDashboardComponent {
       Growth: 35
     },
         {
-      name: 'iron',
+      name: 'MONEL',
       minQTY: '1kg',
       price: '650',
       totalQtySale: '600 kg',

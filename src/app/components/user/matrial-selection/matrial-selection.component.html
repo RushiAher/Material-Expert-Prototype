@@ -25,7 +25,7 @@
     <div class="">
       <label for="" class=" text-sm text-zinc-400 ">Select Category</label><br>
       <select class="select select-bordered w-full">
-        <option disabled selected>Select matrial Category</option>
+        <option disabled selected>Select material Category</option>
         <option *ngFor="let items of MatrialCatagory">{{items}}</option>
       </select>
     </div>
@@ -37,9 +37,9 @@
 <div class="mt-10 w-[80%] mx-auto">
   <div class="flex ">
     <div class="tabs switch-tabs">
-      <a id="properties" (click)="showForm($event)" class="tab  tab-lifted tab-active">Matrial by Properties</a>
+      <a id="properties" (click)="showForm($event)" class="tab  tab-lifted tab-active">Material by Properties</a>
       <a id="process" (click)="showForm($event)" class="tab  tab-lifted ">By Process</a>
-      <a id="assistence" (click)="showForm($event)" class="tab  tab-lifted">Productry Assistence</a>
+      <a id="assistence" (click)="showForm($event)" class="tab  tab-lifted">Productry Assistance</a>
     </div>
   </div>
   <!-- main -->
@@ -48,7 +48,7 @@
     <div *ngIf="showMatrialByProperty">
 
       <div >
-        <p class="mb-3 font-semibold">Physical Propertie</p>
+        <p class="mb-3 font-semibold">Physical Properties</p>
         <table  class="items-center w-full border-collapse text-blueGray-700  ">
           <thead class="thead-light ">
             <tr>

@@ -22,6 +22,7 @@ import { VendorMatrialRequestComponent } from './components/user/vendor-matrial-
 import { CheckOutComponent } from './components/user/check-out/check-out.component';
 import { PaymentComponent } from './components/user/payment/payment.component';
 import { TrackOrderComponent } from './components/user/track-order/track-order.component';
+import { FaqsComponent } from './components/faqs/faqs.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { TrackOrderComponent } from './components/user/track-order/track-order.c
     VendorMatrialRequestComponent,
     CheckOutComponent,
     PaymentComponent,
-    TrackOrderComponent
+    TrackOrderComponent,
+    FaqsComponent
   ],
   imports: [
     BrowserModule,

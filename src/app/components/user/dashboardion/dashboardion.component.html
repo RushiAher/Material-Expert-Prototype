@@ -54,9 +54,9 @@
           </tr>
           <tr>
             <td>
-              <p class="text-zinc-500">Project Area Pincode :</p>
+              <p class="text-zinc-500">Project Start Date :</p>
             </td>
-            <td><span class="text-blue-500">{{items.projectAreaPincode}}</span></td>
+            <td><span class="text-blue-500">{{items.projectStartDate}}</span></td>
           </tr>
           <tr>
             <td>
@@ -79,7 +79,7 @@
       <div class="flex flex-wrap min-h-max gap-2">
         <span class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm" *ngFor="let item of items.Parts">{{item}}</span>
       </div>
-      <p class="text-sm mt-5">{{items.date}}</p>
+      <!-- <p class="text-sm mt-5 hidden">{{items.date}}</p> -->
     </div>
   </div>
   <div class=" w-[27rem]  rounded-xl">
@@ -121,9 +121,9 @@
 
     <div class="form-control mt-3">
       <label class="label">
-        <span class="label-text">Project pincode (where project is building)</span>
+        <span class="label-text">Project Subparts</span>
       </label>
-      <input type="text" placeholder="Project pincode" class="input input-bordered w-full" />
+      <input type="text" placeholder="Add Project Subparts" class="input input-bordered w-full" />
     </div>
     <!--  -->
     <div class="form-control mt-3">
@@ -137,7 +137,7 @@
       <label class="label">
         <span class="label-text">Project Material Category</span>
       </label>
-      <input type="text" placeholder="Project Matrial Category" class="input input-bordered w-full" />
+      <input type="text" placeholder="Project Material Category" class="input input-bordered w-full" />
     </div>
     <!--  -->
     <div class="modal-action">

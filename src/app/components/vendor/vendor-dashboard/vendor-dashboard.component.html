@@ -2,7 +2,7 @@
   <div>
     <h1 class="title-text">Dashboard</h1>
   </div>
-  <div class="flex gap-x-3">
+  <div class="flex flex-wrap gap-x-3">
     <button
       class="btn btn-sm font-medium bg-white hover:bg-blue-50 text-blue-500 border-0"
     >
@@ -32,8 +32,8 @@
 </div>
 
 <div class="dashboard mt-10">
-  <div class="grid grid-cols-3 gap-5">
-    <div class="col-span-1 bg-white p-5 rounded-xl">
+  <div class="grid grid-cols-5  gap-5">
+    <div class="col-span-5 md:col-span-2  bg-white p-5 rounded-xl">
       <div class="flex items-center justify-between">
         <h1 class="text-5xl">65.6K</h1>
         <i class="fa-solid fa-ellipsis-vertical"></i>
@@ -41,7 +41,7 @@
       <div id="revennuGraph"></div>
     </div>
 
-    <div class="col-span-2 bg-white p-5 rounded-xl">
+    <div class="col-span-5 md:col-span-3  bg-white p-5 rounded-xl">
        <div class="flex justify-end">
           <select
             id="form"
@@ -58,22 +58,22 @@
       </div>
       <div id="revenual-barchart"></div>
     </div>
-    <div class="col-span-2 bg-white p-5 rounded-xl donut-chart">
+    <div class="col-span-5 lg:col-span-3  bg-white p-5 rounded-xl donut-chart">
       <div class="flex items-center justify-between">
         <h1 class="text-xl font-semibold">Top selling Products</h1>
         <i class="fa-solid fa-ellipsis-vertical"></i>
       </div>
       <div id="top-product"></div>
     </div>
-    <div class="col-span-2 hidden bg-white p-5 rounded-xl donut-chart">
+    <!-- <div class="lg:col-span-2 hidden bg-white p-5 rounded-xl donut-chart">
       <div class="flex items-center justify-between">
         <h1 class="text-xl font-semibold">Sales</h1>
         <i class="fa-solid fa-ellipsis-vertical"></i>
       </div>
       <div id="sales"></div>
-    </div>
+    </div> -->
 
-    <div class="col-span-1 bg-white p-5 rounded-xl donut-chart">
+    <div class="col-span-5 lg:col-span-2  bg-white p-5 rounded-xl donut-chart">
       <div class="flex items-center justify-between">
         <h1 class="text-xl font-semibold">Total Sales</h1>
         <i class="fa-solid fa-ellipsis-vertical"></i>
@@ -81,7 +81,7 @@
       <div id="Total-sales"></div>
     </div>
 
-    <div class="col-span-2 bg-white p-5 rounded-xl">
+    <div class="col-span-5 bg-white p-5 rounded-xl">
       <div class="overflow-x-auto">
         <div class="flex justify-end">
           <select

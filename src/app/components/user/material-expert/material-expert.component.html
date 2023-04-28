@@ -171,13 +171,14 @@
         <p class="text-black font-medium capitalize ms-2">{{items}}</p>
       </button>
     </div>
-    <app-experts></app-experts>
+    <div class="p-6">
+    <app-experts></app-experts></div>
   </div>
 
   <!-- expert by assistance -->
   <div *ngIf="showExpertByAssistence">
     <div class="flex justify-center">
-      <div class="w-[80%] bg-white p-5 mt-8 rounded-xl">
+      <div class="md:w-full lg:w-[80%] bg-white p-5 mt-8 rounded-xl">
         <table class="items-center w-full border-collapse text-blueGray-700">
           <thead class="thead-light">
             <tr>

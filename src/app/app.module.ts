@@ -25,6 +25,7 @@ import { TrackOrderComponent } from './components/user/track-order/track-order.c
 import { FaqsComponent } from './components/faqs/faqs.component';
 import { MaterialExpertComponent } from './components/user/material-expert/material-expert.component';
 import { ExpertsComponent } from './components/experts/experts.component';
+import { ExpertProfileComponent } from './components/user/expert-profile/expert-profile.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { ExpertsComponent } from './components/experts/experts.component';
     TrackOrderComponent,
     FaqsComponent,
     MaterialExpertComponent,
-    ExpertsComponent
+    ExpertsComponent,
+    ExpertProfileComponent
   ],
   imports: [
     BrowserModule,

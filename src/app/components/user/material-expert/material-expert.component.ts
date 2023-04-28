@@ -14,7 +14,7 @@ export class MaterialExpertComponent {
 
 ngOnInit(): void {
   $(document).ready(()=>{
-    $('#material-expert-1').addClass('active')
+    $('#matrial-expert-1').addClass('active')
   })
 }
    constructor(){

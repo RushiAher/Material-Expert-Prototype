@@ -10,6 +10,7 @@ import { UserProfileComponent } from './components/user/user-profile/user-profil
 import { SettingsComponent } from './components/user/settings/settings.component';
 import { MaterialExpertComponent } from './components/user/material-expert/material-expert.component';
 import { MatrialProcurementComponent } from './components/user/matrial-procurement/matrial-procurement.component';
+import { ExpertProfileComponent } from './components/user/expert-profile/expert-profile.component';
 import { AnalyticsComponent } from './components/user/analytics/analytics.component';
 import { OrdersComponent } from './components/vendor/orders/orders.component';
 import { ProductListComponent } from './components/vendor/product-list/product-list.component';
@@ -29,6 +30,7 @@ const routes: Routes = [
       {path:'settings', component:SettingsComponent},
       {path:'materials-procurement', component:MatrialProcurementComponent},
       {path:'material-experts', component:MaterialExpertComponent},
+      {path:'expert-profile', component:ExpertProfileComponent},
       {path:'project-analytics', component:AnalyticsComponent},
       {path:'vendors', component:VendorMatrialRequestComponent},
       {path:'checkout', component:CheckOutComponent},

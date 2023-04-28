@@ -1,11 +1,11 @@
-  <div class="grid grid-cols-4 gap-4 place-items-center">
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  gap-4 place-items-center">
           <div class="" *ngFor="let items of materialExperts">
-            <div id="{{ items.id }}" class="card w-80 bg-base-100 shadow-xl">
+            <div id="{{ items.id }}" class="card xl:w-80 md:w-76 bg-base-100 shadow-xl">
               <figure class="px-10 pt-10">
                 <img
                   src="{{ items.img }}"
                   alt="Shoes"
-                  class="rounded-full h-48 w-48"
+                  class="rounded-full xl:h-48 xl:w-48 md:w-32 md:h-32"
                 />
               </figure>
               <div class="card-body items-center text-center">
@@ -14,6 +14,7 @@
                 <p>{{ items.summary }}</p>
                 <div class="card-actions">
                   <button
+                  routerLink="/expert-profile"
                     class="text-white bg-primary hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none"
                   >
                     View Profile

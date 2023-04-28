@@ -1,0 +1,7 @@
+.switch-tabs .active{color: #3B82F6;font-weight: 500;border-bottom: 2px solid #3B82F6;}
+.material-expert.active .matrial-icon{border: 3px solid #3B82F6;padding: .5rem;}
+.material-expert.active p{color: #3B82F6;}
+
+
+#select-experts .form{display: none;}
+#select-experts .form:nth-child(1){display: block;}

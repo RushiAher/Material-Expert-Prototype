@@ -8,7 +8,7 @@ import { VendorDashboardComponent } from './components/vendor/vendor-dashboard/v
 import { BussinessInfoComponent } from './components/vendor/bussiness-info/bussiness-info.component';
 import { UserProfileComponent } from './components/user/user-profile/user-profile.component';
 import { SettingsComponent } from './components/user/settings/settings.component';
-import { MatrialSelectionComponent } from './components/user/matrial-selection/matrial-selection.component';
+import { MaterialExpertComponent } from './components/user/material-expert/material-expert.component';
 import { MatrialProcurementComponent } from './components/user/matrial-procurement/matrial-procurement.component';
 import { AnalyticsComponent } from './components/user/analytics/analytics.component';
 import { OrdersComponent } from './components/vendor/orders/orders.component';
@@ -27,8 +27,8 @@ const routes: Routes = [
       {path: '', component: DashboardionComponent},
       {path:'profile', component:UserProfileComponent},
       {path:'settings', component:SettingsComponent},
-      {path:'materials-selection', component:MatrialSelectionComponent},
       {path:'materials-procurement', component:MatrialProcurementComponent},
+      {path:'material-experts', component:MaterialExpertComponent},
       {path:'project-analytics', component:AnalyticsComponent},
       {path:'vendors', component:VendorMatrialRequestComponent},
       {path:'checkout', component:CheckOutComponent},

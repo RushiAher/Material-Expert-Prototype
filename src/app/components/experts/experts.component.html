@@ -1,0 +1,25 @@
+  <div class="grid grid-cols-4 gap-4 place-items-center">
+          <div class="" *ngFor="let items of materialExperts">
+            <div id="{{ items.id }}" class="card w-80 bg-base-100 shadow-xl">
+              <figure class="px-10 pt-10">
+                <img
+                  src="{{ items.img }}"
+                  alt="Shoes"
+                  class="rounded-full h-48 w-48"
+                />
+              </figure>
+              <div class="card-body items-center text-center">
+                <h2 class="card-title">{{ items.name }}</h2>
+
+                <p>{{ items.summary }}</p>
+                <div class="card-actions">
+                  <button
+                    class="text-white bg-primary hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none"
+                  >
+                    View Profile
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>

@@ -56,9 +56,9 @@ export class DashboardLayoutComponent {
       {
         id: '2',
         icon: 'fa-solid fa-flask-vial',
-        name: 'material selection',
-        url: '#',
-        hasSubmenu: 'true',
+        name: 'material experts',
+        url: 'material-experts',
+        hasSubmenu: 'false',
         submenuItems: [
           {
             name: 'metals',

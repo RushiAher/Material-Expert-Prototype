@@ -14,7 +14,7 @@
           type="button"
           class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-full text-md md:px-3 md:py-1.5 lg:px-5 lg:py-2.5 mr-2"
         >
-          Subscribe<i class="bi bi-bell-fill ml-2 md:text-md lg:text-xl"></i>
+          Add Favorite<i class="bi bi-heart ml-2 md:text-md lg:text-xl"></i>
         </button>
       </div>
       <p class="text-md mt-3">
@@ -33,11 +33,12 @@
           </h2>
           <p>Video meeting | 30 min</p>
           <div class="card-actions justify-end">
-            <button
-              class="text-white bg-primary hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none"
+            <label
+              for="my-modal"
+              class="text-white bg-primary hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none cursor-pointer"
             >
               Book Now
-            </button>
+            </label>
           </div>
         </div>
       </div>
@@ -49,11 +50,12 @@
           </h2>
           <p>Video meeting | 30 min</p>
           <div class="card-actions justify-end">
-            <button
-              class="text-white bg-primary hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none"
+            <label
+              for="my-modal"
+              class="text-white bg-primary hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none cursor-pointer"
             >
               Book Now
-            </button>
+            </label>
           </div>
         </div>
       </div>
@@ -65,14 +67,73 @@
           </h2>
           <p>Video meeting | 30 min</p>
           <div class="card-actions justify-end">
-            <button
-              class="text-white bg-primary hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none"
+            <label
+              for="my-modal"
+              class="text-white bg-primary hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none cursor-pointer"
             >
               Book Now
-            </button>
+            </label>
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal -->
+<input type="checkbox" id="my-modal" class="modal-toggle" />
+<div class="modal">
+  <div class="modal-box">
+    <!--  -->
+
+    <h3 class="mb-5 text-lg font-semibold text-gray-900">Pick a Date</h3>
+    <ul class="grid w-full gap-4 md:grid-cols-4">
+      <!-- <ul class="flex flex-row flex-nowrap overflow-x-auto gap-5 w-full"> -->
+      <li *ngFor="let item of expertsAvailabilityDate">
+        <input
+          type="checkbox"
+          id="react-option"
+          value=""
+          class="hidden peer"
+          required=""
+        />
+        <label
+          for="react-option"
+          class="flex flex-col items-center justify-between w-full p-3 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer  hover:text-gray-600 peer-checked:text-gray-600 hover:bg-gray-50"
+        >
+          <div class="w-full text-sm text-center font-semibold">
+            {{ item.day }}
+          </div>
+          <div class="w-full text-lg font-bold">{{ item.date }}</div>
+        </label>
+      </li>
+    </ul>
+    <h3 class="my-5 text-lg font-semibold text-gray-900">Pick a Time</h3>
+    <ul class="grid w-full gap-4 md:grid-cols-4">
+      <!-- <ul class="flex flex-row flex-nowrap overflow-x-auto gap-5 w-full"> -->
+      <li *ngFor="let item of expertsAvailabilityTime">
+        <input
+          type="checkbox"
+          id="react-option"
+          value=""
+          class="hidden peer"
+          required=""
+        />
+        <label
+          for="react-option"
+          class="flex items-center justify-between w-full p-3 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer peer-checked:border-blue-600 hover:text-gray-600 peer-checked:text-gray-600 hover:bg-gray-50"
+        >
+          <div class="w-full text-lg font-bold">{{ item.time }}</div>
+        </label>
+      </li>
+    </ul>
+
+    <div class="modal-action">
+      <label
+        for="my-modal"
+        class="text-white bg-primary hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none cursor-pointer"
+        >Book</label
+      >
     </div>
   </div>
 </div>

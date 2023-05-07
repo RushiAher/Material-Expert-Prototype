@@ -7,14 +7,21 @@ declare let $: any
 })
 export class MaterialExpertComponent {
 
-   showExpertByCategory: boolean = true;
+  showExperts: boolean = true;
+  showFavourite:boolean = false;
+  showHiers: boolean = false;
+
+  showExpertByCategory: boolean = true;
   showExpertBySector: boolean = false;
   showExpertByAssistence: boolean = false;
   showRecommendedExperts: boolean = false;
 
+
 ngOnInit(): void {
-  $(document).ready(()=>{
-    $('#matrial-expert-1').addClass('active')
+  $(document).ready(() => {
+    $('.material-expert').removeClass('active')
+$('#material-expert-1').addClass('active')
+    
   })
 }
    constructor(){
@@ -22,16 +29,35 @@ ngOnInit(): void {
   }
 
 
-  showForm(e: any) {
+
+  showSelectedOption(e: any) {
     let id = e.target.id;
     $('.tabs').removeClass('active');
     $('#' + id).addClass('active');
-    if (id === 'by_category') {
-      this.showExpertByCategory = true; this.showExpertBySector = false; this.showExpertByAssistence = false
-    } else if (id === 'by_sector') {
-      this.showExpertBySector = true; this.showExpertByCategory = false; this.showExpertByAssistence = false
-    } else if (id === 'by_assistance') { this.showExpertByAssistence = true; this.showExpertBySector = false; this.showExpertByCategory = false }
+     if (id === 'find_expert') {
+      this.showExperts = true; this.showFavourite = false; this.showHiers = false
+    } else if (id === 'my_favourites') {
+      this.showFavourite = true; this.showExperts = false; this.showHiers = false
+    } else if (id === 'my_hires') { this.showHiers = true; this.showExperts = false; this.showFavourite = false }
   }
+
+  showForm() {
+   const selectedOption = $('#selected_option').val();   
+      // console.log( selectedOption);
+      if (selectedOption == 'by_category') {
+        this.showExpertByCategory = true;
+        this.showExpertBySector = false;
+        this.showExpertByAssistence = false
+      } else if (selectedOption == 'by_sector') {
+        this.showExpertBySector = true;
+        this.showExpertByCategory = false;
+        this.showExpertByAssistence = false
+      } else if (selectedOption == 'by_assistance') {
+        this.showExpertByAssistence = true;
+        this.showExpertBySector = false;
+        this.showExpertByCategory = false
+      }  
+}
 
 ShowExperts(id:any){
 $('.material-expert').removeClass('active')

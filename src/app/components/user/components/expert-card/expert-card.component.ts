@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-experts',
-  templateUrl: './experts.component.html',
-  styleUrls: ['./experts.component.css']
+  selector: 'app-expert-card',
+  templateUrl: './expert-card.component.html',
+  styleUrls: ['./expert-card.component.css']
 })
-export class ExpertsComponent {
- materialExperts = [
+export class ExpertCardComponent {
+materialExperts = [
     {
       id: 1,
       name: "Josh Philip",

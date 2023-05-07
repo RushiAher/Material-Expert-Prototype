@@ -40,8 +40,8 @@ export class LoginComponent {
       this.errorMsg = ''
       if (this.userType === 'user') {
         this.route.navigateByUrl('/')
-      } else if (this.userType === 'vendor') {
-        this.route.navigateByUrl('/vendor/dashboard')
+      } else if (this.userType === 'expert') {
+        this.route.navigateByUrl('/expert/dashboard')
       }
     }
   }
@@ -63,7 +63,7 @@ export class LoginComponent {
       this.hasError = true
       this.errorMsg = 'please enter your email'
       $('#email').addClass('error-b')
-    } else if (this.userType != 'user' && this.userType != 'vendor') {
+    } else if (this.userType != 'user' && this.userType != 'expert') {
       this.hasError = true
       this.errorMsg = 'Email does not Exist'
       $('#email').addClass('error-b')
@@ -74,8 +74,8 @@ export class LoginComponent {
       localStorage.setItem('userType', this.userType)
       if (this.userType === 'user') {
         this.route.navigateByUrl('/')
-      } else if (this.userType === 'vendor') {
-        this.route.navigateByUrl('/vendor/dashboard')
+      } else if (this.userType === 'expert') {
+        this.route.navigateByUrl('/expert/dashboard')
       }
     }
   }

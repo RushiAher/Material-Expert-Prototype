@@ -7,25 +7,21 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './pages/login/login.component';
 import { DashboardLayoutComponent } from './pages/dashboard-layout/dashboard-layout.component';
 import { DashboardionComponent } from './components/user/dashboardion/dashboardion.component';
-import { MatrialProcurementComponent } from './components/user/matrial-procurement/matrial-procurement.component';
 import { SettingsComponent } from './components/user/settings/settings.component';
 import { UserProfileComponent } from './components/user/user-profile/user-profile.component';
-import { BussinessInfoComponent } from './components/vendor/bussiness-info/bussiness-info.component';
-import { VendorDashboardComponent } from './components/vendor/vendor-dashboard/vendor-dashboard.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { VendorProfileComponent } from './components/vendor/vendor-profile/vendor-profile.component';
-import { OrdersComponent } from './components/vendor/orders/orders.component';
-import { AddProductComponent } from './components/vendor/add-product/add-product.component';
-import { ProductListComponent } from './components/vendor/product-list/product-list.component';
 import { AnalyticsComponent } from './components/user/analytics/analytics.component';
-import { VendorMatrialRequestComponent } from './components/user/vendor-matrial-request/vendor-matrial-request.component';
 import { CheckOutComponent } from './components/user/check-out/check-out.component';
 import { PaymentComponent } from './components/user/payment/payment.component';
 import { TrackOrderComponent } from './components/user/track-order/track-order.component';
 import { FaqsComponent } from './components/faqs/faqs.component';
 import { MaterialExpertComponent } from './components/user/material-expert/material-expert.component';
-import { ExpertsComponent } from './components/experts/experts.component';
 import { ExpertProfileComponent } from './components/user/expert-profile/expert-profile.component';
+import { AppointmentsComponent } from './components/user/appointments/appointments.component';
+import { ExpertCardComponent } from './components/user/components/expert-card/expert-card.component';
+import { ExpertDashboardComponent } from './components/expert/expert-dashboard/expert-dashboard.component';
+import { MyProfileComponent } from './components/expert/my-profile/my-profile.component';
+import { BilingAnalyticsComponent } from './components/user/biling-analytics/biling-analytics.component';
 
 @NgModule({
   declarations: [
@@ -33,25 +29,21 @@ import { ExpertProfileComponent } from './components/user/expert-profile/expert-
     LoginComponent,
     DashboardLayoutComponent,
     DashboardionComponent,
-    MatrialProcurementComponent,
     SettingsComponent,
-    UserProfileComponent,
-    BussinessInfoComponent,
-    VendorDashboardComponent,
+    UserProfileComponent, 
     NavbarComponent,
-    VendorProfileComponent,
-    OrdersComponent,
-    AddProductComponent,
-    ProductListComponent,
     AnalyticsComponent,
-    VendorMatrialRequestComponent,
     CheckOutComponent,
+    ExpertCardComponent,
     PaymentComponent,
     TrackOrderComponent,
     FaqsComponent,
     MaterialExpertComponent,
-    ExpertsComponent,
-    ExpertProfileComponent
+    ExpertProfileComponent,
+    AppointmentsComponent,
+    ExpertDashboardComponent,
+    MyProfileComponent,
+    BilingAnalyticsComponent
   ],
   imports: [
     BrowserModule,

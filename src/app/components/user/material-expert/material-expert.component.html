@@ -14,6 +14,64 @@
       </div>
     </div>
     <div class="mt-10 w-full mx-auto">
+      <div class="border-b border-gray-200">
+        <ul
+          class="flex flex-wrap -mb-px text-sm font-medium text-center text-gray-500 switch-tabs"
+        >
+          <li class="mr-2">
+            <a
+              id="find_expert"
+              (click)="showSelectedOption($event)"
+              class="inline-flex p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 group cursor-pointer tabs active"
+            >
+              <svg
+                aria-hidden="true"
+                class="w-5 h-5 mr-2"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z"
+                  clip-rule="evenodd"
+                ></path></svg
+              >Find Material Expert
+            </a>
+          </li>
+          <li class="mr-2">
+            <a
+              id="my_favourites"
+              (click)="showSelectedOption($event)"
+              class="inline-flex p-4 rounded-t-lg group cursor-pointer tabs"
+              aria-current="page"
+            >
+              <i class="bi bi-heart-fill mr-2"></i>My Favourites
+            </a>
+          </li>
+          <li class="mr-2">
+            <a
+              id="my_hires"
+              (click)="showSelectedOption($event)"
+              class="inline-flex p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 group cursor-pointer tabs"
+            >
+              <svg
+                aria-hidden="true"
+                class="w-5 h-5 mr-2"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5 4a1 1 0 00-2 0v7.268a2 2 0 000 3.464V16a1 1 0 102 0v-1.268a2 2 0 000-3.464V4zM11 4a1 1 0 10-2 0v1.268a2 2 0 000 3.464V16a1 1 0 102 0V8.732a2 2 0 000-3.464V4zM16 3a1 1 0 011 1v7.268a2 2 0 010 3.464V16a1 1 0 11-2 0v-1.268a2 2 0 010-3.464V4a1 1 0 011-1z"
+                ></path></svg
+              >My Hires
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- <div class="mt-10 hidden w-full mx-auto">
       <p class="font-semibold">Find Material Expert By</p>
       <div class="border-b border-gray-200">
         <ul
@@ -81,247 +139,276 @@
           </li>
         </ul>
       </div>
-    </div>
+    </div> -->
   </div>
 
-  <!-- expert by category -->
-  <div *ngIf="showExpertByCategory">
-    <div class="p-4 mt-8">
-      <div class="flex flex-row gap-x-6 justify-center materials-catagory">
-        <div
-          class="flex flex-col items-center gap-y-2"
-          *ngFor="let items of categories"
+  <!-- show experts -->
+  <div *ngIf="showExperts">
+    <div class="grid grid-cols-3 gap-x-4 mt-5">
+      <div class="">
+        <label for="" class="text-sm text-zinc-400">Find Experts by</label
+        ><br />
+        <select
+          class="select select-bordered w-full"
+          id="selected_option"
+          (change)="showForm()"
         >
-          <a
-            id="material-expert-{{ items.id }}"
-            class="cursor-pointer flex flex-col items-center gap-y-2 material-expert"
-            (click)="ShowExperts(items.id)"
+          <option value="by_category" selected>Material Category</option>
+          <option value="by_sector">Material Sector</option>
+          <option value="by_assistance">ProducTry Assistance</option>
+        </select>
+      </div>
+    </div>
+    <!-- expert by catergory -->
+    <div *ngIf="showExpertByCategory">
+      <div class="p-4 mt-8">
+        <div class="flex flex-row gap-x-6 justify-center materials-catagory">
+          <div
+            class="flex flex-col items-center gap-y-2"
+            *ngFor="let items of categories"
           >
-            <div
-              class="w-[4rem] h-[4rem] matrial-icon rounded-full bg-white p-2"
+            <a
+              id="material-expert-{{ items.id }}"
+              class="cursor-pointer flex flex-col items-center gap-y-2 material-expert"
+              (click)="ShowExperts(items.id)"
             >
-              <img
-                class="cover-fill rounded-full"
-                src="{{ items.img }}"
-                alt="metals"
-              />
-            </div>
-            <p class="text-sm text-normal text-center">{{ items.name }}</p>
-          </a>
+              <div
+                class="w-[4rem] h-[4rem] matrial-icon rounded-full bg-white p-2"
+              >
+                <img
+                  class="cover-fill rounded-full"
+                  src="{{ items.img }}"
+                  alt="metals"
+                />
+              </div>
+              <p class="text-sm text-normal text-center">{{ items.name }}</p>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="flex justify-center">
-      <div
-        class="py-4 px-8 mt-8 flex justify-between items-center w-[90%] bg-white rounded-lg"
-      >
-        <p class="font-semibold">
-          Tell us what Kind of expert are you looking for!
-        </p>
-        <label
-          class="text-white bg-primary hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none cursor-pointer"
-          for="required-expert-modal"
+      <div class="flex justify-center">
+        <div
+          class="py-4 px-8 mt-8 flex justify-between items-center w-[90%] bg-white rounded-lg"
         >
-          Find Now
-        </label>
-      </div>
-    </div>
-    <div id="select-experts">
-      <!-- metal experts -->
-      <div id="matrial-expert-1" class="form min-h-max w-full p-6 rounded-lg">
-        <p class="title-text mb-6">Metal Experts</p>
-        <app-experts></app-experts>
-      </div>
-      <!-- chemical experts -->
-      <div id="matrial-expert-2" class="form min-h-max w-full p-6 rounded-lg">
-        <p class="title-text mb-6">Chemical Experts</p>
-        <app-experts></app-experts>
-      </div>
-      <!-- polymer experts -->
-      <div id="matrial-expert-3" class="form min-h-max w-full p-6 rounded-lg">
-        <p class="title-text mb-6">Polymer Experts</p>
-        <app-experts></app-experts>
-      </div>
-      <!-- composites experts -->
-      <div id="matrial-expert-4" class="form min-h-max w-full p-6 rounded-lg">
-        <p class="title-text mb-6">composites Experts</p>
-        <app-experts></app-experts>
-      </div>
-      <!-- ceramics experts -->
-      <div id="matrial-expert-5" class="form min-h-max w-full p-6 rounded-lg">
-        <p class="title-text mb-6">Ceramics Experts</p>
-        <app-experts></app-experts>
-      </div>
-      <!-- natural material experts -->
-      <div id="matrial-expert-6" class="form min-h-max w-full p-6 rounded-lg">
-        <p class="title-text mb-6">Naural Material Experts</p>
-        <app-experts></app-experts>
-      </div>
-    </div>
-  </div>
-
-  <!-- expert by sector -->
-  <div *ngIf="showExpertBySector">
-    <div class="mb-8 flex flex-wrap items-center gap-4 mt-6 px-1" >
-      <button
-        class="btn bg-white active hover:bg-blue-50 border-0 flex p-2 px-5"
-        routerLink="/materials-selection" *ngFor="let items of sectors"
-      >
-        <p><i class="fa-solid fa-circle-check text-blue-500"></i></p>
-        <p class="text-black font-medium capitalize ms-2">{{items}}</p>
-      </button>
-    </div>
-    <div class="p-6">
-    <app-experts></app-experts></div>
-  </div>
-
-  <!-- expert by assistance -->
-  <div *ngIf="showExpertByAssistence">
-    <div class="flex justify-center">
-      <div class="md:w-full lg:w-[80%] bg-white p-5 mt-8 rounded-xl">
-        <table class="items-center w-full border-collapse text-blueGray-700">
-          <thead class="thead-light">
-            <tr>
-              <th
-                class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
-              >
-                Define Service Requirements
-              </th>
-              <th
-                class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
-              >
-                Details
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr
-              *ngFor="
-                let items of parameterForProductryAssistence.DefineServiceRequirements
-              "
-            >
-              <td
-                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left"
-              >
-                {{ items }}
-              </td>
-              <td>
-                <div class="my-2">
-                  <input
-                    type="text"
-                    placeholder="please fill {{ items }}"
-                    class="input input-bordered w-full"
-                  />
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <!--  -->
-        <hr class="my-5" />
-        <!--  -->
-        <table class="items-center w-full border-collapse text-blueGray-700">
-          <thead class="thead-light">
-            <tr>
-              <th
-                class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
-              >
-                Manufacturing Requirement
-              </th>
-              <th
-                class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
-              >
-                Details
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr
-              *ngFor="
-                let items of parameterForProductryAssistence.ManufacturingRequirement
-              "
-            >
-              <td
-                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left"
-              >
-                {{ items }}
-              </td>
-              <td>
-                <div class="my-2">
-                  <input
-                    type="text"
-                    placeholder="please fill {{ items }}"
-                    class="input input-bordered w-full"
-                  />
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <!--  -->
-        <hr class="my-5" />
-        <!--  -->
-        <table class="items-center w-full border-collapse text-blueGray-700">
-          <thead class="thead-light">
-            <tr>
-              <th
-                class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
-              >
-                Material Property Requirement
-              </th>
-              <th
-                class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
-              >
-                Details
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr
-              *ngFor="
-                let items of parameterForProductryAssistence.MaterialPropertyRequirement
-              "
-            >
-              <td
-                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left"
-              >
-                {{ items }}
-              </td>
-              <td>
-                <div class="my-2">
-                  <input
-                    type="text"
-                    placeholder="please fill {{ items }}"
-                    class="input input-bordered w-full"
-                  />
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <div class="flex justify-end">
-         
-          <button
-           class="text-white bg-primary hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none mt-4"
-            (click)="showRecommendedExpert()"
+          <p class="font-semibold">
+            Tell us what Kind of expert are you looking for!
+          </p>
+          <label
+            class="text-white bg-primary hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none cursor-pointer"
+            for="required-expert-modal"
           >
             Find Now
-          </button>
+          </label>
+        </div>
+      </div>
+      <div id="select-experts">
+        <!-- metal experts -->
+        <div id="matrial-expert-1" class="form min-h-max w-full p-6 rounded-lg">
+          <p class="title-text mb-6">Metal Experts</p>
+          <app-expert-card></app-expert-card>
+        </div>
+        <!-- chemical experts -->
+        <div id="matrial-expert-2" class="form min-h-max w-full p-6 rounded-lg">
+          <p class="title-text mb-6">Chemical Experts</p>
+          <app-expert-card></app-expert-card>
+        </div>
+        <!-- polymer experts -->
+        <div id="matrial-expert-3" class="form min-h-max w-full p-6 rounded-lg">
+          <p class="title-text mb-6">Polymer Experts</p>
+          <app-expert-card></app-expert-card>
+        </div>
+        <!-- composites experts -->
+        <div id="matrial-expert-4" class="form min-h-max w-full p-6 rounded-lg">
+          <p class="title-text mb-6">composites Experts</p>
+          <app-expert-card></app-expert-card>
+        </div>
+        <!-- ceramics experts -->
+        <div id="matrial-expert-5" class="form min-h-max w-full p-6 rounded-lg">
+          <p class="title-text mb-6">Ceramics Experts</p>
+          <app-expert-card></app-expert-card>
+        </div>
+        <!-- natural material experts -->
+        <div id="matrial-expert-6" class="form min-h-max w-full p-6 rounded-lg">
+          <p class="title-text mb-6">Naural Material Experts</p>
+          <app-expert-card></app-expert-card>
         </div>
       </div>
     </div>
 
-    <div *ngIf="showRecommendedExperts">
-      <p class="title-text mt-12">Recommened Experts</p>
-      <div
-        id="matrial-expert-1"
-        class="form min-h-max w-full p-6 rounded-lg mt-8"
-      >
-        <app-experts></app-experts>
+    <!-- expert by sector -->
+    <div *ngIf="showExpertBySector">
+      <div class="mb-8 flex flex-wrap items-center gap-4 mt-6 px-1">
+        <button
+          class="btn bg-white active hover:bg-blue-50 border-0 flex p-2 px-5"
+          routerLink="/materials-selection"
+          *ngFor="let items of sectors"
+        >
+          <p><i class="fa-solid fa-circle-check text-blue-500"></i></p>
+          <p class="text-black font-medium capitalize ms-2">{{ items }}</p>
+        </button>
+      </div>
+      <div class="p-6">
+        <app-expert-card></app-expert-card>
+      </div>
+    </div>
+
+    <!-- expert by assistance -->
+    <div *ngIf="showExpertByAssistence">
+      <div class="flex justify-center">
+        <div class="md:w-full lg:w-[80%] bg-white p-5 mt-8 rounded-xl">
+          <table class="items-center w-full border-collapse text-blueGray-700">
+            <thead class="thead-light">
+              <tr>
+                <th
+                  class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
+                >
+                  Define Service Requirements
+                </th>
+                <th
+                  class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
+                >
+                  Details
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr
+                *ngFor="
+                  let items of parameterForProductryAssistence.DefineServiceRequirements
+                "
+              >
+                <td
+                  class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left"
+                >
+                  {{ items }}
+                </td>
+                <td>
+                  <div class="my-2">
+                    <input
+                      type="text"
+                      placeholder="please fill {{ items }}"
+                      class="input input-bordered w-full"
+                    />
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!--  -->
+          <hr class="my-5" />
+          <!--  -->
+          <table class="items-center w-full border-collapse text-blueGray-700">
+            <thead class="thead-light">
+              <tr>
+                <th
+                  class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
+                >
+                  Manufacturing Requirement
+                </th>
+                <th
+                  class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
+                >
+                  Details
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr
+                *ngFor="
+                  let items of parameterForProductryAssistence.ManufacturingRequirement
+                "
+              >
+                <td
+                  class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left"
+                >
+                  {{ items }}
+                </td>
+                <td>
+                  <div class="my-2">
+                    <input
+                      type="text"
+                      placeholder="please fill {{ items }}"
+                      class="input input-bordered w-full"
+                    />
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!--  -->
+          <hr class="my-5" />
+          <!--  -->
+          <table class="items-center w-full border-collapse text-blueGray-700">
+            <thead class="thead-light">
+              <tr>
+                <th
+                  class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
+                >
+                  Material Property Requirement
+                </th>
+                <th
+                  class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
+                >
+                  Details
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr
+                *ngFor="
+                  let items of parameterForProductryAssistence.MaterialPropertyRequirement
+                "
+              >
+                <td
+                  class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left"
+                >
+                  {{ items }}
+                </td>
+                <td>
+                  <div class="my-2">
+                    <input
+                      type="text"
+                      placeholder="please fill {{ items }}"
+                      class="input input-bordered w-full"
+                    />
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="flex justify-end">
+            <button
+              class="text-white bg-primary hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none mt-4"
+              (click)="showRecommendedExpert()"
+            >
+              Find Now
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="showRecommendedExperts">
+        <p class="title-text mt-12">Recommened Experts</p>
+        <div
+          id="matrial-expert-1"
+          class="form min-h-max w-full p-6 rounded-lg mt-8"
+        >
+          <app-expert-card></app-expert-card>
+        </div>
       </div>
     </div>
   </div>
 
+  <!-- show favourite experts  -->
+  <div *ngIf="showFavourite" class="mt-6">
+    <p class="title-text mb-6">Your Favourites</p>
+    <app-expert-card></app-expert-card>
+  </div>
+  <!-- show hired experts  -->
+  <div *ngIf="showHiers" class="mt-6">
+    <p class="title-text mb-6">Previously Heired Experts</p>
+    <app-expert-card></app-expert-card>
+  </div>
   <!-- modal -->
   <input type="checkbox" id="required-expert-modal" class="modal-toggle" />
   <div class="modal">

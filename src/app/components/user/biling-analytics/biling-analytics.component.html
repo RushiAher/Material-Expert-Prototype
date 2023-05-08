@@ -1,1 +1,314 @@
-<p>biling-analytics works!</p>
+<div class="w-full min-h-[100vh] bg-zinc-100">
+  <h1 class="title-text mb-5">Account Billing</h1>
+  <div class="bg-white rounded-xl p-4 my-4">
+    <div class="flex justify-between items-center">
+      <div class="">
+        <p class="text-xl font-semibold">Payment Method</p>
+        <p class="text-sm text-zinc-400">
+          View and Manage payment methods in your account
+        </p>
+      </div>
+      <label
+        for="payment-modal"
+        class="text-white bg-primary hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none cursor-pointer"
+      >
+        <i class="bi bi-plus text-xl font-semibold"></i> Add Payment Method
+      </label>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-3 gap-6 items-start mt-6">
+    <div class="w-[25rem] h-[14rem] flex justify-start items-start">
+      <div
+        class="w-full h-full p-3 bg-gradient-to-r from-gray-600 to-black rounded-lg"
+      >
+        <div class="flex justify-between">
+          <span class="text-xl font-medium text-gray-100 pb-4"
+            >Master Card</span
+          >
+          <label for="edit-card-modal" class="text-primary cursor-pointer"
+            >edit</label
+          >
+        </div>
+
+        <span class="text-xs text-gray-200 shadow-2xl">Amit Jadhwar</span>
+
+        <div class="flex justify-between items-center pt-4">
+          <div class="flex flex-col">
+            <span class="text-xs text-gray-300 font-bold"
+              >1234 4567 8901 2345</span
+            >
+            <span class="text-xs text-gray-300 font-bold">09/25</span>
+          </div>
+
+          <img
+            src="https://img.icons8.com/offices/80/000000/sim-card-chip.png"
+            width="48"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="w-[25rem] h-[14rem] rounded-xl">
+      <label
+        for="payment-modal"
+        class="btn bg-white hover:bg-blue-50 border-0 w-full h-full"
+      >
+        <i class="text-secondary bi bi-plus-circle-dotted text-5xl"></i>
+      </label>
+    </div>
+  </div>
+
+  <div class="bg-white mt-8 rounded-xl p-4 my-4">
+    <div class="border-b border-gray-200">
+      <ul
+        class="flex flex-wrap -mb-px text-sm font-medium text-center text-gray-500 switch-tabs"
+      >
+        <li class="mr-2">
+          <a
+            id="project_billing"
+            (click)="showSelectedOption($event)"
+            class="inline-flex p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 group tabs active cursor-pointer"
+          >
+            <i class="bi bi-calendar-date-fill mr-2"></i>Project Billing
+          </a>
+        </li>
+        <li class="mr-2">
+          <a
+            id="transaction_history"
+            (click)="showSelectedOption($event)"
+            class="inline-flex p-4 cursor-pointer rounded-t-lg group tabs"
+            aria-current="page"
+          >
+            <i class="bi bi-clock-history mr-2"></i>Transaction History
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div *ngIf="showProjectBilling" class="">
+      <div class="mt-8">
+        <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+          <table class="w-full text-sm text-left text-gray-500">
+            <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+              <tr>
+                <th scope="col" class="px-6 py-3">Project name</th>
+                <th scope="col" class="px-6 py-3">Expert Hired</th>
+                <th scope="col" class="px-6 py-3">Amount (in ruppes)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr
+                class="bg-white border-b"
+                *ngFor="let items of projectBillingData"
+              >
+                <th
+                  scope="row"
+                  class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
+                >
+                  {{ items.projectName }}
+                </th>
+                <td class="px-6 py-4">
+                  <a class="hover:text-blue-400 cursor-pointer">
+                    {{ items.expertName }}
+                  </a>
+                </td>
+                <td class="px-6 py-4">
+                  {{ items.amount }}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="showTransactionHistory" class="">
+      <div class="mt-6">
+        <p class="text-sm text-zinc-400">
+          You can view your complete transaction history with productry.
+        </p>
+        <div class="mt-6 flex gap-6 bg-gray-50 rounded-xl p-1">
+          <div class="border-r-2 p-4 border-gray-200">
+            <p class="text-md font-semibold">Total Funds: ₹ 5000</p>
+          </div>
+           <div class="border-r-2 p-4 border-gray-200">
+            <p class="text-md font-semibold">Total Paid to Experts: ₹ 6700</p>
+          </div>
+          <div class=" p-4 ">
+            <p class="text-md font-semibold">Total Refund: ₹ 00</p>
+          </div>
+        </div>
+        <div class="grid grid-cols-3 gap-x-4 mb-6">
+          <div class="">
+            <!-- <label for="" class="text-sm text-zinc-400">Select Project</label> -->
+            <br />
+            <select class="select select-bordered w-full">
+              <option disabled selected>Filter by</option>
+              <option>Last 7 days</option>
+              <option>Last Month</option>
+              <option>Last Year</option>
+            </select>
+          </div>
+        </div>
+        <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+          <table class="w-full text-sm text-left text-gray-500">
+            <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+              <tr>
+                <th scope="col" class="px-6 py-3">Date</th>
+                <th scope="col" class="px-6 py-3">Initiator</th>
+                <th scope="col" class="px-6 py-3">Transction Details</th>
+                <th scope="col" class="px-6 py-3">Amount (in ruppes)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr
+                class="bg-white border-b"
+                *ngFor="let items of transctionHistoryData"
+              >
+                <th
+                  scope="row"
+                  class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
+                >
+                  {{ items.tDate }}
+                </th>
+                <td class="px-6 py-4">
+                  {{ items.tInitiator }}
+                </td>
+                <td class="px-6 py-4">
+                  <a class="hover:text-blue-400 cursor-pointer">
+                    {{ items.tDetails }}
+                  </a>
+                </td>
+
+                <td class="px-6 py-4">
+                  {{ items.tAmount }}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <input type="checkbox" id="payment-modal" class="modal-toggle" />
+  <div class="modal">
+    <div class="modal-box">
+      <!--  -->
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text">Card Holder Name</span>
+        </label>
+        <input
+          type="text"
+          placeholder="Enter name"
+          class="input input-bordered w-full"
+        />
+      </div>
+
+      <!--  -->
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text">Card Number</span>
+        </label>
+        <input
+          type="text"
+          placeholder="Enter card number"
+          class="input input-bordered w-full"
+        />
+      </div>
+      <!--  -->
+
+      <!--  -->
+      <div class="flex gap-x-3 mt-3">
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Expiry Date</span>
+          </label>
+          <input
+            type="text"
+            placeholder="2/24"
+            class="input input-bordered w-full"
+          />
+        </div>
+        <!--  -->
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">CVV</span>
+          </label>
+          <input
+            type="text"
+            placeholder="546"
+            class="input input-bordered w-full"
+          />
+        </div>
+      </div>
+
+      <div class="mt-3 flex justify-end">
+        <label class="btn btn-primary" for="payment-modal">Add</label>
+      </div>
+      <!--  -->
+    </div>
+  </div>
+  <!-- edit debit card info card  -->
+  <input type="checkbox" id="edit-card-modal" class="modal-toggle" />
+  <div class="modal">
+    <div class="modal-box">
+      <!--  -->
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text">Card Holder Name</span>
+        </label>
+        <input
+          type="text"
+          placeholder="Enter name"
+          class="input input-bordered w-full"
+          value="Amit Jadhwar"
+        />
+      </div>
+
+      <!--  -->
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text">Card Number</span>
+        </label>
+        <input
+          type="text"
+          placeholder="Enter card number"
+          class="input input-bordered w-full"
+          value="1234 4567 8901 2345"
+        />
+      </div>
+      <!--  -->
+      <div class="flex gap-x-3 mt-3">
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Expiry Date</span>
+          </label>
+          <input
+            type="text"
+            placeholder="2/24"
+            class="input input-bordered w-full"
+            value="9/25"
+          />
+        </div>
+        <!--  -->
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">CVV</span>
+          </label>
+          <input
+            type="text"
+            placeholder="546"
+            class="input input-bordered w-full"
+            value="435"
+          />
+        </div>
+      </div>
+
+      <div class="mt-3 flex justify-end">
+        <label class="btn btn-primary" for="edit-card-modal">Finish</label>
+      </div>
+      <!--  -->
+    </div>
+  </div>
+</div>

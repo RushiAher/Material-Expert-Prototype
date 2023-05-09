@@ -1,5 +1,9 @@
 .selected-option ::ng-deep  .select2{
  width: 100% !important;
 }
-
+.selected-option ::ng-deep .select2-selection-multiple{
+    background-color: #808080;
+    padding: .5rem;
+    border-radius: .5rem;
+}
 

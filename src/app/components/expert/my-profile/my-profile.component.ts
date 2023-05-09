@@ -6,11 +6,13 @@ declare let $: any;
   styleUrls: ['./my-profile.component.css']
 })
 export class MyProfileComponent {
-ngOnInit(): void {
-    $(".js-example-tokenizer").select2({
-    tags: true,
-    tokenSeparators: [',', ' ']
-})
+  ngOnInit(): void {
+    $(document).ready(function () {
+      $(".form-control").select2({
+        tags: true,
+        tokenSeparators: [',', ' ']
+      })
+    })
   }
 
 }

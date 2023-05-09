@@ -1,7 +1,7 @@
 <div class="w-full min-h-[100vh] bg-zinc-100">
-  <h1 class="title-text mb-5">My Profile</h1>
+  <h1 class="title-text mb-5">Profile Details</h1>
 
-  <div class="bg-white rounded-xl p-4 my-4 min-h-max">
+  <div class="bg-white rounded-xl p-4 my-4">
     <div class="flex gap-x-6 items-center">
       <div class="relative">
         <img
@@ -57,7 +57,7 @@
         </div>
       </div>
     </div>
-    <div class=" mt-8">
+    <div class="mt-8">
       <div class="mb-6">
         <label
           for="default-input"
@@ -111,7 +111,7 @@
           class="bg-gray-50 mb-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5"
         />
       </div>
-      <div class="mb-6">
+      <div class="mb-6 hidden">
         <label
           for="default-input"
           class="block mb-2 text-sm font-semibold text-gray-900"
@@ -124,14 +124,14 @@
         </p>
 
         <div class="selected-option">
-          <select class="js-example-tokenizer" multiple="multiple">
+          <!-- <select class="js-example-tokenizer" multiple="multiple">
             <option value="technology">Technology</option>
             <option value="healthcare">Healthcare</option>
             <option value="education">Education</option>
             <option value="finance">Finance</option>
             <option value="manufacturing">Manufacturing</option>
             <option value="retail">Retail</option>
-          </select>
+          </select> -->
         </div>
       </div>
     </div>
@@ -141,6 +141,443 @@
       >
         Save
       </button>
+    </div>
+  </div>
+
+  <!-- work experience -->
+  <h1 class="title-text mb-5">Work Experiance</h1>
+  <div class="bg-white rounded-xl p-4 my-4">
+    <div class="">
+      <div class="mb-6">
+        <label
+          for="default-input"
+          class="block mb-2 text-md font-semibold text-gray-900 capitalize"
+          >Add new work experience</label
+        >
+        <p class="text-sm text-zinc-500 mb-2">
+          Enter your work experience, including fellowships and temporary lab
+          positions.
+        </p>
+        <div class="grid grid-cols-2 gap-4">
+          <input
+            type="text"
+            id="default-input"
+            placeholder="Company Name"
+            class="bg-gray-50 mb-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          />
+          <input
+            type="text"
+            id="default-input"
+            placeholder="Job Title"
+            class="bg-gray-50 mb-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          />
+        </div>
+        <div class="mb-6">
+          <label for="desc" class="block mb-2 text-sm font-medium text-gray-900"
+            >Job Description (Optional)</label
+          >
+          <textarea
+            id="message"
+            rows="4"
+            class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+            placeholder=""
+          ></textarea>
+        </div>
+        <div class="mb-6">
+          <label for="desc" class="block mb-2 text-sm font-medium text-gray-900"
+            >Time Period</label
+          >
+          <div class="grid grid-cols-3 gap-4">
+            <label for="desc" class="block mb-2 text-sm font-sm text-gray-900"
+              >From</label
+            >
+            <label for="desc" class="block mb-2 text-sm font-sm text-gray-900"
+              >To</label
+            >
+          </div>
+          <div class="grid grid-cols-3 gap-4">
+            <div class="flex gap-4 justify-between">
+              <select
+                id="title"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2"
+              >
+                <option selected value="01">January</option>
+                <option value="03">February</option>
+                <option value="03">March</option>
+                <option value="04">April</option>
+                <option value="05">May</option>
+                <option value="06">June</option>
+                <option value="07">July</option>
+                <option value="08">August</option>
+                <option value="09">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+              </select>
+
+              <select
+                id="title"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2"
+              >
+                <option selected value="01">2023</option>
+                <option value="03">2022</option>
+                <option value="03">2021</option>
+                <option value="04">2020</option>
+                <option value="05">2019</option>
+                <option value="06">2018</option>
+              </select>
+            </div>
+            <div class="flex gap-4 justify-between">
+              <select
+                id="title"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2"
+              >
+                <option selected value="01">January</option>
+                <option value="03">February</option>
+                <option value="03">March</option>
+                <option value="04">April</option>
+                <option value="05">May</option>
+                <option value="06">June</option>
+                <option value="07">July</option>
+                <option value="08">August</option>
+                <option value="09">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+              </select>
+
+              <select
+                id="title"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2"
+              >
+                <option selected value="01">2023</option>
+                <option value="03">2022</option>
+                <option value="03">2021</option>
+                <option value="04">2020</option>
+                <option value="05">2019</option>
+                <option value="06">2018</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center mb-4">
+          <input
+            id="default-checkbox"
+            type="checkbox"
+            value=""
+            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
+          />
+          <label
+            for="default-checkbox"
+            class="ml-2 text-sm font-medium text-gray-900"
+            >I currently work here</label
+          >
+        </div>
+        <div class="flex justify-end w-full">
+            <div class="">
+          <button
+            class="text-white bg-primary hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mt-4 mb-2 focus:outline-none"
+          >
+            Add Another
+          </button>
+          <button
+            class="text-white bg-primary hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mt-4 mb-2 focus:outline-none"
+          >
+            Save
+          </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- education -->
+  <h1 class="title-text mb-5">Education</h1>
+  <div class="bg-white rounded-xl p-4 my-4">
+    <div class="">
+      <div class="mb-6">
+        <label
+          for="default-input"
+          class="block mb-2 text-md font-semibold text-gray-900 capitalize"
+          >Add new Education</label
+        >
+        <p class="text-sm text-zinc-500 mb-2">
+         Enter details for each of your completed college and university degrees.
+        </p>
+        <div class="grid grid-cols-2 gap-4">
+          <input
+            type="text"
+            id="default-input"
+            placeholder="Institute Name"
+            class="bg-gray-50 mb-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          />
+          <input
+            type="text"
+            id="default-input"
+            placeholder="Degree Title"
+            class="bg-gray-50 mb-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          />
+        </div>
+        <div class="mb-6">
+          <label for="desc" class="block mb-2 text-sm font-medium text-gray-900"
+            >Description (Optional)</label
+          >
+          <textarea
+            id="message"
+            rows="4"
+            class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+            placeholder=""
+          ></textarea>
+        </div>
+        <div class="mb-6">
+          <label for="desc" class="block mb-2 text-sm font-medium text-gray-900"
+            >Time Period</label
+          >
+          <div class="grid grid-cols-3 gap-4">
+            <label for="desc" class="block mb-2 text-sm font-sm text-gray-900"
+              >From</label
+            >
+            <label for="desc" class="block mb-2 text-sm font-sm text-gray-900"
+              >To</label
+            >
+          </div>
+          <div class="grid grid-cols-3 gap-4">
+            <div class="flex gap-4 justify-between">
+              <select
+                id="title"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2"
+              >
+                <option selected value="01">January</option>
+                <option value="03">February</option>
+                <option value="03">March</option>
+                <option value="04">April</option>
+                <option value="05">May</option>
+                <option value="06">June</option>
+                <option value="07">July</option>
+                <option value="08">August</option>
+                <option value="09">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+              </select>
+
+              <select
+                id="title"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2"
+              >
+                <option selected value="01">2023</option>
+                <option value="03">2022</option>
+                <option value="03">2021</option>
+                <option value="04">2020</option>
+                <option value="05">2019</option>
+                <option value="06">2018</option>
+              </select>
+            </div>
+            <div class="flex gap-4 justify-between">
+              <select
+                id="title"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2"
+              >
+                <option selected value="01">January</option>
+                <option value="03">February</option>
+                <option value="03">March</option>
+                <option value="04">April</option>
+                <option value="05">May</option>
+                <option value="06">June</option>
+                <option value="07">July</option>
+                <option value="08">August</option>
+                <option value="09">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+              </select>
+
+              <select
+                id="title"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2"
+              >
+                <option selected value="01">2023</option>
+                <option value="03">2022</option>
+                <option value="03">2021</option>
+                <option value="04">2020</option>
+                <option value="05">2019</option>
+                <option value="06">2018</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center mb-4">
+          <input
+            id="default-checkbox"
+            type="checkbox"
+            value=""
+            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
+          />
+          <label
+            for="default-checkbox"
+            class="ml-2 text-sm font-medium text-gray-900"
+            >I currently study here</label
+          >
+        </div>
+        <div class="flex justify-end w-full">
+            <div class="">
+          <button
+            class="text-white bg-primary hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mt-4 mb-2 focus:outline-none"
+          >
+            Add Another
+          </button>
+          <button
+            class="text-white bg-primary hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mt-4 mb-2 focus:outline-none"
+          >
+            Save
+          </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Certificate -->
+  <h1 class="title-text mb-5">Certification</h1>
+  <div class="bg-white rounded-xl p-4 my-4">
+    <div class="">
+      <div class="mb-6">
+        <label
+          for="default-input"
+          class="block mb-2 text-md font-semibold text-gray-900 capitalize"
+          >Add new Certification</label
+        >
+        <p class="text-sm text-zinc-500 mb-2">
+        Enter details for each of the certifications that you hold or that have been awarded to you on successful completion of the relevant courses.
+        </p>
+        <div class="grid grid-cols-2 gap-4">
+          <input
+            type="text"
+            id="default-input"
+            placeholder="Certification Name"
+            class="bg-gray-50 mb-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          />
+          <input
+            type="text"
+            id="default-input"
+            placeholder="Issuing Organization"
+            class="bg-gray-50 mb-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          />
+        </div>
+        
+        <div class="mb-6">
+          <label for="desc" class="block mb-2 text-sm font-medium text-gray-900"
+            >Validty</label
+          >
+          <div class="grid grid-cols-3 gap-4">
+            <label for="desc" class="block mb-2 text-sm font-sm text-gray-900"
+              >From</label
+            >
+            <label for="desc" class="block mb-2 text-sm font-sm text-gray-900"
+              >To</label
+            >
+          </div>
+          <div class="grid grid-cols-3 gap-4">
+            <div class="flex gap-4 justify-between">
+              <select
+                id="title"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2"
+              >
+                <option selected value="01">January</option>
+                <option value="03">February</option>
+                <option value="03">March</option>
+                <option value="04">April</option>
+                <option value="05">May</option>
+                <option value="06">June</option>
+                <option value="07">July</option>
+                <option value="08">August</option>
+                <option value="09">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+              </select>
+
+              <select
+                id="title"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2"
+              >
+                <option selected value="01">2023</option>
+                <option value="03">2022</option>
+                <option value="03">2021</option>
+                <option value="04">2020</option>
+                <option value="05">2019</option>
+                <option value="06">2018</option>
+              </select>
+            </div>
+            <div class="flex gap-4 justify-between">
+              <select
+                id="title"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2"
+              >
+                <option selected value="01">January</option>
+                <option value="03">February</option>
+                <option value="03">March</option>
+                <option value="04">April</option>
+                <option value="05">May</option>
+                <option value="06">June</option>
+                <option value="07">July</option>
+                <option value="08">August</option>
+                <option value="09">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+              </select>
+
+              <select
+                id="title"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2"
+              >
+                <option selected value="01">2023</option>
+                <option value="03">2022</option>
+                <option value="03">2021</option>
+                <option value="04">2020</option>
+                <option value="05">2019</option>
+                <option value="06">2018</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center mb-6">
+          <input
+            id="default-checkbox"
+            type="checkbox"
+            value=""
+            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
+          />
+          <label
+            for="default-checkbox"
+            class="ml-2 text-sm font-medium text-gray-900"
+            >Does not expire</label
+          >
+        </div>
+        <div class="mb-6">
+        <input
+            type="text"
+            id="default-input"
+            placeholder="Certification URL"
+            class="bg-gray-50 mb-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          />
+          </div>
+        <div class="flex justify-end w-full">
+            <div class="">
+          <button
+            class="text-white bg-primary hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mt-4 mb-2 focus:outline-none"
+          >
+            Add Another
+          </button>
+          <button
+            class="text-white bg-primary hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mt-4 mb-2 focus:outline-none"
+          >
+            Save
+          </button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

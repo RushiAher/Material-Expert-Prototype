@@ -22,6 +22,7 @@ import { ExpertCardComponent } from './components/user/components/expert-card/ex
 import { ExpertDashboardComponent } from './components/expert/expert-dashboard/expert-dashboard.component';
 import { MyProfileComponent } from './components/expert/my-profile/my-profile.component';
 import { BilingAnalyticsComponent } from './components/user/biling-analytics/biling-analytics.component';
+import { ProjectsComponent } from './components/expert/projects/projects.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { BilingAnalyticsComponent } from './components/user/biling-analytics/bil
     AppointmentsComponent,
     ExpertDashboardComponent,
     MyProfileComponent,
-    BilingAnalyticsComponent
+    BilingAnalyticsComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,

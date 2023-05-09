@@ -1,0 +1,5 @@
+.selected-option ::ng-deep  .select2{
+ width: 100% !important;
+}
+
+

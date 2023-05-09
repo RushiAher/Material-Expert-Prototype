@@ -19,6 +19,7 @@ import { BilingAnalyticsComponent } from './components/user/biling-analytics/bil
 /** expert imports */
 import {ExpertDashboardComponent} from './components/expert/expert-dashboard/expert-dashboard.component'
 import {MyProfileComponent} from './components/expert/my-profile/my-profile.component'
+import {ProjectsComponent} from './components/expert/projects/projects.component'
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -41,6 +42,7 @@ const routes: Routes = [
       {path:'expert/profile', component: MyProfileComponent},
       { path: 'expert/faqs', component: FaqsComponent },
       {path:'expert/settings', component:SettingsComponent},
+      {path:'expert/projects', component:ProjectsComponent},
     ]
   }
 

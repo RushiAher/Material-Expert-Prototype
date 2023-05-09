@@ -1,1 +1,146 @@
-<p>my-profile works!</p>
+<div class="w-full min-h-[100vh] bg-zinc-100">
+  <h1 class="title-text mb-5">My Profile</h1>
+
+  <div class="bg-white rounded-xl p-4 my-4 min-h-max">
+    <div class="flex gap-x-6 items-center">
+      <div class="relative">
+        <img
+          src="../../../../assets/asserts/experts/person1.jpg"
+          class="rounded-full w-32 h-32 cover-fill"
+          alt=""
+        />
+        <div
+          class="h-16 w-32 bg-slate-600 rounded-bl-full opacity-50 absolute bottom-0 rounded-br-full cursor-pointer hover:bg-slate-700"
+        >
+          <i
+            class="bi bi-camera text-white flex justify-center relative top-[-80%] text-3xl z-10 font-bold mt-16"
+          ></i>
+        </div>
+      </div>
+      <div class="flex flex-col gap-x-4">
+        <div class="grid grid-cols-5 gap-4 mb-4">
+          <select
+            id="title"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2"
+          >
+            <option selected>Choose Title</option>
+            <option value="US">Mr.</option>
+            <option value="CA">Mrs.</option>
+          </select>
+          <div class="col-span-2">
+            <input
+              type="text"
+              id="first_name"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+              placeholder="First Name"
+              required
+            />
+          </div>
+          <div class="col-span-2">
+            <input
+              type="text"
+              id="first_name"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+              placeholder="Last Name"
+              required
+            />
+          </div>
+        </div>
+        <p class="text-sm text-zinc-500 mb-1">Your profile is 45% Completed</p>
+        <div class="w-2/3 bg-gray-200 rounded-full">
+          <div
+            class="bg-primary text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full"
+            style="width: 45%"
+          >
+            45%
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class=" mt-8">
+      <div class="mb-6">
+        <label
+          for="default-input"
+          class="block mb-2 text-sm font-semibold text-gray-900"
+          >Headline</label
+        >
+        <p class="text-sm text-zinc-500 mb-2">
+          Your headline is the first thing that prospective clients will see. It
+          will appear directly below your name in the search results page. Enter
+          a short, succinct sentence that best summarizes your core expertise
+          and skills, like you would on your resume or Linkedin profile.
+        </p>
+        <input
+          type="text"
+          id="default-input"
+          class="bg-gray-50 mb-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+        />
+        <p class="text-sm text-zinc-500 mb-2">
+          Examples: <br />
+          Freelance Statistician & Data Analyst | Expert in R & SPSS Medical
+          writer with 10+ years of experience in clinical research
+        </p>
+      </div>
+      <div class="mb-6">
+        <label
+          for="default-input"
+          class="block mb-2 text-sm font-semibold text-gray-900"
+          >Profile Summary</label
+        >
+        <p class="text-sm text-zinc-500 mb-2">
+          Please describe your experience and skills, previous and ongoing
+          research projects, and other relevant details about your work and
+          educational experience.
+        </p>
+        <input
+          type="text"
+          id="default-input"
+          class="bg-gray-50 mb-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+        />
+      </div>
+      <div class="mb-6">
+        <label
+          for="default-input"
+          class="block mb-2 text-sm font-semibold text-gray-900"
+          >Hourly Fee</label
+        >
+        <input
+          type="text"
+          id="default-input"
+          placeholder="0"
+          class="bg-gray-50 mb-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5"
+        />
+      </div>
+      <div class="mb-6">
+        <label
+          for="default-input"
+          class="block mb-2 text-sm font-semibold text-gray-900"
+          >Preferred Industries</label
+        >
+        <p class="text-sm text-zinc-500 mb-2">
+          Choose upto 3 most relevant industries matching your skillset, this
+          would allow our clients to reach out to you with relevant
+          opportunities.
+        </p>
+
+        <div class="selected-option">
+          <select class="js-example-tokenizer" multiple="multiple">
+            <option value="technology">Technology</option>
+            <option value="healthcare">Healthcare</option>
+            <option value="education">Education</option>
+            <option value="finance">Finance</option>
+            <option value="manufacturing">Manufacturing</option>
+            <option value="retail">Retail</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="flex justify-end w-full">
+      <button
+        class="text-white bg-primary hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mt-4 mb-2 focus:outline-none"
+      >
+        Save
+      </button>
+    </div>
+  </div>
+</div>

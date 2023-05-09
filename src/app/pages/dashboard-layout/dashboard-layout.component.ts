@@ -124,7 +124,7 @@ export class DashboardLayoutComponent {
       id: '3',
       icon: 'fa-solid fa-cart-flatbed',
       name: 'My Projects',
-      url: '#',
+      url: 'expert/projects',
       hasSubmenu: 'false',
     },
     {
@@ -156,6 +156,7 @@ export class DashboardLayoutComponent {
     $('.submenu').slideUp();
     $('#submenu-'+id).slideToggle();
   }
+
 
   closeAllMenu(){
     $('#logoName').removeClass('opacity-1').addClass(' opacity-0')

@@ -20,6 +20,7 @@ import { BilingAnalyticsComponent } from './components/user/biling-analytics/bil
 import {ExpertDashboardComponent} from './components/expert/expert-dashboard/expert-dashboard.component'
 import {MyProfileComponent} from './components/expert/my-profile/my-profile.component'
 import {ProjectsComponent} from './components/expert/projects/projects.component'
+import {AvailabilityComponent} from './components/expert/availability/availability.component'
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -36,13 +37,14 @@ const routes: Routes = [
        {path:'faqs', component: FaqsComponent},
       
 
-      // ******* vendor ******
-      // route url if there is a vendor use vendor at first like vendor/dashboard
+      // ******* expert ******
+      // route url if there is a expert use expert at first like expert/dashboard
       {path:'expert/dashboard', component: ExpertDashboardComponent},
       {path:'expert/profile', component: MyProfileComponent},
       { path: 'expert/faqs', component: FaqsComponent },
       {path:'expert/settings', component:SettingsComponent},
       {path:'expert/projects', component:ProjectsComponent},
+      {path:'expert/availability', component:AvailabilityComponent},
     ]
   }
 

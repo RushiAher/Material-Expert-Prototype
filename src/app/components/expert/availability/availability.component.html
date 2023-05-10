@@ -1,0 +1,344 @@
+<div class="w-full min-h-[100vh] bg-zinc-100">
+  <h1 class="title-text mb-5">Availability</h1>
+  <div class="w-full bg-white p-5 rounded-xl">
+    <div class="w-full mx-auto">
+      <div class="border-b border-gray-200">
+        <ul
+          class="flex flex-wrap -mb-px text-sm font-medium text-center text-gray-500 switch-tabs"
+        >
+          <li class="mr-2">
+            <a
+              id="schedule"
+              (click)="showSelectedOption($event)"
+              class="inline-flex p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 group cursor-pointer tabs active"
+            >
+              <i class="bi bi-calendar3 mr-2"></i>Schedule
+            </a>
+          </li>
+          <li class="mr-2">
+            <a
+              id="calendar"
+              (click)="showSelectedOption($event)"
+              class="inline-flex p-4 rounded-t-lg group cursor-pointer tabs"
+              aria-current="page"
+            >
+              <i class="bi bi-calendar-date mr-2"></i>calendar
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="showSchedule" class="">
+    <div class="grid grid-cols-5 gap-x-8 mt-6">
+      <div class="col-span-3">
+        <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+          <table class="w-full text-sm text-left text-gray-500">
+            <caption
+              class="px-5 text-lg font-semibold text-left text-gray-900 bg-white"
+            >
+              <div class="flex justify-between items-center">
+                <p class="">Add availability</p>
+                <button
+                  class="text-white bg-primary hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none mt-4"
+                >
+                  Save
+                </button>
+              </div>
+            </caption>
+            <thead class="text-xs hidden text-gray-700 uppercase">
+              <tr>
+                <th scope="col" class="px-6 py-3"></th>
+                <th scope="col" class="px-6 py-3"></th>
+                <th scope="col" class="px-6 py-3"></th>
+                <th scope="col" class="px-6 py-3"></th>
+                <th scope="col" class="px-6 py-3">
+                  <span class="sr-only"></span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr
+                class="bg-white border-b"
+                *ngFor="let items of availabilityData"
+              >
+                <td class="w-4 p-4">
+                  <div class="flex items-center">
+                    <input
+                      id="checkbox-table-search-1"
+                      type="checkbox"
+                      class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 mr-2"
+                    />
+                    <label for="checkbox-table-search-1" class="sr-only"
+                      >checkbox</label
+                    >
+                  </div>
+                </td>
+                <td class="px-6 py-4 font-semibold text-xl">{{ items.day }}</td>
+                <td class="px-6 py-4">
+                  <select
+                    id="title"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2"
+                  >
+                    <option value="01" *ngFor="let items of timeData">
+                      {{ items }}
+                    </option>
+                  </select>
+                </td>
+                <td class="py-4">-</td>
+                <td class="px-6 py-4 text-right">
+                  <select
+                    id="title"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2"
+                  >
+                    <option value="01" *ngFor="let items of timeData">
+                      {{ items }}
+                    </option>
+                  </select>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="col-span-2 bg-white p-5 rounded-xl">
+        <p class="text-lg font-semibold text-left text-gray-900">Block Dates</p>
+        <p class="mt-2 text-sm font-normal text-left text-gray-400">
+          Add dates when you will be unavailable to take calls
+        </p>
+        <div class="mb-6">
+          <label
+            for="default-input"
+            class="block mb-2 text-sm font-medium text-gray-900"
+            >Default input</label
+          >
+          <input
+            type="date"
+            id="default-input"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          />
+        </div>
+        <div class="flex justify-end w-full">
+          <button
+            class="text-white bg-primary hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 focus:outline-none"
+          >
+            Add
+          </button>
+        </div>
+
+        <div class="relative overflow-x-auto mt-4 shadow rounded-xl">
+          <table class="w-full text-sm text-left text-gray-500">
+            <caption class="p-3 text-md text-gray-800 capitalize bg-gray-50">
+              Dates for which you are unavailable
+            </caption>
+            <thead class="text-xs hidden text-gray-700 uppercase bg-gray-50">
+              <tr>
+                <th scope="col" class="px-6 py-3"></th>
+                <th scope="col" class="px-6 py-3"></th>
+                <th scope="col" class="px-6 py-3"></th>
+                <th scope="col" class="px-6 py-3"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="bg-white border-b">
+                <td class="px-6 py-4">1</td>
+                <th
+                  scope="row"
+                  class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
+                >
+                  26/5/2023
+                </th>
+
+                <td class="px-6 py-4">
+                  <a class="font-medium text-red-600 cursor-pointer hover:underline">remove</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="showCalender" class="">
+    <!-- <div class="w-full bg-white p-5 rounded-xl"> -->
+    <div
+      class="relative overflow-x-auto mt-4 rounded-xl bg-white shadow p-5 pb-6"
+    >
+      <table class="w-full text-sm text-left text-gray-500">
+        <tbody>
+          <tr class="border-b">
+            <th
+              scope="row"
+              class="px-6 flex gap-4 items-center py-4 font-medium text-gray-900 whitespace-nowrap"
+            >
+              <i class="bi bi-geo-alt font-semibold text-xl"></i>
+              <div class="">
+                <p class="text-md font-semibold">Timezone</p>
+                <p class="text-sm text-zinc-500">
+                  Required for timely communication
+                </p>
+              </div>
+            </th>
+
+            <td class="px-6 py-4"></td>
+            <td class="px-6 py-4">
+              <select
+                id="timezone"
+                name="timezone"
+                class="border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-72 p-2"
+              >
+                <option value="Asia/Kolkata">
+                  (GMT+05:30) India Standard Time
+                </option>
+                <option value="Asia/Kolkata">(GMT+05:30) Asia/Kolkata</option>
+
+                <option value="Asia/Kolkata">(GMT+05:30) Kolkata</option>
+                <option value="Asia/Kolkata">(GMT+05:30) Mumbai</option>
+                <option value="Asia/Kolkata">(GMT+05:30) New Delhi</option>
+                <option value="Asia/Kolkata">(GMT+05:30) Chennai</option>
+                <option value="Asia/Kolkata">
+                  (GMT+05:30) Sri Jayawardenepura Kotte
+                </option>
+              </select>
+            </td>
+          </tr>
+          <tr class="border-b">
+            <th
+              scope="row"
+              class="px-6 flex gap-4 items-center py-4 font-medium text-gray-900 whitespace-nowrap"
+            >
+              <i class="bi bi-link font-semibold text-xl"></i>
+              <div class="">
+                <p class="text-md font-semibold">Personal Meeting Link</p>
+                <p class="text-sm text-zinc-500">
+                  All your 1:1 meetings will be redirected to this URL
+                </p>
+              </div>
+            </th>
+
+            <td class="px-6 py-4"></td>
+            <td class="px-6 py-4 text-blue-600">
+              <a
+                href="https://meet.google.com/urp-rwmp-yms"
+                target="_blank"
+                class="hover:underline"
+                >meet.google.com/urp-rwmp-yms</a
+              >
+              <label for="link-modal">
+              <i
+                class="bi bi-pencil-square mx-4 cursor-pointer text-zinc-400"
+              ></i></label>
+            </td>
+          </tr>
+          <tr class="border-b">
+            <th
+              scope="row"
+              class="px-6 flex gap-4 items-center py-4 font-medium text-gray-900 whitespace-nowrap"
+            >
+              <i class="bi bi-calendar-date font-semibold text-xl"></i>
+              <div class="">
+                <p class="text-md font-semibold">Bookin Period</p>
+                <p class="text-sm text-zinc-500">
+                  How far in the future can attendees book
+                </p>
+              </div>
+            </th>
+
+            <td class="px-6 py-4"></td>
+            <td class="px-6 py-4">
+              <select
+                id="timezone"
+                name="timezone"
+                class="border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-52 p-2"
+              >
+                <option value="1">1 Month</option>
+                <option value="1">2 Months</option>
+                <option value="1">3 Months</option>
+                <option value="1">4 Months</option>
+                <option value="1">5 Months</option>
+              </select>
+            </td>
+          </tr>
+          <tr class="border-b">
+            <th
+              scope="row"
+              class="px-6 flex gap-4 items-center py-4 font-medium text-gray-900 whitespace-nowrap"
+            >
+              <i class="bi bi-calendar-date font-semibold text-xl"></i>
+              <div class="">
+                <p class="text-md font-semibold">Notice Period</p>
+                <p class="text-sm text-zinc-500">
+                  Set the amount of notice that is reguired
+                </p>
+              </div>
+            </th>
+
+            <td class="px-6 py-4"></td>
+            <td class="px-6 py-4">
+              <select
+                id="timezone"
+                name="timezone"
+                class="border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-52 p-2"
+              >
+                <option value="1">30 Minutes</option>
+                <option value="1">1 Hour</option>
+                <option value="1">2 Hours</option>
+                <option value="1">3 Hours</option>
+                <option value="1">4 Hours</option>
+                <option value="1">5 Hours</option>
+                <option value="1">6 Months</option>
+              </select>
+            </td>
+          </tr>
+          <tr class="border-b">
+            <th
+              scope="row"
+              class="px-6 flex gap-4 items-center py-4 font-medium text-gray-900 whitespace-nowrap"
+            >
+              <i class="bi bi-camera-video font-semibold text-xl"></i>
+              <div class="">
+                <p class="text-md font-semibold">Google Meet</p>
+                <p class="text-sm text-zinc-500">
+                  Use google meet for your 1:1 calls
+                </p>
+              </div>
+            </th>
+
+            <td class="px-6 py-4"></td>
+            <td class="px-6 py-4">
+              <label class="relative inline-flex items-center cursor-pointer">
+                <input type="checkbox" value="" class="sr-only peer" />
+                <div
+                  class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"
+                ></div>
+              </label>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- </div> -->
+  </div>
+</div>
+
+<!-- modal -->
+<input type="checkbox" id="link-modal" class="modal-toggle" />
+<div class="modal">
+  <div class="modal-box">
+    <div class="form-control mt-3">
+      <label class="label">
+        <span class="label-text text-xl font-semibold">Meeting Link</span>
+      </label>
+      <input
+        type="text"
+        placeholder="add link here"
+        class="input input-bordered w-full"
+      />
+    </div>
+    <div class="modal-action">
+      <label for="link-modal" class="text-white bg-primary hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 focus:outline-none cursor-pointer">add</label>
+    </div>
+  </div>
+</div>

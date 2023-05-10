@@ -129,13 +129,20 @@ export class DashboardLayoutComponent {
     },
     {
       id: '4',
-      icon: 'fa-solid fa-building',
+      icon: 'i bi-telephone-fill',
       name: 'Scheduled Calls',
       url: 'vendor/business-profile',
       hasSubmenu: 'false',
     },
     {
       id: '5',
+      icon: 'bi bi-person-badge',
+      name: 'Availability',
+      url: 'expert/availability',
+      hasSubmenu: 'false',
+    },
+    {
+      id: '6',
       icon: 'fa-solid fa-building',
       name: 'Billing',
       url: 'vendor/business-profile',

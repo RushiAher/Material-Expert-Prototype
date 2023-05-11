@@ -24,6 +24,8 @@ import { MyProfileComponent } from './components/expert/my-profile/my-profile.co
 import { BilingAnalyticsComponent } from './components/user/biling-analytics/biling-analytics.component';
 import { ProjectsComponent } from './components/expert/projects/projects.component';
 import { AvailabilityComponent } from './components/expert/availability/availability.component';
+import { BillingComponent } from './components/expert/billing/billing.component';
+import { BookingsComponent } from './components/expert/bookings/bookings.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,9 @@ import { AvailabilityComponent } from './components/expert/availability/availabi
     MyProfileComponent,
     BilingAnalyticsComponent,
     ProjectsComponent,
-    AvailabilityComponent
+    AvailabilityComponent,
+    BillingComponent,
+    BookingsComponent
   ],
   imports: [
     BrowserModule,

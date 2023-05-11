@@ -21,6 +21,8 @@ import {ExpertDashboardComponent} from './components/expert/expert-dashboard/exp
 import {MyProfileComponent} from './components/expert/my-profile/my-profile.component'
 import {ProjectsComponent} from './components/expert/projects/projects.component'
 import {AvailabilityComponent} from './components/expert/availability/availability.component'
+import {BillingComponent} from './components/expert/billing/billing.component'
+import {BookingsComponent} from './components/expert/bookings/bookings.component'
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -45,6 +47,8 @@ const routes: Routes = [
       {path:'expert/settings', component:SettingsComponent},
       {path:'expert/projects', component:ProjectsComponent},
       {path:'expert/availability', component:AvailabilityComponent},
+      {path:'expert/bookings', component:BookingsComponent},
+      {path:'expert/billing', component:BillingComponent},
     ]
   }
 

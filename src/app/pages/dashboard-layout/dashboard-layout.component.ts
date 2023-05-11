@@ -131,7 +131,7 @@ export class DashboardLayoutComponent {
       id: '4',
       icon: 'i bi-telephone-fill',
       name: 'Scheduled Calls',
-      url: 'vendor/business-profile',
+      url: 'expert/bookings',
       hasSubmenu: 'false',
     },
     {
@@ -145,7 +145,7 @@ export class DashboardLayoutComponent {
       id: '6',
       icon: 'fa-solid fa-building',
       name: 'Billing',
-      url: 'vendor/business-profile',
+      url: 'expert/billing',
       hasSubmenu: 'false',
     },
     {

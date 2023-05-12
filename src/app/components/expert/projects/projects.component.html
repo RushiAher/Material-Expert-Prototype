@@ -19,76 +19,105 @@
 <h1 class="title-text mb-8">Your Projects</h1>
 
 <div class="overflow-hidden">
-<div class="flex gap-4 overflow-x-auto flex-nowrap w-full">
-  <div *ngFor="let items of projectData">
-  <div class="w-[22rem] lg:w-[27rem] h-full bg-white border border-gray-200 rounded-2xl " >
-    <div class="p-5 flex items-center justify-center">
-      <img class="rounded-t-lg w-[8rem] h-[8rem] cover-fill" src="{{items.img}}" alt="" />
-    </div>
-    <div class="p-5 flex justify-between items-center">
-      <div class="">
-        <p class="text-xs text-zinc-500">Project Name</p>
-        <p class="text-md font-semibold">{{items.name}}</p>
-      </div>
-      <a href="#" class="inline-flex items-center px-2.5  text-sm font-medium text-center btn btn-primary btn-sm">
-        <p>view</p>
-        <p><i class="ms-2 fa-solid fa-arrow-right"></i></p>
-      </a>
-    </div>
-    <div class="p-5 pt-0">
-      <table class="border-separate border-spacing-y-2">
-        <tbody class="text-xs ">
-          <tr>
-            <td>
-              <p class="text-zinc-500">Product Sectore : </p>
-            </td>
-            <td><span class="text-blue-500">{{items.projectSector}}</span></td>
-          </tr>
-          <tr>
-            <td>
-              <p class="text-zinc-500">Project Organization Type :</p>
-            </td>
-            <td><span class="text-blue-500">{{items.ProjectOrganizationType}}</span></td>
-          </tr>
-          <tr>
-            <td>
-              <p class="text-zinc-500">Project Start Date :</p>
-            </td>
-            <td><span class="text-blue-500">{{items.projectStartDate}}</span></td>
-          </tr>
-          <tr>
-            <td>
-              <p class="text-zinc-500">Project Phase :</p>
-            </td>
-            <td><span class="text-blue-500">{{items.ProjectPhase}}</span></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+  <div class="flex gap-4 overflow-x-auto flex-nowrap w-full">
+    <div *ngFor="let items of projectData">
+      <div
+        class="w-[22rem] lg:w-[27rem] h-full bg-white border border-gray-200 rounded-2xl"
+      >
+        <div class="p-5 flex items-center justify-center">
+          <img
+            class="rounded-t-lg w-[8rem] h-[8rem] cover-fill"
+            src="{{ items.img }}"
+            alt=""
+          />
+        </div>
+        <div class="p-5 flex justify-between items-center">
+          <div class="">
+            <p class="text-xs text-zinc-500">Project Name</p>
+            <p class="text-md font-semibold">{{ items.name }}</p>
+          </div>
+          <a
+            href="#"
+            class="inline-flex items-center px-2.5 text-sm font-medium text-center btn btn-primary btn-sm"
+          >
+            <p>view</p>
+            <p><i class="ms-2 fa-solid fa-arrow-right"></i></p>
+          </a>
+        </div>
+        <div class="p-5 pt-0">
+          <table class="border-separate border-spacing-y-2">
+            <tbody class="text-xs">
+              <tr>
+                <td>
+                  <p class="text-zinc-500">Product Sectore :</p>
+                </td>
+                <td>
+                  <span class="text-blue-500">{{ items.projectSector }}</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p class="text-zinc-500">Project Organization Type :</p>
+                </td>
+                <td>
+                  <span class="text-blue-500">{{
+                    items.ProjectOrganizationType
+                  }}</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p class="text-zinc-500">Project Start Date :</p>
+                </td>
+                <td>
+                  <span class="text-blue-500">{{
+                    items.projectStartDate
+                  }}</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p class="text-zinc-500">Project Phase :</p>
+                </td>
+                <td>
+                  <span class="text-blue-500">{{ items.ProjectPhase }}</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-
-    <div class="px-5">
-      <p class="  text-sm">Summary</p>
-      <p class="text-xs text-justify mt-2 text-zinc-500 whitespace-normal tracking-tight">
-        {{items.summary}}
-      </p>
-    </div>
-    <div class="p-5">
-      <div class="flex flex-wrap min-h-max gap-2">
-        <span class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm" *ngFor="let item of items.Parts">{{item}}</span>
+        <div class="px-5">
+          <p class="text-sm">Summary</p>
+          <p
+            class="text-xs text-justify mt-2 text-zinc-500 whitespace-normal tracking-tight"
+          >
+            {{ items.summary }}
+          </p>
+        </div>
+        <div class="p-5">
+          <div class="flex flex-wrap min-h-max gap-2">
+            <span
+              class="bg-blue-100 text-blue-500 px-3 py-1 rounded capitalize text-sm"
+              *ngFor="let item of items.Parts"
+              >{{ item }}</span
+            >
+          </div>
+          <!-- <p class="text-sm mt-5 hidden">{{items.date}}</p> -->
+        </div>
       </div>
-      <!-- <p class="text-sm mt-5 hidden">{{items.date}}</p> -->
+    </div>
+    <div>
+      <div class="w-[22rem] lg:w-[27rem] h-full rounded-xl">
+        <label
+          class="btn bg-white hover:bg-blue-50 border-0 w-full h-full"
+          for="my-modal"
+        >
+          <i class="text-secondary bi bi-plus-circle-dotted text-5xl"></i>
+        </label>
+      </div>
     </div>
   </div>
-</div>
-<div>
-  <div class=" w-[22rem] lg:w-[27rem] h-full rounded-xl">
-    <label class="btn bg-white hover:bg-blue-50 border-0 w-full h-full" for="my-modal">
-      <i class="text-secondary bi bi-plus-circle-dotted text-5xl"></i>
-    </label>
-  </div>
-</div>
-</div>
 </div>
 
 <!-- modal -->
@@ -99,7 +128,11 @@
       <label class="label">
         <span class="label-text">Project Name</span>
       </label>
-      <input type="text" placeholder="Project Name" class="input input-bordered w-full" />
+      <input
+        type="text"
+        placeholder="Project Name"
+        class="input input-bordered w-full"
+      />
     </div>
 
     <div class="flex gap-x-3 mt-3">
@@ -108,14 +141,22 @@
         <label class="label">
           <span class="label-text">Project Domain</span>
         </label>
-        <input type="text" placeholder="Project Domain" class="input input-bordered w-full" />
+        <input
+          type="text"
+          placeholder="Project Domain"
+          class="input input-bordered w-full"
+        />
       </div>
       <!--  -->
       <div class="form-control">
         <label class="label">
           <span class="label-text">Project Phase</span>
         </label>
-        <input type="text" placeholder="Project Phase" class="input input-bordered w-full" />
+        <input
+          type="text"
+          placeholder="Project Phase"
+          class="input input-bordered w-full"
+        />
       </div>
       <!--  -->
     </div>
@@ -124,21 +165,33 @@
       <label class="label">
         <span class="label-text">Project Subparts</span>
       </label>
-      <input type="text" placeholder="Add Project Subparts" class="input input-bordered w-full" />
+      <input
+        type="text"
+        placeholder="Add Project Subparts"
+        class="input input-bordered w-full"
+      />
     </div>
     <!--  -->
     <div class="form-control mt-3">
       <label class="label">
         <span class="label-text">Project Description</span>
       </label>
-      <input type="text" placeholder="Project Description" class="input input-bordered w-full" />
+      <input
+        type="text"
+        placeholder="Project Description"
+        class="input input-bordered w-full"
+      />
     </div>
     <!--  -->
     <div class="form-control mt-3">
       <label class="label">
         <span class="label-text">Project Material Category</span>
       </label>
-      <input type="text" placeholder="Project Material Category" class="input input-bordered w-full" />
+      <input
+        type="text"
+        placeholder="Project Material Category"
+        class="input input-bordered w-full"
+      />
     </div>
     <!--  -->
     <div class="modal-action">

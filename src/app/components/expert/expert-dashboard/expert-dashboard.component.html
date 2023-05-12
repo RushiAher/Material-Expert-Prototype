@@ -1,1 +1,219 @@
-<p>expert-dashboard works!</p>
+<div class="w-full min-h-[100vh] bg-zinc-100">
+  <h1 class="title-text mb-5">Dashboard</h1>
+
+  <div class="stats shadow w-full mb-6">
+    <div class="stat">
+      <div class="stat-figure text-primary">
+        <i class="bi bi-cash-coin text-2xl font-semibold"></i>
+      </div>
+      <div class="stat-title">Lifetime earnings</div>
+      <div class="stat-value text-primary">22.5K</div>
+      <!-- <div class="stat-desc">21% more than last month</div> -->
+    </div>
+    <div class="stat">
+      <div class="stat-figure text-secondary">
+        <i class="bi bi-journal-album text-2xl font-bold"></i>
+      </div>
+      <div class="stat-title">Upcoming Bookings</div>
+      <div class="stat-value text-secondary">0</div>
+      <!-- <div class="stat-desc">21% more than last month</div> -->
+    </div>
+    <div class="stat">
+      <div class="stat-figure text-secondary">
+        <i class="bi bi-camera-video text-2xl font-bold"></i>
+      </div>
+      <div class="stat-title">Scheduled Calls</div>
+      <div class="stat-value text-secondary">2</div>
+      <!-- <div class="stat-desc">21% more than last month</div> -->
+    </div>
+    <div class="stat">
+      <div class="stat-figure text-secondary">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          class="inline-block w-8 h-8 stroke-current"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1"
+            d="M13 10V3L4 14h7v7l9-11h-7z"
+          ></path>
+        </svg>
+      </div>
+      <div class="stat-title">1:1 Mentorship Completed</div>
+      <div class="stat-value text-secondary">12</div>
+      <!-- <div class="stat-desc">21% more than last month</div> -->
+    </div>
+    <div class="stat">
+      <div class="stat-figure text-secondary">
+        <i class="bi bi-telephone text-2xl font-bold"></i>
+      </div>
+      <div class="stat-title">1:1 Consulting Completed</div>
+      <div class="stat-value text-secondary">5</div>
+      <!-- <div class="stat-desc">21% more than last month</div> -->
+    </div>
+  </div>
+  <a
+    class="flex flex-col items-center bg-white border border-gray-200 rounded-xl shadow md:flex-row w-full px-6"
+  >
+    <img
+      class="object-cover rounded-full cover-fill w-48 h-48"
+      src="../../../../assets/asserts/experts/person1.jpg"
+      alt=""
+    />
+    <div class="flex flex-col justify-between p-4 leading-normal w-full">
+      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+        Amit Jadhwar
+      </h5>
+      <p class="mb-3 font-normal text-gray-700">
+        Your profile is 30% completed
+      </p>
+      <div class="w-full bg-gray-200 rounded-full h-2.5 mb-4">
+        <div class="bg-primary h-2.5 rounded-full" style="width: 45%"></div>
+      </div>
+      <p class="mb-3 font-normal text-gray-700">
+        Fill in your details to apply to become an approved expert. This will
+        boost your visibility with potential clients.
+      </p>
+      <div class="flex justify-end items-center w-full">
+        <a
+          routerLink="/expert/profile"
+          class="text-white bg-primary hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mt-4 mb-2 focus:outline-none"
+        >
+          Update Your Profile
+        </a>
+      </div>
+    </div>
+  </a>
+
+  <div class="bg-white rounded-xl p-4 my-6">
+    <p class="text-xl font-semibold">
+      <i class="bi bi-kanban-fill mr-2 text-xl text-[#3E82FC]"></i>Your Projects
+    </p>
+    <div class="grid grid-cols-4 p-4 gap-6">
+      <div
+        class="max-w-sm bg-blue-50 border border-gray-200 rounded-lg relative shadow-lg pb-6"
+        *ngFor="let items of projectData"
+      >
+        <div class="w-full flex justify-center items-center p-4">
+          <img class="rounded-t-lg h-32" src="{{ items.img }}" alt="" />
+        </div>
+
+        <div class="p-4 mb-6 text-justify">
+          <h5 class="mb-2 text-xl font-semibold tracking-tight text-gray-900">
+            {{ items.name }}
+          </h5>
+
+          <p class="mb-6 text-md font-normal text-gray-700">
+            {{ items.summary }}
+          </p>
+        </div>
+        <div class="flex justify-end absolute bottom-5 right-2">
+          <a
+            class="text-white bg-primary hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 my-4 cursor-pointer mb-2 focus:outline-none"
+          >
+            view Details
+          </a>
+        </div>
+      </div>
+      <div
+        class="max-w-sm shadow-lg h-full rounded-xl"
+        routerLink="/expert/projects"
+      >
+        <label
+          class="btn bg-white hover:bg-blue-50 border-0 w-full h-full"
+          for="my-modal"
+        >
+          <i class="text-secondary bi bi-plus-circle-dotted text-5xl"></i>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-white rounded-xl p-4 my-6">
+    <p class="text-xl font-semibold">
+      <i class="bi bi-person-lines-fill mr-2 text-xl text-[#3E82FC]"></i>Contact
+      Details
+    </p>
+    <div class="mt-3 p-4 grid grid-cols-3 gap-6 w-full">
+      <div class="flex justify-between items-center">
+        <p class="text-md font-semibold text-zinc-600">Contact Number : 8907987987</p>
+         <label for="contactNo-modal">
+        <i class="bi bi-pencil-square mx-4 cursor-pointer text-zinc-400 hover:text-[#3E82FC]"></i></label>
+      </div>
+      <div class="flex justify-between items-center">
+        <p class="text-md font-semibold text-zinc-600">Primary Email Id : amitjadhwar@prodctry.in</p>
+       <label for="emailId-modal">
+        <i class="bi bi-pencil-square mx-4 cursor-pointer text-zinc-400 hover:text-[#3E82FC]"></i></label>
+      </div>
+      <div class="flex justify-between items-center">
+        <p class="text-md font-semibold text-zinc-600">Skype Id :</p>
+       <label for="skypeId-modal">
+        <i class="bi bi-pencil-square mx-4 cursor-pointer text-zinc-400 hover:text-[#3E82FC]"></i></label>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- contactNo modal -->
+<input type="checkbox" id="contactNo-modal" class="modal-toggle" />
+<div class="modal">
+  <div class="modal-box">
+    <div class="form-control mt-3">
+      <label class="label">
+        <span class="label-text text-xl font-semibold">Contact Number</span>
+      </label>
+      <input
+        type="text"
+        placeholder="add  here"
+        class="input input-bordered w-full"
+      />
+    </div>
+    <div class="modal-action">
+      <label for="contactNo-modal" class="text-white bg-primary hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 focus:outline-none cursor-pointer">add</label>
+    </div>
+  </div>
+</div>
+
+<!-- emailId modal -->
+<input type="checkbox" id="emailId-modal" class="modal-toggle" />
+<div class="modal">
+  <div class="modal-box">
+    <div class="form-control mt-3">
+      <label class="label">
+        <span class="label-text text-xl font-semibold">Primary Email Id</span>
+      </label>
+      <input
+        type="text"
+        placeholder="add  here"
+        class="input input-bordered w-full"
+      />
+    </div>
+    <div class="modal-action">
+      <label for="emailId-modal" class="text-white bg-primary hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 focus:outline-none cursor-pointer">add</label>
+    </div>
+  </div>
+</div>
+
+<!-- skypeID modal -->
+<input type="checkbox" id="skypeId-modal" class="modal-toggle" />
+<div class="modal">
+  <div class="modal-box">
+    <div class="form-control mt-3">
+      <label class="label">
+        <span class="label-text text-xl font-semibold">Skype Id</span>
+      </label>
+      <input
+        type="text"
+        placeholder="add  here"
+        class="input input-bordered w-full"
+      />
+    </div>
+    <div class="modal-action">
+      <label for="skypeId-modal" class="text-white bg-primary hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 focus:outline-none cursor-pointer">add</label>
+    </div>
+  </div>
+</div>

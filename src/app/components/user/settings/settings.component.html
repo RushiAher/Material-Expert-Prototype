@@ -1,101 +1,454 @@
-<div class="w-full h-full bg-white rounded-xl">
-  <div class="grid grid-cols-3 p-5">
-    <div class="col-span-3 lg:col-span-1 rounded-xl border-2 p-3">
-      <div class="flex justify-between">
-        <p class="text-lg font-medium text-zinc-500">Company Info</p>
-        <div>
-          <label for="my-modal" class="btn btn-sm bg-zinc-100 text-zinc-600 border-0 hover:bg-zinc-300">Edit</label>
+<div>
+     
+  <!-- profile -->   
+  <div class="bg-white p-7 rounded-xl">
+           
+    <div class="flex justify-between items-center">
+                 
+      <h1 class="text-zinc-500 text-lg font-medium">
+        <i class="fa-solid fa-user me-3"></i> Name And Profile
+      </h1>
+                 
+      <button class="bg-zinc-200 px-5 py-2 rounded-md text-zinc-700">
+        <i class="fa-solid fa-pencil"></i> Edit</button
+      >       
+    </div>
+           
+    <hr class="my-3" />
+           
+    <div class="flex items-start">
+                 
+      <div>
+                       
+        <div class="w-[10rem] h-[10rem] rounded-lg overflow-hidden relative">
+                             
+          <img
+            class="img-cover"
+            src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fG1hbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+            alt=""
+          />                   
+          <div class="w-full bg-black/50 absolute z-10 h-1/2 bottom-0 left-0">
+                                   
+            <span class="flex justify-center items-center w-full h-full"
+              ><i class="text-white text-3xl fa-solid fa-camera"></i></span
+            >                   
+          </div>
+                         
         </div>
+                   
       </div>
-      <div class="overflow-x-auto mt-3">
-        <table class="table w-full text-sm">
-          <tbody>
-            <!-- row 1 -->
-            <tr>
-              <td class="text-blue-500">Company Name :</td>
-              <td>ProducTRY</td>
-            </tr>
-            <!-- row 2 -->
-            <tr>
-              <td class="text-blue-500">Company Sector :</td>
-              <td>Supplyer</td>
-            </tr>
-            <!-- row 2 -->
-            <tr>
-              <td class="text-blue-500">Address :</td>
-              <td class="whitespace-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit</td>
-            </tr>
-            <!-- row 2 -->
-            <tr>
-              <td class="text-blue-500">City :</td>
-              <td>Pune</td>
-            </tr>
-            <!-- row 2 -->
-            <tr>
-              <td class="text-blue-500">Pincode :</td>
-              <td>400022</td>
-            </tr>
-            <!-- row 2 -->
-          </tbody>
-        </table>
+                 
+      <div class="ms-10 mt-3">
+                       
+        <h1 class="text-3xl">Amit Jadhwar</h1>
+                   
       </div>
-
+             
     </div>
   </div>
-  </div>
-
-
-
-
-  <!-- Put this part before </body> tag -->
-  <input type="checkbox" id="my-modal" class="modal-toggle" />
-  <div class="modal">
-    <div class="modal-box">
-  <!--  -->
-  <div class="mt-3 flex gap-x-3">
-    <!--  -->
-    <div class="form-control  ">
-      <label class="label">
-        <span class="label-text">Company Name</span>
-      </label>
-      <input type="text" placeholder="Company Name" class="input input-bordered w-full" />
+     
+  <!-- profile -->   
+  <!-- email -->   
+  <div class="bg-white p-7 rounded-xl mt-5">
+           
+    <div class="flex justify-between items-center">
+                 
+      <h1 class="text-zinc-500 text-lg font-medium">
+        <i class="fa-solid fa-envelope me-3"></i> Email Preference
+      </h1>
+                 
+      <button class="bg-zinc-200 px-5 py-2 rounded-md text-zinc-700">
+        <i class="fa-solid fa-pencil"></i> Edit</button
+      >       
     </div>
-    <!--  -->
-    <div class="form-control  ">
-      <label class="label">
-        <span class="label-text">Company Sector</span>
-      </label>
-      <input type="text" placeholder="Sector" class="input input-bordered w-full" />
+           
+    <hr class="my-3" />
+           
+    <div>
+                 
+      <p class="text-sm text-zinc-400">Primary Email Address</p>
+                 
+      <h1 class="font-semibold text-xl my-2">
+        admit.jhadwat@productry.in
+        <span class="text-green-500"><i class="fa-solid fa-check"></i></span>
+      </h1>
+                 
+      <span class="bg-green-100 px-5 py-1 text-xs rounded-md text-green-700"
+        ><i class="fa-solid fa-envelope-circle-check"></i> You are reciving
+        Emails on this email address</span
+      >       
     </div>
-    <!--  -->
-  </div>
-
-  <div class="form-control mt-3 ">
-    <label class="label">
-      <span class="label-text">Address</span>
-    </label>
-    <textarea type="text" placeholder="" class="textarea textarea-bordered w-full" cols="3"></textarea>
-  </div>
-  <!--  -->
-  <div class="flex gap-x-3 mt-3">
-    <div class="form-control ">
-      <label class="label">
-        <span class="label-text">City</span>
-      </label>
-      <input type="text" placeholder="" class="input input-bordered w-full" />
-    </div>
-    <!--  -->
-    <div class="form-control ">
-      <label class="label">
-        <span class="label-text">Pincode</span>
-      </label>
-      <input type="text" placeholder="Pincode" class="input input-bordered w-full" />
+           
+    <div class="mt-5">
+                 
+      <p class="text-sm text-zinc-400">secondary Email Address</p>
+                 
+      <h1 class="font-semibold text-xl my-2">--</h1>
+             
     </div>
   </div>
-
-  <div class="mt-3 flex justify-end">
-    <label class="btn btn-primary" for="my-modal">Continue</label>
-  </div>
-  <!--  -->
+     
+  <!-- email -->   
+  <!-- contact -->   
+  <div class="bg-white p-7 rounded-xl mt-5">
+           
+    <div class="flex justify-between items-center">
+                 
+      <h1 class="text-zinc-500 text-lg font-medium">
+        <i class="fa-solid fa-address-book me-3"></i> Contact Details
+      </h1>
+                 
+      <button class="bg-zinc-200 px-5 py-2 rounded-md text-zinc-700">
+        <i class="fa-solid fa-pencil"></i> Edit</button
+      >       
+    </div>
+           
+    <hr class="my-3" />
+    <div>
+         
+      <table>
+               
+        <thead>
+                     
+          <tr>
+                           
+            <th class="min-w-[15rem]"></th>
+                           
+            <th></th>
+                       
+          </tr>
+                 
+        </thead>
+               
+        <tbody>
+                     
+          <tr>
+                           
+            <td class="py-2 font-semibold">Phone number</td>
+                           
+            <td>+91 7715934333</td>
+                       
+          </tr>
+                     
+          <tr>
+                           
+            <td class="py-2 font-semibold">SKype Id</td>
+                           
+            <td>--</td>
+                       
+          </tr>
+                     
+          <tr>
+                           
+            <td class="py-2 font-semibold">Current Timezone</td>
+                           
+            <td>Aisa/Kolkata</td>
+                       
+          </tr>
+                 
+        </tbody>
+           
+      </table>
     </div>
   </div>
+     
+  <!-- contact -->   
+  <!-- address -->   
+  <div class="bg-white p-7 rounded-xl mt-5">
+           
+    <div class="flex justify-between items-center">
+                 
+      <h1 class="text-zinc-500 text-lg font-medium">
+        <i class="fa-solid fa-map-location-dot me-3"></i> Email Preference
+      </h1>
+                 
+      <button class="bg-zinc-200 px-5 py-2 rounded-md text-zinc-700">
+        <i class="fa-solid fa-pencil"></i> Edit</button
+      >       
+    </div>
+           
+    <hr class="my-3" />
+           
+    <div>
+                 
+      <table>
+                       
+        <thead>
+                             
+          <tr>
+                                   
+            <th class="min-w-[15rem]"></th>
+                                   
+            <th></th>
+                               
+          </tr>
+                         
+        </thead>
+                       
+        <tbody>
+                             
+          <tr>
+                                   
+            <td class="py-2 font-semibold">Address</td>
+                                   
+            <td>sion Bandra link road, kala killa, Dharavi</td>
+                               
+          </tr>
+                             
+          <tr>                        
+            <td class="py-2 font-semibold">City</td>
+                                   
+            <td>Mumbai</td>
+                               
+          </tr>
+                             
+          <tr>
+                                   
+            <td class="py-2 font-semibold">State</td>
+                                   
+            <td>Maharashtra</td>
+                               
+          </tr>
+                             
+          <tr>
+                                   
+            <td class="py-2 font-semibold">Pincode</td>
+                                   
+            <td>400022</td>
+                               
+          </tr>
+                         
+        </tbody>
+                   
+      </table>
+             
+    </div>
+  </div>
+     
+  <!-- address -->   
+  <!--bill address -->   
+  <div class="bg-white p-7 rounded-xl mt-5">
+           
+    <div class="flex justify-between items-center">
+                 
+      <h1 class="text-zinc-500 text-lg font-medium">
+        <i class="fa-solid fa-money-check-dollar me-3"></i> Billing Address
+      </h1>
+                 
+      <button class="bg-zinc-200 px-5 py-2 rounded-md text-zinc-700">
+        <i class="fa-solid fa-pencil"></i> Edit</button
+      >       
+    </div>
+           
+    <hr class="my-3" />
+           
+    <div>
+                 
+      <table>
+                       
+        <thead>
+                             
+          <tr>
+                                   
+            <th class="min-w-[15rem]"></th>
+                                   
+            <th></th>
+                               
+          </tr>
+                         
+        </thead>
+                       
+        <tbody>
+                                                 
+          <tr>
+                                   
+            <td class="py-2 font-semibold">Company Name</td>
+                                   
+            <td>ProducTRY</td>
+                               
+          </tr>
+                             
+          <tr>
+                                   
+            <td class="py-2 font-semibold">Address</td>
+                                   
+            <td>sion Bandra link road, kala killa, Dharavi</td>
+                               
+          </tr>
+                         
+        </tbody>
+                   
+      </table>
+             
+    </div>
+  </div>
+     
+  <!-- bill address -->   
+  <!-- change password -->   
+  <div class="bg-white p-7 rounded-xl mt-5">
+           
+    <div class="flex justify-between items-center">
+                 
+      <h1 class="text-zinc-500 text-lg font-medium">
+        <i class="fa-solid fa-unlock-keyhole me-3"></i> Change Password
+      </h1>
+             
+    </div>
+           
+    <hr class="my-3" />
+           
+    <div>
+                 
+      <div class="mb-4 w-1/2">
+                       
+        <label
+          for="password"
+          class="block mb-2 text-sm font-medium text-gray-900"
+          >Current Password</label
+        >               
+        <input
+          type="password"
+          id="password"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          placeholder="•••••••••"
+          required
+        />           
+      </div>
+                   
+      <div class="mb-4 w-1/2">
+                       
+        <label
+          for="password"
+          class="block mb-2 text-sm font-medium text-gray-900"
+          >New Password</label
+        >               
+        <input
+          type="password"
+          id="password"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          placeholder="•••••••••"
+          required
+        />           
+      </div>
+                   
+      <div class="mb-4 w-1/2">
+                       
+        <label
+          for="password"
+          class="block mb-2 text-sm font-medium text-gray-900"
+          >Confirm Password</label
+        >               
+        <input
+          type="password"
+          id="password"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          placeholder="•••••••••"
+          required
+        />           
+      </div>
+                  
+      <span
+        class="p-2 text-sm p flex gap-x-2 items-center rounded-md bg-yellow-100 text-yellow-600"
+        >                <i class="fa-solid fa-circle-info"></i>               
+        <p>
+          Password must be at least 6 characters long and contain at least 1   
+                          number and 1 character in UPPER case.               
+        </p>
+                   
+      </span>
+                 
+      <div class="mt-5">
+                       
+        <button class="bg-blue-500 text-white px-5 py-2 rounded-md">
+          Change Password</button
+        >           
+      </div>
+             
+    </div>
+  </div>
+     
+  <!-- change password -->   
+  <!-- email alert -->       
+  <!--bill address -->       
+  <div class="bg-white p-7 rounded-xl mt-5">
+               
+    <div class="flex justify-between items-center">
+                     
+      <h1 class="text-zinc-500 text-lg font-medium">
+        <i class="fa-solid fa-money-check-dollar me-3"></i> Billing Address
+      </h1>
+                 
+    </div>
+               
+    <hr class="my-3" />
+               
+    <div>
+                     
+      <div class="flex items-start mt-5 gap-x-4">
+                           
+        <input
+          id="default-radio-1"
+          type="radio"
+          value=""
+          name="default-radio"
+          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300"
+        />                   
+        <label
+          for="default-radio-1"
+          class="ml-2 text-sm font-medium text-gray-900 cursor-pointer"
+          >Receive an alert every time a project is posted on Kolabtree
+          (Suitability 10% or more and includes details                       
+          mentioned in Summary, Work & Education experience, subject matter and
+          services as well as publication)                        </label
+        >               
+      </div>
+                     
+      <div class="flex items-start mt-5 gap-x-4">
+                           
+        <input
+          id="default-radio-2"
+          type="radio"
+          value=""
+          name="default-radio"
+          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300"
+        />                   
+        <label
+          for="default-radio-2"
+          class="ml-2 text-sm font-medium text-gray-900 cursor-pointer"
+          >Receive an alert only if the project is suitable to my profile
+          (Suitability 50% or more and includes details mentioned               
+                  in Summary, Work & Education experience)                     
+            </label
+        >               
+      </div>
+                     
+      <div class="flex items-start mt-5 gap-x-4">
+                           
+        <input
+          id="default-radio-3"
+          type="radio"
+          value=""
+          name="default-radio"
+          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300"
+        />                   
+        <label
+          for="default-radio-3"
+          class="ml-2 text-sm font-medium text-gray-900 cursor-pointer"
+          >Receive an alert only if the client directly invites me for a
+          project                        </label
+        >               
+      </div>
+                     
+      <div class="mt-5">
+                           
+        <button class="bg-blue-500 text-white px-5 py-2 rounded-md">Save</button
+        >               
+      </div>
+                 
+    </div>
+       
+  </div>
+         
+  <!-- bill address -->   
+  <!-- email alert -->
+</div>
